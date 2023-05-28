@@ -1,0 +1,178 @@
+/*body#main{
+	background:url(../img/index/mainImg_balii.jpg) top center no-repeat; 
+	background-color:#fbfbfb;
+}*/
+#main_wrap{
+	max-width: 720px;
+    left:50%;
+	margin-left:-360px;
+    overflow: hidden;
+	position:absolute;
+	top:0;
+	background:#fbfbfb;
+}
+#main_wrap.hawai{
+	background:url(../img/index/mainImg_hawai.jpg) center center no-repeat;
+}
+.main_container{
+	/*background-color:#fbfbfb;*/
+	padding:0 50px 100px;
+}
+.main_personInfo{
+	width:100%;
+	margin-top: 340px;
+	z-index: 11;
+}
+.main_personImg img.personImg{
+    border-radius: 20px;
+	width:100%; 
+	height:100%;
+}
+.main_personImg span{
+	display:block;
+	float:left;
+}
+.person_rank{
+	margin-top: 22px;
+	font-size:55px;
+	color:#000;
+	letter-spacing:-2.75px;
+	font-family: 'OneShinhanB', sans-serif;
+	font-weight:bold;
+	text-align: center;
+}
+.person_rank span{
+	font-size:30px;
+	font-family: 'OneShinhanM', sans-serif;
+	font-weight:500;
+	display:block;
+	color:#000;
+	margin-bottom:10px;
+}
+.main_personImg{
+	width:200px; 
+	height:200px;
+	margin: 0 auto;
+}
+.main_personImg input[type="file"] {
+	/* 파일 필드 숨기기 */
+	position: absolute;
+	width: 1px; 
+	height: 1px;
+	padding: 0; 
+	margin: -1px; 
+	overflow: hidden; 
+	clip:rect(0,0,0,0); 
+	border: 0; 
+}
+.inputFileButton{
+	position: absolute;
+    top: -40px;
+    left: 160px;
+    cursor: pointer;
+}
+.imgEditBtn{
+	position: absolute;
+    right: -30px;
+    top: 43px;
+}
+.imgEditBtn img{
+	cursor:pointer;
+}
+.rewardBox{
+	margin-top:35px;
+	margin-bottom: 40px;
+	width:100%;
+}
+.rewardBox .rewardTitle span{
+	display:block;
+	font-size:25px;
+	font-family: 'OneShinhanB', sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+.rewardBox dl{
+	width:100%;
+}
+.rewardBox dl.canp{margin-bottom:40px;}
+.rewardBox dl:last-child{
+	margin-bottom:0;
+}
+
+.rewardBox dl.canp dt{
+	background-color:#96b3ff;
+}
+.rewardBox dl dd{
+	float:right;
+	font-size:31px;
+	font-family: 'OneShinhanB', sans-serif;
+	font-weight:bold;
+	color:#715def;
+	line-height:50px;
+}
+.rewardBox dl:last-child{
+	width:100%;
+	box-sizing:border-box;
+	border-radius:20px;
+	margin-top:30px;
+}
+.rewardBox dl:last-child dt{
+	background:none;
+	width:100%;
+	font-size:30px;
+	text-align:center;
+	height:80px;
+	line-height:80px;
+	background-color:#9486db;
+	border-radius: 20px 20px 0 0;
+	color:#fff;
+	font-family: 'OneShinhanB', sans-serif;
+	font-weight:bold;
+	letter-spacing: normal;
+}
+.rewardBox dl:last-child dd{
+	line-height:141px;
+	float:none;
+	text-align:center;
+	font-size:45px;
+	background-color:#f1ecff;
+	border-radius: 0 0 20px 20px;
+}
+.rewardBox dl:last-child dd a{
+	color:#705cef;
+	font-family: 'OneShinhanB', sans-serif;
+	font-weight:bold;
+	letter-spacing: normal;
+}
+
+.categoryBox dt{
+	font-size:35px;
+	font-weight:600;
+	color:#000;
+	margin-bottom:35px;
+}
+.categoryBox dd{
+	margin-bottom: 30px;
+}
+.categoryBox dd a{
+	width: 100%;
+    height: auto;
+}
+.categoryBox dd a img{
+	width:100%;
+}
+.categoryBox dd:last-child{margin-right:0;}
+.mainEventBanner {
+    padding-top: 10px;
+}
+.swiper-slide img {
+    width: 100%	;
+    height: auto;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    box-sizing: border-box;
+}
+.swiper-container{
+	padding-bottom:30px !important;
+}
