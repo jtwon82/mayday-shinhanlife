@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -220,6 +221,7 @@
     </Content>
     <Content Include="packages.config" />
     <Content Include="common\master\page.Master" />
+    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Properties\PublishProfiles\lfc.pubxml" />
     <None Include="Properties\PublishProfiles\OrangeSummerFront.pubxml" />
     <None Include="Properties\Settings.settings">

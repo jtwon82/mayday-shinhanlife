@@ -274,6 +274,7 @@
     <Content Include="template.aspx" />
     <Content Include="travel\default.aspx" />
     <Content Include="travel\regist.aspx" />
+    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Web References\kr.co.youiwe.webservice\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
