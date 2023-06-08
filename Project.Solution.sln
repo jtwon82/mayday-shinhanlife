@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{BE7FCD24-6587-4EAA-9630-A3622A911677}"
 EndProject
@@ -19,13 +19,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrangeSummer.Model", "Orang
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrangeSummer.Web.UserApplication", "OrangeSummer.Web.UserApplication\OrangeSummer.Web.UserApplication.csproj", "{6E5810CE-AD88-4872-929E-D8170603F8F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrangeSummer.Web.MasterApplication", "OrangeSummer.Web.MasterApplication\OrangeSummer.Web.MasterApplication.csproj", "{FD415D83-FBFD-4D0E-A6A8-9AC4991577C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.admin.shinhanlife-fc.com", "OrangeSummer.Web.MasterApplication\01.admin.shinhanlife-fc.com.csproj", "{FD415D83-FBFD-4D0E-A6A8-9AC4991577C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrangeSummer.Web2.UserApplication", "OrangeSummer.Web2.UserApplication\OrangeSummer.Web2.UserApplication.csproj", "{AE60E45C-15C8-47B4-912E-AB4A5A1AC967}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.www.shinhanlife-fc.com", "OrangeSummer.Web2.UserApplication\01.www.shinhanlife-fc.com.csproj", "{AE60E45C-15C8-47B4-912E-AB4A5A1AC967}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrangeSummer.Web2flc.UserApplication", "OrangeSummer.Web2flc.UserApplication\OrangeSummer.Web2flc.UserApplication.csproj", "{CD6352BB-33FE-48BB-BEA8-A6A74D664C30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.lfc.shinhanlife-fc.com", "OrangeSummer.Web2flc.UserApplication\01.lfc.shinhanlife-fc.com.csproj", "{CD6352BB-33FE-48BB-BEA8-A6A74D664C30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrangeSummer.Weblfc.MasterApplication", "OrangeSummer.Weblfc.MasterApplication\OrangeSummer.Weblfc.MasterApplication.csproj", "{695D88E3-61D1-4ECC-AA18-CAB2750709C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.lfcadmin.shinhanlife-fc.com", "OrangeSummer.Weblfc.MasterApplication\01.lfcadmin.shinhanlife-fc.com.csproj", "{695D88E3-61D1-4ECC-AA18-CAB2750709C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
