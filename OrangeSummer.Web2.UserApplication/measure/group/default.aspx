@@ -17,10 +17,10 @@
                 <p class="subTitle"><img src="/resources/img/sub/measureTitle.png" alt="시책안내" /></p>
                 <div class="measure_guide">
                     <ul class="bmTabs measure">
-                        <li><a href="/measure/individual/">개인부문</a></li>
-                        <li><a href="/measure/sl/">SL 부문</a></li>
-                        <li><a href="/measure/point/">지점부문</a></li>
-                        <li><a href="/measure/group/" class="current">그룹부문</a></li>
+                        <li><a href="/measure/individual">개인 부문</a></li>
+                        <li><a href="/measure/sl">SL 부문</a></li>
+                        <li><a href="/measure/point">지점 부문</a></li>
+                        <li><a href="/measure/group" class="current">그룹부문</a></li>
                     </ul>
                   
                   <div class="evaluationInfo">

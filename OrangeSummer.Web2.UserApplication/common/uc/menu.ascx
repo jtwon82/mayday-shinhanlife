@@ -1,8 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="menu.ascx.cs" Inherits="OrangeSummer.Web2.UserApplication.common.uc.menu" %>
 
 		<div id="header">
-			<h1 class="logo"><a href="/"><img src="/resources/img/index/index_logo.png" alt="ShinhanLife" /></a></h1>
-			<p class="homeBtn"><a href="/"><img src="/resources/img/index/index_homeIcon.png" alt="ShinhanLife" /></a></p>
+			<h1 class="logo"><a href="/index"><img src="/resources/img/index/index_logo.png" alt="ShinhanLife" /></a></h1>
+			<p class="homeBtn"><a href="/index"><img src="/resources/img/index/index_homeIcon.png" alt="ShinhanLife" /></a></p>
 
   			<header class="cf" id="hd">
 				<div id="hd_wr">
