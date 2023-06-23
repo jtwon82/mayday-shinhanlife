@@ -1,19 +1,15 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="menu.ascx.cs" Inherits="OrangeSummer.Web2.UserApplication.common.uc.menu" %>
 
-<div id="header">
-    <h1 class="logo"><a href="/index">
-        <img src="/resources/img/index/index_logo.png" alt="ShinhanLife" /></a></h1>
-    <p class="homeBtn">
-        <a href="/index">
-            <img src="/resources/img/index/index_homeIcon.png" alt="ShinhanLife" /></a>
-    </p>
+		<div id="header">
+			<h1 class="logo"><a href="/"><img src="/resources/img/index/index_logo.png" alt="ShinhanLife" /></a></h1>
+			<p class="homeBtn"><a href="/"><img src="/resources/img/index/index_homeIcon.png" alt="ShinhanLife" /></a></p>
 
-    <header class="cf" id="hd">
-        <div id="hd_wr">
-            <div class="btn"></div>
-            <div class="page_cover"></div>
-            <div id="menu">
-                <div class="person_info">
+  			<header class="cf" id="hd">
+				<div id="hd_wr">
+					<div class="btn"></div>
+					<div class="page_cover"></div>
+					<div id="menu">
+						<div class="person_info">
         <% 
             if (MLib.Auth.Forms.IsAuthenticated)
             {
@@ -42,15 +38,28 @@
             }
         %>
                 </div>
-
-                <div class="close"></div>
-                <ul id="mainMenu">
-					<li><a href="/member/reward/">프로모션</a></li>
-					<li><a href="/member/reward/?reward=reward">수수료</a></li>
-					<li><a href="/board/notice/">주요 안내</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-
-</div>
+						<div class="close"></div>
+						<ul id="mainMenu">
+							<li>
+								<a href="/measure_list.html">시책 안내</a>
+							</li>
+							<li>
+								<a href="/bm.html">SUMMER 업적</a>
+							</li>
+							<li>
+								<a href="/ranking.html">SUMMER 랭킹</a>
+							</li>
+							<li>
+								<a href="/ranking_point.html">NSM 부문</a>
+							</li>
+							<li>
+								<a href="/notice.html">공지사항</a>
+							</li>
+							<li>
+								<a href="/event.html">이벤트</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</header>
+		</div>

@@ -99,6 +99,7 @@
     <Content Include="common\js\jquery-library.js" />
     <Content Include="common\js\site.js" />
     <Content Include="intro\default.aspx" />
+    <Content Include="measure\group\default.aspx" />
     <Content Include="measure\headoffice\default.aspx" />
     <Content Include="member\find_pw\default.aspx" />
     <Content Include="member\reward\default.aspx" />
@@ -558,6 +559,12 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="measure\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="measure\group\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="measure\group\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
     <Compile Include="measure\headoffice\default.aspx.cs">

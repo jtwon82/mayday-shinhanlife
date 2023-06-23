@@ -430,7 +430,7 @@ namespace OrangeSummer.Access
             StringBuilder query = new StringBuilder();
             query.Append($"SELECT T3.MEMBER_NAME MEMBER_NAME, T3.BRANCH_NAME, T3.MEMBER_NAME, T3.LEVEL_NAME ");
             query.Append($", dbo.UFNC_DECRYPT(T1.PWD)PWD, dbo.UFNC_DECRYPT(T1.PWD)PWD_DECODE, dbo.UFNC_DECRYPT(T1.[MOBILE]) AS [MOBILE] ");
-            query.Append($", CASE WHEN T1.PROFILE_IMG IS NULL OR T1.PROFILE_IMG = '' THEN '/resources/img/index/personImg2.png' ELSE T1.PROFILE_IMG END PROFILE_IMG ");
+            query.Append($", CASE WHEN T1.PROFILE_IMG IS NULL OR T1.PROFILE_IMG = '' THEN '/resources/img/index/main_person_img2.png' ELSE T1.PROFILE_IMG END PROFILE_IMG ");
             query.Append($", CASE WHEN T1.BACKGROUND_IMG IS NULL OR T1.BACKGROUND_IMG = '' THEN '/resources/img/index/backgroundImg.png' ELSE T1.BACKGROUND_IMG END BACKGROUND_IMG ");
             query.Append($", (SELECT SUM(PRICE)PRICE FROM( ");
             query.Append($"        SELECT 'PROMOTION'GB, A.* FROM REWRAD_PROMOTION A WHERE A.CODE = T1.CODE ");
@@ -467,7 +467,7 @@ namespace OrangeSummer.Access
                             Canp = Check.IsNone(dr["CANP"].ToString()) ? "" : Convert.ToDecimal(dr["CANP"].ToString()).ToString("#,##0"),
                             Reward = Check.IsNone(dr["REWARD"].ToString()) ? "" : Convert.ToDecimal(dr["REWARD"].ToString()).ToString("#,##0"),
                             Cmip = Check.IsNone(dr["CMIP"].ToString()) ? "" : Convert.ToDecimal(dr["CMIP"].ToString()).ToString("#,##0"),
-                            PersonRank = dr["PERSON_RANK"].ToString(),
+                            PersonRank= Check.IsNone(dr["PERSON_RANK"].ToString()) ? "" : Convert.ToDecimal(dr["PERSON_RANK"].ToString()).ToString("#,##0"),
                             BranchRank = dr["BRANCH_RANK"].ToString(),
                             MyReward = Check.IsNone(dr["MY_REWARD"].ToString()) ? "0" : Convert.ToDecimal(dr["MY_REWARD"].ToString()).ToString("#,##0")
                         };
