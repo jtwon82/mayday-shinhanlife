@@ -31,8 +31,8 @@
 				<dl class="categoryBox">
 					<dd><a href="/measure"><span></span>시책 안내</a></dd>
 					<dd><a href="/achieve/bm"><span></span>SUMMER 업적</a></dd>
-					<dd><a href="/ranking.html"><span></span>SUMMER 랭킹</a></dd>
-					<dd><a href="/notice.html"><span></span>공지사항</a></dd>
+					<dd><a href="/ranking"><span></span>SUMMER 랭킹</a></dd>
+					<dd><a href="/board/notice"><span></span>공지사항</a></dd>
 					<!-- <dd><a href="/ranking_point.html"><span></span>NSM 부문</a></dd> -->
 				</dl>
                 

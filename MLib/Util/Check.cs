@@ -26,18 +26,6 @@ namespace MLib.Util
 
         #region [ IsNone ]
         /// <summary>
-        /// 문자열이 공백이나 null인지 판단
-        /// </summary>
-        /// <param name="value">데이터 원본</param>
-        /// <returns>bool</returns>
-        public static bool IsNone(string value)
-        {
-            if (string.IsNullOrEmpty(value) || value == "")
-                return true;
-            else
-                return false;
-        }
-        /// <summary>
         /// 
         /// </summary>
         /// <param name="value"> </param>
@@ -86,6 +74,7 @@ namespace MLib.Util
                 return ex.ToString();
             }
         }
+        #endregion
 
         #region [ IsNone ]
         /// <summary>

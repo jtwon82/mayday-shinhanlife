@@ -41,22 +41,22 @@
 						<div class="close"></div>
 						<ul id="mainMenu">
 							<li>
-								<a href="/measure_list.html">시책 안내</a>
+								<a href="/measure">시책 안내</a>
 							</li>
 							<li>
-								<a href="/bm.html">SUMMER 업적</a>
+								<a href="/achieve/bm">SUMMER 업적</a>
 							</li>
 							<li>
-								<a href="/ranking.html">SUMMER 랭킹</a>
+								<a href="/ranking">SUMMER 랭킹</a>
 							</li>
 							<li>
-								<a href="/ranking_point.html">NSM 부문</a>
+								<a href="/ranking/point">NSM 부문</a>
 							</li>
 							<li>
-								<a href="/notice.html">공지사항</a>
+								<a href="/board/notice">공지사항</a>
 							</li>
 							<li>
-								<a href="/event.html">이벤트</a>
+								<a href="/board/evt">이벤트</a>
 							</li>
 						</ul>
 					</div>

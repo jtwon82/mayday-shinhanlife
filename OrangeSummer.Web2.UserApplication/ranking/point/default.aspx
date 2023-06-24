@@ -10,23 +10,45 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 <body>
-	<div class="background sub">
-		<p class="cover"></p>
-		<p class="upload"><img src="/resources/img/sub/subMetaBg_ranking.jpg" alt=""/></p>
-		<p class="topBox"><img src="/resources/img/sub/subTopImg.png" alt=""/></p>
-	</div>
-	<div id="sub_wrap">
+	<div id="sub_wrap" class="subMeta07">
             <uc1:menu runat="server" ID="menu1" />
-		<div class="subContainer">
-			<p class="subTitle"><img src="/resources/img/sub/rankingTitle.png" alt="랭킹" /></p>
-			<ul class="bmTabs measure ranking">
-				<li><a href="/ranking/">개인 부문</a></li>
-				<li><a href="/ranking/point/" class="current">지점 부문</a></li>
-			</ul>
-			
+				<div class="subContainer">
+					<p class="subTitle"><img src="/resources/img/sub/rankingTitle.png" alt="SUMMER 랭킹" />
+					</p>
+
+					<div class="cumulativePage" style="display:none">
+						<p class="endTxt">
+							준비중입니다.
+						</p>
+					</div>
+
+					<div>
+						<ul class="bmTabs measure ranking">
+							<li>
+								<a href="/ranking">개인 부문</a>
+							</li>
+							<li>
+								<a href="/ranking/sl">E SL 부문</a>
+							</li>
+							<li>
+								<a href="/ranking/point" class="current">지점 부문</a>
+							</li>
+						</ul>
+						<ul class="bmTabs measure ranking two">
+							<li>
+								<a href="/ranking/gsl">G SL 부문</a>
+							</li>
+							<li>
+								<a href="/ranking/ssl">S SL 부문</a>
+							</li>
+						</ul>
+						
 			<%=_branch %>
             <%=_paging %>
-		</div>	
+					</div>
+				</div>
+
+
 	</div>
 </body>
 </asp:Content>

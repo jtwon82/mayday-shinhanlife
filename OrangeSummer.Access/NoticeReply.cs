@@ -138,6 +138,55 @@ namespace OrangeSummer.Access
 
             return lists;
         }
+        public List<Model.NoticeReply> UserList_202206(int page, int size, string id, string member)
+        {
+            List<Model.NoticeReply> lists = null;
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@PAGE", page));
+            parameters.Add(new SqlParameter("@SIZE", size));
+            parameters.Add(new SqlParameter("@FK_NOTICE", id));
+            parameters.Add(new SqlParameter("@FK_MEMBER", member));
+            using (DataTable dt = DBHelper.ExecuteDataTable(_connection, "USP_NOTICE_REPLY_LIST", parameters))
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    lists = new List<Model.NoticeReply>();
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        Model.NoticeReply reply = new Model.NoticeReply()
+                        {
+                            Total = Convert.ToInt32(dr["TOTAL"].ToString()),
+                            Id = dr["ID"].ToString().ToUpper(),
+                            Code = dr["CODE"].ToString().ToUpper(),
+                            Sort = Convert.ToInt32(dr["SORT"].ToString()),
+                            FkMember = dr["FK_MEMBER"].ToString().ToUpper(),
+                            DepthGid = Convert.ToInt32(dr["DEPTH_GID"].ToString()),
+                            DepthSeq = Convert.ToInt32(dr["DEPTH_SEQ"].ToString()),
+                            Depth = Convert.ToInt32(dr["DEPTH"].ToString()),
+                            Contents = dr["CONTENTS"].ToString(),
+                            LikeCount = Convert.ToInt32(dr["LIKE_COUNT"].ToString()),
+                            ReplyCount = Convert.ToInt32(dr["REPLY_COUNT"].ToString()),
+                            DelYn = dr["DEL_YN"].ToString(),
+                            RegistDate = dr["REGIST_DATE"].ToString(),
+                            Like = Convert.ToInt32(dr["LIKE"].ToString()),
+                            Member = new Model.Member()
+                            {
+                                Name = dr["MEMBER_NAME"].ToString(),
+                                ProfileImg = dr["PROFILE_IMG"].ToString()
+                            },
+                            Branch = new Model.Branch()
+                            {
+                                Name = dr["BRANCH_NAME"].ToString()
+                            }
+                        };
+
+                        lists.Add(reply);
+                    }
+                }
+            }
+
+            return lists;
+        }
 
         /// <summary>
         /// 공지사항 댓글 좋아요

@@ -10,11 +10,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
-	    <div class="background sub">
-		    <p class="cover"></p>
-		    <p class="upload"><img src="/resources/img/sub/subMetaBg_noti.jpg" alt=""/></p>
-	    </div>
-	    <div id="sub_wrap">
+    <body>
+	    <div id="sub_wrap" class="subMeta09">
 
             <uc1:menu runat="server" ID="menu" />
 

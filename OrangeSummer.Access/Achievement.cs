@@ -288,7 +288,7 @@ namespace OrangeSummer.Access
                     if (index % 500 == 0)
                     {
                         query_union.Append(") A WHERE [ORDERBY]>0");
-                        new Log().Info("" + query_union.ToString());
+                        //new Log().Info("" + query_union.ToString());
 
                         DBHelper.ExecuteDataTableInQuery(_connection, query_insert.ToString() + query_union.ToString());
                         query_union.Clear();
@@ -350,7 +350,7 @@ namespace OrangeSummer.Access
                     if (index % 500 == 0)
                     {
                         query_union.Append(") A WHERE [ORDERBY]>0");
-                        new Log().Info("" + query_union.ToString());
+                        //new Log().Info("" + query_union.ToString());
 
                         DBHelper.ExecuteDataTableInQuery(_connection, query_insert.ToString() + query_union.ToString());
                         query_union.Clear();
@@ -818,6 +818,59 @@ namespace OrangeSummer.Access
                             PersonRank = Check.IsNone(dr["PERSON_RANK"].ToString()) ? "" : dr["PERSON_RANK"].ToString(),
                             BranchRank = Check.IsNone(dr["BRANCH_RANK"].ToString()) ? "" : dr["BRANCH_RANK"].ToString()
                         };
+                        achievement.Add(T);
+                    }
+                }
+            }
+
+            return achievement;
+        }
+
+
+        public List<Model.Achievement> UserList_202206(string code, string level)
+        {
+            List<Model.Achievement> achievement = new List<Model.Achievement>();
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@CODE", code));
+            parameters.Add(new SqlParameter("@LEVEL", level));
+            using (DataTable dt = DBHelper.ExecuteDataTable(_connection, "USP_ACHIEVEMENT_LIST_202206", parameters))
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        Model.Achievement T = new Model.Achievement().getAchievement(dr);
+                        achievement.Add(T);
+                    }
+                }
+            }
+
+            return achievement;
+        }
+        public List<Model.Achievement> UserListNsm_202206(string type)
+        {
+            List<Model.Achievement> achievement = new List<Model.Achievement>();
+            //List<SqlParameter> parameters = new List<SqlParameter>();
+            //parameters.Add(new SqlParameter("@CODE", code));
+            //parameters.Add(new SqlParameter("@LEVEL", level));
+
+            string sql = "";
+            if (type == "")
+            {
+                sql = "select top 5 * from ACHIEVEMENT_NSM_202206 order by BRANCH_RANK";
+            }
+            else if (type == "list")
+            {
+                sql = "select * from ACHIEVEMENT_NSM_202206 where SORT not in (select top 5 SORT from ACHIEVEMENT_NSM_202206) order by BRANCH_RANK";
+            }
+
+            using (DataTable dt = DBHelper.ExecuteDataTableInQuery(_connection, sql))
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        Model.Achievement T = new Model.Achievement().getAchievement(dr);
                         achievement.Add(T);
                     }
                 }

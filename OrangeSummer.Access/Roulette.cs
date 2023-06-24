@@ -21,6 +21,29 @@ namespace OrangeSummer.Access
         {
             _connection = connection;
         }
+        public bool UserCheck_202206(string member)
+        {
+            bool result = false;
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@FK_MEMBER", member));
+            using (DataTable dt = DBHelper.ExecuteDataTable(_connection, "USP_ROULETTE_CHECK_202206", parameters))
+            {
+                if (dt.Rows.Count >= 1)
+                    result = true;
+            }
+
+            return result;
+        }
+        //
+        public bool UserCheckLog_202206(Model.Roulette roulette)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@FK_MEMBER", roulette.FkMember));
+            parameters.Add(new SqlParameter("@RESULT", roulette.Result));
+
+            return DBHelper.ExecuteNonQuery(_connection, "USP_ROULETTE_CHECK_LOG_202206", parameters);
+        }
+
 
         #region [ 관리자 ]
         /// <summary>
@@ -162,5 +185,22 @@ namespace OrangeSummer.Access
             return DBHelper.ExecuteNonQuery(_connection, "USP_ROULETTE_REGIST", parameters);
         }
         #endregion
+
+
+        public string getDbDate()
+        {
+            string result = "";
+            using (DataTable dt = DBHelper.ExecuteDataTableInQuery(_connection, "SELECT CONVERT(VARCHAR, GETDATE(), 102) RESULT"))
+            {
+                if (dt.Rows.Count == 1)
+                {
+                    DataRow dr = dt.Rows[0];
+                    result = dr["RESULT"].ToString();
+                }
+            }
+
+            return result;
+        }
     }
+
 }
