@@ -65,10 +65,10 @@
   visibility: hidden;
 }
 /* Auto Height */
-/* .swiper-container-autoheight,
+.swiper-container-autoheight,
 .swiper-container-autoheight .swiper-slide {
-  height:350px;
-} */
+ 
+}
 .swiper-container-autoheight .swiper-wrapper {
   align-items: flex-start;
   transition-property: transform, height;
@@ -246,11 +246,11 @@
   transform: scale(0.33);
 }
 .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   display: inline-block;
   border-radius: 50%;
-  background: #bfbfbf;
+  background: #d8d8d8;
   /*opacity: 0.2;*/
 }
 button.swiper-pagination-bullet {
@@ -535,7 +535,7 @@ button.swiper-pagination-bullet {
           backface-visibility: hidden;
 }
 
-/* 210625 추가 */
+/* 210625 �߰� */
 .swiper-container2 .swiper-wrapper {
 	position: relative;
 	width: 100%;
@@ -544,7 +544,6 @@ button.swiper-pagination-bullet {
 	display: flex;
 	transition-property: transform;
 	box-sizing: content-box;
-	margin:0 auto;
 }
 /*.swiper-container2 .swiper-wrapper .swiper-slide{width:650px !important;}*/
 .swiper-pagination2 {
@@ -556,8 +555,8 @@ button.swiper-pagination-bullet {
 	bottom:0;
 }
 
-/* 210707 추가
+/* 210707 �߰� */
 .event_rolling .swiper-container-autoheight,
 .event_rolling .swiper-container-autoheight .swiper-slide {
-  height:350px;
-} */
+  height:480px;
+}

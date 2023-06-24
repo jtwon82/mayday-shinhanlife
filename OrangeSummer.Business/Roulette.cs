@@ -53,6 +53,14 @@ namespace OrangeSummer.Business
         {
             return _roulette.UserCheck(member);
         }
+        public bool UserCheck_202206(string member)
+        {
+            return _roulette.UserCheck_202206(member);
+        }
+        public bool UserCheckLog_202206(Model.Roulette roulette)
+        {
+            return _roulette.UserCheckLog_202206(roulette);
+        }
 
         /// <summary>
         /// 룰렛 등록
@@ -62,6 +70,10 @@ namespace OrangeSummer.Business
             return _roulette.UserRegist(roulette);
         }
         #endregion
+        public string getDbDate()
+        {
+            return _roulette.getDbDate();
+        }
 
         /// <summary>
         /// 롤렛이벤트 소멸자

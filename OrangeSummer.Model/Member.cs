@@ -34,6 +34,7 @@ namespace OrangeSummer.Model
 
         public Branch Branch { get; set; }
         public Travel Travel { get; set; }
+        public string achieveUrl { get; set; }
 
         public Achievement Achievement { get; set; }
         public Member getMember(DataRow dr)

@@ -13,33 +13,31 @@
 <body id="main">
 	<div class="background">
 		<p class="cover"></p>
-		<p class="upload"><img src="<%=_member.BackgroundImg %>" error="this.src='/resources/img/index/backgroundImg.png'" alt=""/></p>
+		<p class="upload"><img src="<%=_member.BackgroundImg %>" error="this.src='/resources/img/index/backgroundImg.jpg'" alt=""/></p>
 	</div>
 	<div id="main_wrap">
             <uc1:menu runat="server" ID="menu1" />
 		<div class="main_container">
 			<div class="main_personInfo">
-				<p class="main_personImg"><img src="<%=_member.ProfileImg %>" alt="" class="personImg" /><span><label for="myfile" class="inputFileButton"><img src="/resources/img/index/fileIcon.png" alt="" /></label><input type="file" id="myfile" name="myfile" style="display:none";></span></p>
+				<p class="main_personImg"><img src="<%=_member.ProfileImg %>" onerror="this.src='/resources/img/index/personImg2.jpg'" alt="" class="personImg " style="width:180px; height:180px;"/><span>
+                    <label for="myfile" class="inputFileButton"><img src="/resources/img/index/fileIcon.png" alt="" /></label><input type="file" id="myfile" name="myfile" style="display:none;" accept="image/*"/></span></p>
+				<p class="imgEditBtn"><label for="myfile2" class="inputFileButton2"><img src="/resources/img/index/fileIcon.png" alt="" /></label><input type="file" id="myfile2" name="myfile2" style="display:none;" /></p>
 				<p class="person_rank"><span class="point"><%=_member.Branch.Name %></span><%=_member.MemberName %> / <%=_member.LevelName %></p>
-				<p class="imgEditBtn"><label for="myfile2" class="inputFileButton2"><img src="/resources/img/index/fileIcon.png" alt="" /></label><input type="file" id="myfile2" name="myfile2" style="display:none";></p>
+				<!-- 230620 추가 -->
+				<p class="my_rank"><em></em>나의 랭킹<span><%=_member.Achievement.PersonRank %>위</span></p>
 			</div>
-			<div class="rewardBox">
-				<p class="rewardTitle"><span><%=_member.Achievement.Date %> 기준</span></p>
-				<dl> 
-					<dt>My Reward 적립 현황</dt>
-					<dd><a href="/member/reward/">총 <%=_member.Achievement.Reward %>원</a></dd>
-				</dl>
-			</div>
-			<dl class="categoryBox">
-				<dd><a href="/member/reward/"><img src="/resources/img/index/categoryBg_01.png" alt="프로모션" /></a></dd>
-				<dd><a href="/member/reward/?reward=reward"><img src="/resources/img/index/categoryBg_02.png" alt="수수료" /></a></dd>
-				<dd><a href="/board/notice/"><img src="/resources/img/index/categoryBg_03.png" alt="주요안내" /></a></dd>
-				<!--dt>Category</dt-->
-			</dl>
 			<div class="mainEventBanner">
-				<!--p class="mainEventBanner_t">EVENT &amp; NOTICE</p-->
+				<!-- 카테고리 -->
+				<dl class="categoryBox">
+					<dd><a href="/measure"><span></span>시책 안내</a></dd>
+					<dd><a href="/achieve/bm"><span></span>SUMMER 업적</a></dd>
+					<dd><a href="/ranking"><span></span>SUMMER 랭킹</a></dd>
+					<dd><a href="/board/notice"><span></span>공지사항</a></dd>
+					<!-- <dd><a href="/ranking_point.html"><span></span>NSM 부문</a></dd> -->
+				</dl>
+                
+					<!-- 이벤트 / 공지 -->
 				<div class="EventBanner_rolling">
-					
 					<!-- Swiper -->
 					<div class="swiper-container">
 						<div class="swiper-wrapper">

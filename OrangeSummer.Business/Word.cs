@@ -27,6 +27,10 @@ namespace OrangeSummer.Business
         {
             return _word.List(page, size);
         }
+        public List<Model.Word> List2(int page, int size)
+        {
+            return _word.List2(page, size);
+        }
 
         /// <summary>
         /// Wrod이벤트 리스트
@@ -34,6 +38,10 @@ namespace OrangeSummer.Business
         public List<Model.Word> Excel()
         {
             return _word.Excel();
+        }
+        public List<Model.Word> Excel2()
+        {
+            return _word.Excel2();
         }
 
         /// <summary>
@@ -43,12 +51,20 @@ namespace OrangeSummer.Business
         {
             return _word.Ranking();
         }
+        public List<Model.Word> Ranking2()
+        {
+            return _word.Ranking2();
+        }
         #endregion
 
         #region [ 사용자 ]
         public string UserVote(string member, string vote)
         {
             return _word.UserVote(member, vote);
+        }
+        public string UserVote2(string member, string vote)
+        {
+            return _word.UserVote2(member, vote);
         }
         #endregion
 

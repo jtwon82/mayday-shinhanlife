@@ -1,474 +1,1826 @@
 #sub_wrap{
-	max-width:720px;
-	margin:0 auto;
-	position:relative;
-	height:100%;
+    max-width:720px;
+    margin:0 auto;
+    position:relative;
+    height:100%;
 }
+.subMeta, .subMeta02, .subMeta03, .subMeta04,
+.subMeta05, .subMeta06, .subMeta07{
+    height:432px;
+    background:url(/resources/img/sub/subMeta01.jpg) top center no-repeat;
+}
+.subMeta02{
+    background:#f5f5f5 url(/resources/img/sub/subMeta02.jpg) top center no-repeat;
+}
+.subMeta03{
+    background:#cad9ff  url(/resources/img/sub/subMeta02.jpg) top center no-repeat;
+    padding-bottom:30px;
+}
+.subMeta04{
+    background:#b6e6d8 url(/resources/img/sub/subMeta02.jpg) top center no-repeat;
+}
+.subMeta05{
+    background:#fbfbfb url(/resources/img/sub/subMeta05.jpg) top center no-repeat;
+}
+.subMeta06{
+    background:url(/resources/img/sub/event/rouletteImg.jpg) top center no-repeat;
+    height:1789px !important;
+}
+.subMeta07{
+    background:#fbfbfb url(/resources/img/sub/subMeta07.jpg) top center no-repeat;
+}
+.subMeta08{
+    background:#fbfbfb url(/resources/img/sub/subMeta08.gif) top center no-repeat;
+}
+.subMeta09{
+    background:#fbfbfb url(/resources/img/sub/subMeta09.jpg) top center no-repeat;
+}
+.subMeta10{
+    background:#fbfbfb url(/resources/img/sub/subMeta05.jpg) top center no-repeat;
+}
+
+.subMeta05.measure{
+    background: #fbfbfb url(/resources/img/sub/measure_bg.gif) top center no-repeat;
+}
+
 .subTitle{
-	width:430px;
-	margin: 155px  auto 150px auto;
-	z-index:12;
+    margin: 0 auto;
+    padding-top: 205px;
 }
-.subTitle img{margin:0 auto;}
+.subTitle img{
+    margin: 0 auto;
+}
+.subMeta05 .subTitle{
+    
+}
+.subMeta07 .subTitle{
+
+}
+.subMeta08 .subTitle{
+
+}
+.subMeta09 .subTitle{
+    
+}
 .subContainer{
-	margin:0 47px;
-	overflow:hidden;
-	padding-bottom:30px;
+    margin:0 50px;
+    padding-bottom:30px;
+}
+.subContainer.guide{
+    margin:0 15px;
+    overflow: hidden;
+}
+.subMeta05.measure .subContainer.guide{
+    margin:0 50px;
+}
+.subContainer.cumulative{
+    margin:0 26px;
 }
 .subContainer.notice{
-	margin:0 37px;
+    overflow:hidden;
 }
 
 /* My영업관리 */
 ul.tabs{
-	margin: 0px;
-	padding: 0px;
-	list-style: none;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
 }
 ul.tabs li{
-	background: none;
-	color: #222;
-	display: inline-block;
-	padding: 10px 15px;
-	cursor: pointer;
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
 }
 
 ul.tabs li.current{
-	background: #ededed;
-	color: #222;
+    background: #ededed;
+    color: #222;
 }
 
 .tab-content{
-	display: none;
+    display: none;
 }
 
 .tab-content.current{
-	display: inherit;
+    display: inherit;
 }
 ul.bmTabs{
-	display: table;
-	margin:0 auto 50px auto;
-}
-ul.bmTabs.reward{
-	width: 100%;
+    overflow: hidden;
+   margin: 170px auto 50px auto;
+    text-align: center;
 }
 ul.bmTabs.measure.ranking{
-	margin:0 auto 30px auto;
+    margin: 160px auto 0px auto;
+    margin-bottom: 20px;
 }
 ul.bmTabs.measure.ranking.two{
-	margin:0 auto 50px auto;
+    padding: 0 105px;
+    margin:0 auto 40px auto;
 }
 ul.bmTabs li, ul.bmTabs.measure.ranking li{
-	float:left;
-	margin-right:12px;
-	border-radius:50px;
+    display:inline-block;
+    margin-right:10px;
+    border-radius:50px;
 }
-ul.bmTabs.measure li{
-	margin-right:12px;
+ul.bmTabs.measure{
+    margin: 160px auto 20px  auto;
+}
+ul.bmTabs.measure li{margin-bottom:20px;}
+ul.bmTabs.measure.ranking li{margin-bottom:0;}
+ul.bmTabs.measure.ranking li:nth-child(even){
+    margin-right:10px;
+}
+ul.bmTabs.measure li:nth-child(even){
+    margin-right:10px;
 }
 ul.bmTabs li:last-child{margin-right:0;}
 ul.bmTabs li a, ul.bmTabs.measure li a{
-	/*border:1px solid #705dcf;*/
-	border-radius:50px;
-	line-height:66px;
-	color:#705dcf;
-	font-size:25px;
-	font-weight:300;
-	font-family: 'OneShinhanM', sans-serif;
-	text-align:center;
-	width:236px;
-	box-sizing:border-box;
-	cursor:pointer;
-	display:block;
-	background-color:#fff;
+   border-radius: 20px;
+    line-height: 80px;
+    color: #705dcf;
+    font-size: 34px;
+    font-family: 'OneShinhanM', sans-serif;
+    text-align: center;
+    width: 310px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    background-color: #fff;
+    letter-spacing: -1.7px;
 }
 ul.bmTabs.measure li a{
-	width:189px;
-	border:1px solid #705dcf;
+    width:297px;
+    border:1px solid #d8d8d8;
 }
 ul.bmTabs.measure.ranking li a{
-	width:241px;
-	border-radius:50px;
-	border:1px solid #705dcf;
+    width: 198px;
+}
+ul.bmTabs.measure.ranking  li:last-child{
+    margin-right:0;
 }
 ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.bmTabs.measure li.hover{
-	background:#705dcf;
-	color:#fff;
+    background:#705dcf;
+    color:#fff;
+    border:1px solid #705dcf;
+}
+/* ranking - achieve */
+.achieve{
+    background:#fbfbfb  url(/resources/img/sub/achieve_bg.gif) top center no-repeat;
+}
+.achieve .subContainer{
+}
+.achieve .subTitle{
+    
+}
+.achieve{
+   margin: 180px auto 50px auto;
+}
+
+
+.achieve dl {
+    background-color: #fff;
+    margin-bottom: 30px;
+    padding: 27px 46px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+
+.achieve dl .progress{
+    box-shadow: 0 3px 6px 0 rgba(185, 185, 185, 0.16);
+    margin-top: 20px;
+    background-color: #fff;
+    height: 69px;
+    border-radius: 45px;
+    line-height: 80px;
+    padding-top: 11px;
+}
+.achieve  dl .progress div{
+    background-color: #f2f2f2;
+    height: 58px;
+    line-height: 58px;
+    width: 93%;
+    margin: 0 auto;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 0 10px;
+}
+.achieve dl .progress div .bar{
+    line-height: 43px;
+    height: 43px;
+    display: block;
+    width: 0;
+    color: #fff;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 7px;
+    border-radius: 20px;
+    padding-right: 15px;
+}
+.achieve .rankingUnit{
+    overflow: hidden;
+    margin: 140px auto 35px auto;
+    float:none;
+}
+.achieve  dl .progress div .percent{
+    color:#fff;
+}
+.achieve  dl dt em{
+    text-align: center;
+    color: #fff;
+    font-family: 'OneShinhanB', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+.achieve dl dt em{
+    color:#fff;
+}
+.achieve .rankingUnit li{
+    float:none !important;
+}
+.achieve dl dd{
+    color:#fff;
+    margin-top: 14px;
+    font-size: 24px;
+}
+.achieve dl dd span{
+    font-size: 25px;
+    color:#fff;
+}
+.achieve dl dd span.txt {
+    font-family: 'OneShinhanM', sans-serif;
+}
+.achieve dl dd span.value {
+   font-weight:bold;
+   font-family: 'OneShinhanB', sans-serif;
+   float:right;
+}
+.achieve dl dd.canp span.txt .icon{
+    background: url(/resources/img/sub/ranking/achievebox_icon1.png) top center no-repeat;
+}
+.achieve dl dd.cmip span.txt .icon{
+    background: url(/resources/img/sub/ranking/achievebox_icon2.png) top center no-repeat;
+}
+.achieve .achieveBox dl{
+    background: #fff url(/resources/img/sub/ranking/achievebox_bg.png) top center no-repeat;
+}
+.achieve dl dt{
+    text-align:center;
+}
+.achieve .achieveBox dl dt{
+    padding-bottom: 15px;
+    border-bottom:1px solid #e2e2e2;
+}
+.achieve .achieveList dl dt{
+    padding-bottom: 15px;
+    border-bottom:1px solid #d6c7ff;
+}
+.achieve .achieveList{
+    margin-bottom: 120px;
+}
+.achieve .achieveList dt em{
+    color:#000;
+}
+.achieve  .icon{
+
+}
+.achieve  .icon{
+    vertical-align: -7px;
+    margin-right: 10px;
+   width: 33px;
+   height:33px;
+   display:inline-block;
+ 
+}
+.achieve .achieveBox .icon img{
+    width:100%;
+}
+.achieve .achieveBox {
+    
+}
+.achieve .achieveBox .bar {
+    background: linear-gradient(to right, #c8b4ff 0%, #593bf1 100%);
+}
+.achieve .achieveList .bar {
+    background: linear-gradient(to right, #d8d8d8 0%, #aeaeae 100%);
+}
+
+.achieve .achieveList dl dt {
+    color: #000;
+}
+.achieve .achieveList dl dd {
+    color: #000;
+}
+.achieve .achieveList dl dd span{
+    color: #000;
+}
+.achieve .achieveList dl dd.canp span.value{
+    color:#705dcf;
+}
+.achieve .achieveList dl dd.cmip span.value{
+    color:#96b3ff;
+}
+.achieve .achieveList dl dd em {
+    color: #705dcf;
+    font-weight: normal;
+}
+.achieve .achieveList .icon {
+    
+}
+.achieve .more {
+   font-size: 28px;
+    font-weight: bold;
+    color: #705dcf;
+    text-align: center;
+    background-image: url(/resources/img/sub/ranking/achieve_more.png);
+    background-size: 34px 24px;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    height: 65px;
+    background-position-y: 108%;
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% - 39px);
+    font-family: 'OneShinhanB', sans-serif;
+}
+.bmRanking_box{
+    
+    width: 90%;
+    margin: 0 auto 26px auto;
+    font-family: 'OneShinhanM', sans-serif;
+    background-size: contain;
+}
+.bmRanking_box p{
+    border-radius: 20px 20px 0 0;
+    background: #fff;
+    text-align:center;
+    font-size:60px;
+    font-family: 'OneShinhanB', sans-serif;
+    font-weight:bold;
+    color:#705dcf;
+    padding-bottom: 80px;
+    padding-top:72px;
+}
+.bmRanking_box p span{
+    display:block;
+    color:#705dcf;
+    font-size:30px;
+    font-family: 'OneShinhanL', sans-serif;
+    font-weight:100;
+    letter-spacing:-1.5px;
+    margin-bottom: 11px;
+}
+.bmRanking_box p em{
+    display:block;
+    color:#705dcf;
+    font-size:200px;
+    font-family: 'OneShinhanB', sans-serif;
+    font-weight:bold;
+    line-height:200px;
+    margin-top: 40px;
+    letter-spacing: -10px;
+}
+.bmRanking_box dl{
+    width: 100%;
+    padding: 32px 40px;
+    height: 114px;
+    box-sizing: border-box;
+    display:block;
+}
+.bmRanking_box dl:last-child{
+    border-radius:0 0 20px 20px;
+}
+.bmRanking_box dl.canp{
+    background:#705dcf;
+}
+.bmRanking_box dl.canpBp{
+    background:#c8b4ff;
+}
+.bmRanking_box dl.cmipBp{
+    background:#bbceff;
+}
+.bmRanking_box dl.canpBp dt em, .bmRanking_box dl.cmipBp dt em{
+    color: #fff;
+    font-size: 28px;
+    font-weight: 300;
+    display: inline-block;
+}
+.bmRanking_box dl.canp dt{
+    margin-top: -13px;
+} 
+.bmRanking_box dl.cmip{
+    background:#96b3ff;
+}
+.bmRanking_box.personal dl.number{
+    background:#cad9ff;
+}
+
+.bmRanking_box.personal dt, 
+.bmRanking_box.personal dt span, 
+.bmRanking_box.personal dd{
+    color:#fff;
+}
+.bmRanking_box dl.number *{
+    color:#000;
+}
+
+.bmRanking_box dt, .bmRanking_box dd{
+    float:left;
+    font-family: 'OneShinhanB', sans-serif;
+    font-weight:bold;
+    color:#fff;
+}
+.bmRanking_box dt{
+    text-align: center;
+    font-size:34px;
+}
+.bmRanking_box dt span{
+    color:#fff;
+    display:block;
+    font-size:20px;
+    font-family: 'OneShinhanB', sans-serif;
+    font-weight:bold;
+}
+.bmRanking_box dd{
+    float:right;
+    font-size:40px;
+    margin-top: -5px
+}
+.bmRanking_box dd.cmip{
+    
+}
+.bmRanking_box.personal dl.canp.two dd.cmip{
+    margin-top:0;
+}
+.referenceBox{
+    float:left;
+    width:95%;
+    margin-left:0;
+}
+.referenceBox li{
+    word-break: keep-all;
+    margin-bottom:15px;
+    font-size:24px;
+    font-family: 'OneShinhanM', sans-serif;
+    font-weight:300;
+    letter-spacing:-1.2px;
+    text-indent:-18px;
+    margin-left:50px;
+    line-height: 38px;;
+}
+
+/* 시책안내 */
+.measure_list{
+    margin-top: 160px;
+    margin-bottom:36px;
+}
+.measure_list dl{
+    margin-bottom: 40px;
+}
+.measure_list ul{
+    
+}
+.measure_list ul li{
+    margin-bottom:40px;
+}
+.measure_list ul li a{
+    display:block;
+}
+.measure_list ul li a img{
+    width:100%;
+}
+
+.measure_guide .titleBox .titleBox_t.first{
+    margin-top:0;
+    border-top:none;
+    padding-top:0;
+}
+.measure_guide .titleBox .titleBox_t{
+    font-size:34px;
+    font-weight:bold;
+    color:#705dcf;
+    font-family: 'OneShinhanB', sans-serif;
+    border-top:1px solid #e5e5e5;
+    padding-top:40px;
+}
+#sub_wrap.measure .measure_list dl dt{
+    font-weight:100;
+    width:150px;
+    
+}
+.measure_list dl dt, .measure_guide .titleBox dt{
+    display: inline-block;
+    text-align: center;
+    color:#fff;
+    width: 135px;
+    height: 40px;
+    font-weight:bold;
+    line-height: 41px;
+    font-size: 20px;
+    letter-spacing: 0px;
+    background: #705dcf;
+    border-radius: 20px;
+}
+.measure_guide .titleBox dt{
+    font-size: 24px;
+    background:none;
+    color:#705dcf;
+    width:auto;
+    margin-right:10px;
+    font-family: 'OneShinhanB', sans-serif;
+    font-weight:bold;
+    color: #705dcf;
+}
+.measure_guide .titleBox dt span{
+    display: inline-block;
+    margin: 0 12px;
+    font-size: 18px;
+    font-family: 'OneShinhanB', sans-serif;
+    vertical-align: 4px;
+}
+.measure_list dl dd, .measure_guide .titleBox dd{
+    line-height: 40px;
+    color: #705dcf;
+    font-size: 24px;
+    font-family: 'OneShinhanL', sans-serif;
+    display: inline-block;
+    margin-left: 10px;
+}
+.measure_list dl.dynamite dt{
+    background:url(/resources/img/sub/measure/measuretBg2.png) no-repeat;
+    width:173px;
+    letter-spacing:-1.5px;
+}
+.measure_guide .titleBox{
+    float:left;
+    width:100%;
+}
+.measure_guide .titleBox.sl dt{
+    padding-left:50px;
+    width:132px;
+}
+.measure_guide .titleBox dd{
+   margin-left: -5px
+}
+.measure_guide .titleBox ul{
+    float:right;
+}
+.measure_guide .titleBox ul li{
+    float:left;
+    line-height:45px;
+    font-size:19px;
+    font-family: 'OneShinhanL', sans-serif;
+    font-weight:300;
+}
+.measureCon{
+    margin-top: 40px;
+    float:left;
+    width:100%;
+}
+.subContainer.guide.individual .measureCon .Con{
+    height:224px;
+}
+.subContainer.guide.individual .Con dl:nth-child(2) dd{
+    line-height: 1.3;
+    margin-top: -7px;
+    font-size: 22px;
+}
+.subContainer.guide.sl .Con dl:nth-child(2) dd{
+    line-height: 1.3;
+    margin-top: -9px;
+    font-size:22px;
+}
+.subContainer.guide.individual .evaluationInfo dl:nth-child(2) dd+dd{
+    font-size:20px;
+    margin-top: -8px;
+}
+.subContainer.guide.individual .mandatory_standards dd strong{
+    font-weight:300;
+    margin-bottom: 5px;
+}
+.subContainer.guide.individual .Con dl:nth-child(2) dd strong{
+    font-size:30px;
+}
+.subContainer.guide.sl .measureCon .Con{
+    height:224px;
+}
+.subContainer.guide.point .measureCon .Con{
+    height:189px;
+}
+.subContainer.guide.point .measureCon.bp .Con{
+    height:200px;
+    padding:28px 0;
+}
+.subContainer.guide.group .measureCon.bb .Con{
+    height:232px;
+}
+.measureCon.esl{margin-bottom:0;}
+
+.measureCon .Con_t{
+    margin-bottom: 20px;
+   text-indent: 20px;
+    background:
+    url(/resources/img/sub/measure/circle.png) left center no-repeat;
+    font-size:30px;
+    font-weight: bold;
+    width:100%;
+    font-family: 'OneShinhanM', sans-serif;
+}
+.measureCon .Con{
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 5%);
+    width: 100%;
+    background-color: #fff;
+    padding: 35px 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+.measureCon .Con dl{
+    border-right:1px dashed #c9c9c9;
+    width: 24%;
+    height: 100%;
+    text-align:
+    center;
+    box-sizing: border-box;
+   float:left;
+    vertical-align: middle;
+}
+.measureCon .Con dl:nth-child(3){
+    width:26.7%;
+}
+.measureCon .Con dl:last-child{border-right:none;}
+.measureCon.sl .Con dl{
+    width:50%;
+}
+.measureCon .Con dt{
+    height: 70px;
+}
+.measureCon .Con dt, .measureCon .Con dd{
+    font-size:24px;
+    font-weight:bold;
+    font-family: 'OneShinhanB', sans-serif;
+}
+.measureCon .Con dd.blank{
+    color:#705dcf;
+    font-weight:bold;
+    font-size:30px;
+}
+.measureCon .Con dd{
+    font-weight:300;
+    font-family: 'OneShinhanM', sans-serif;
+    height: 80px;
+    line-height: 80px;
+}
+.measureCon .Con dd{
+    font-size:24px;
+}
+.measureCon .Con dd.small{
+    font-size: 18px;
+    line-height: 1.33;
+    font-family: 'OneShinhanL';
+    font-weight: 100;
+    margin-top: -14px;
+}
+.measureCon .Con dd em{
+    display:inline-block;
+    color:#705dcf;
+    font-size:30px;
+    font-weight:bold;
+    font-family: 'OneShinhanB', sans-serif;
+    letter-spacing: -3px;
+}
+
+.measureCon.point + .point{
+    margin-bottom:40px;
+}
+
+.measureCon.sl .Con dl:nth-child(2) dd em {
+    font-size: 50px;
+}
+.measureGuidance{
+    float:left;
+    margin-bottom:50px;
+    width:100%;
+}
+.measureGuidance dt{
+    color:#705dcf;
+    font-size:20px;
+    font-weight:bold;
+    font-family: 'OneShinhanB', sans-serif;
+    background:url(/resources/img/sub/measure/measuretBg3.png) no-repeat;
+    float:left;
+    width:187px;
+    height:73px;
+    line-height:73px;
+    text-align:center;
+
+}
+.measureGuidance dd{
+    line-height:73px;
+    font-size:20px;
+}
+.measureGuidance dd strong{
+    font-weight:bold;
+}
+.commissionerBox{
+    margin:40px 0;
+}
+.commissionerBox p{
+    background: url(/resources/img/sub/measure/arrow.png);
+    font-size: 28px;
+    font-weight: bold;
+    padding-left: 25px;
+    margin-bottom:23px;
+    font-family: 'OneShinhanB', sans-serif;
+    background-position: 1% 59%;
+    background-repeat: no-repeat;
+}
+.commissionerBox ul{
+    width:100%;
+    
+    background-color:#f1ecff;
+    padding: 38px 0px;
+    border-radius:30px;
+}
+.commissionerBox li{
+    text-align:
+    center;
+    font-size:30px;
+    font-weight:
+    bold;
+    font-family: 'OneShinhanB', sans-serif;
+    color:#705dcf;
+    line-height: 1.3;
+}
+.commissionerBox li span{
+    font-size:20px;
+    font-family: 'OneShinhanL', sans-serif;
+    color:#000;
+    line-height:40px;
+    display:
+    block;
+    margin-top: 5px;
+}
+.achievement_standards{
+   padding-top: 20px;
+    clear: both;
+    margin: 0 auto;
+    overflow: hidden;
+    width:83%;
+}
+.achievement_standards dt{
+    float:left;
+    font-size:24px;
+    font-family: 'OneShinhanM', sans-serif;
+    font-weight:bold;
+    color:#705dcf;
+}
+.achievement_standards dt span{
+    font-size:24px;
+    font-family: 'OneShinhanM', sans-serif;
+    color:#000;
+    display:inline-block;
+    margin:0 10px;
+    float:right;
+}
+.achievement_standards dd{
+    font-size:24px;
+    color:#000;
+    float:left;
+}
+.achievement_standards dd span{
+    font-family: 'OneShinhanB', sans-serif;
+    font-size:24px;
+    margin-left:5px;
+}
+.achievement_standards dd em{
+    font-family: 'OneShinhanM', sans-serif;
+    font-size:24px;
+    color:#705dcf;
+}
+.evaluation{
+    height:115px;
+    background:url(/resources/img/sub/cumulative/evaluation_standardBox.png) no-repeat;
+    float:left;
+    width:648px;
+}
+.evaluation dt, .evaluation dd{
+    line-height:115px;
+    /*font-weight:bold;*/
+    font-family: 'OneShinhanM', sans-serif;
+    font-size:22px;
+    color:#fff;
+    padding-left:47px;
+    float:left;
+}
+.evaluation dd{ 
+    padding-left:100px;
+    color:#000;
+    font-family: 'OneShinhanM', sans-serif;
+    font-weight:normal;
+    width:56%;
+}
+.evaluation.point dd{   
+    padding-left:125px;
+}
+.evaluation dd strong{
+    color:#705dcf;
+    font-weight:bold;
+    font-family: 'OneShinhanM', sans-serif;
+}
+.necessaryGuidance{
+    float: left;
+    width:100%;
+    margin: 30px 0 40px;
+}
+.necessaryGuidance dt{
+    display: inline-block;
+    width:150px;
+    height:50px;
+    line-height:50px;
+    font-family: 'OneShinhanM', sans-serif;
+    background-color:#705dcf; 
+    border-radius:25px;
+    font-size:22px;
+    color:#fff;
+    text-align:center;
+}
+.necessaryGuidance dd{
+    margin-left: 10px;
+    display: inline-block;
+    font-family: 'OneShinhanL', sans-serif;
+    font-size:24px;
+}
+.necessaryGuidance dd strong{
+    font-weight:bold;
+    font-family: 'OneShinhanB', sans-serif;
+    color:#705dcf;
+}
+.necessaryGuidance dd span{
+    font-weight:bold;
+    font-family: 'OneShinhanL', sans-serif;
+    font-size:15px;
+}
+.bpTxt{
+    float:left;
+    font-size:24px;
+    font-weight:300;
+    font-family: 'OneShinhanM', sans-serif;
+    margin:0 0 0 25px;
+}
+.bpTxt strong{
+    
+}
+.point_bonus{
+    float:left;
+    width:653px;
+    background:url(/resources/img/sub/measure/bonusBox.png) no-repeat;
+    height:183px;
+    margin-top:22px;
+}
+.point_bonus dt, .point_bonus dd{
+    text-align:center;
+}
+.point_bonus dt{
+    font-size:25px;
+    font-weight:300;
+    font-family: 'OneShinhanB', sans-serif;
+    color:#705dcf;
+    line-height:68px;
+}
+.point_bonus dd{
+    font-size:21px;
+    margin-top:26px;
+    font-family: 'OneShinhanM', sans-serif;
+    color:#000;
+    line-height:30px;
+}
+.point_bonus dd strong{
+    font-family: 'OneShinhanB', sans-serif;
+    color:#705dcf;
+    font-weight:bold;
+}
+/* 시책 진도 현황 */
+.cumulativePage{
+    float:left;
+    width:100%;
+}
+.cumulativeTxt{
+    text-align:center;
+    font-size:65px;
+    font-weight:bold;
+    font-family: 'OneShinhanB', sans-serif;
+}
+.cumulativeTxt span{
+    font-weight:100;
+    display:block;
+}
+.cumulativeTxt span.person{
+    color:#705dcf;
+    font-size:35px;
+}
+.cumulativeTxt span.currentDate{
+    color:#b1b1b1;
+    font-size:20px;
+    font-weight:bold;
+    font-family: 'OneShinhanB', sans-serif;
+}
+.cumulativePage p em{display:block;}
+.cumulativePage p.currentCumulative span,
+.cumulativePage p.preCumulative span,
+.cumulativePage p.forwardCumulative span{
+    display:inline-block;
+    font-size:30px;
+    font-weight:100;
+}
+.cumulativePage p.currentCumulative span{color:#fff;}
+.cumulativePage p.currentCumulative em,
+.cumulativePage p.preCumulative em,
+.cumulativePage p.forwardCumulative em{
+    font-size:30px;
+    font-weight:bold;
+    font-family: 'OneShinhanB', sans-serif;
+    color:#fff;
+}
+.cumulativePage p.preCumulative em,
+.cumulativePage p.forwardCumulative em{
+    color:#705dcf;
+}
+.currentCumulative, 
+.preCumulative,
+.forwardCumulative{
+    float:left;
+    width:668px;
+    height:184px;
+    background:url(/resources/img/sub/cumulative/cumulativeBg.png) no-repeat;
+    text-align:center;
+    padding-top:44px;
+    font-size:61px;
+    font-weight:bold;
+    font-family: 'OneShinhanB', sans-serif;
+    color:#fff;
+    margin-top:40px;
+}
+.preCumulative,
+.forwardCumulative{
+    background:url(/resources/img/sub/cumulative/cumulativeBg2.png) no-repeat;
+    color:#000;
+}
+.cumulativePage .endTxt{
+    background:url(/resources/img/sub/cumulative/endIcon.png) center top no-repeat;
+    padding-top:218px;
+    margin:100px 0 60px;
+    text-align:center;
+    font-size:35px;
+    line-height:55px;
+    font-weight:200;
+}
+.cumulativePage .endTxt strong{
+    font-weight:bold;
+    font-family: 'OneShinhanB', sans-serif;
 }
 
 /* 랭킹 */
 .rankingTitle{
-	text-align:center;
-	font-size:60px;
-	letter-spacing:-5px;
-	font-weight:600;
-	margin-bottom:77px;
+    text-align:center;
+    font-size:60px;
+    letter-spacing:-5px;
+    font-weight:600;
+    margin-bottom:77px;
 }
 .rankingTitle span{
-	display:block;
-	color:#3789dc;
-	font-weight:normal;
-	font-size:20px;
+    display:block;
+    color:#3789dc;
+    font-weight:normal;
+    font-size:20px;
+}
+.rankingBox .icon, .rankingList .icon{
+    margin-right: 15px;
+    margin-top: 5.5%;
+   float:left;
+}
+.rankingBox .icon img, .rankingList .icon img{
+    display:inline;
 }
 .rankingBox{
-	float:left;
-	margin:0 0 90px 22px;
+    
+}
+.rankingBox dt, .rankingBox dd {
+    font-size: 32px;
+    font-family: 'OneShinhanB', sans-serif;
+    color:#fff;
 }
 .rankingBox dl{
-	float:left;
-	margin:70px 20px 0 0;
-	position:relative;
+    border-radius: 20px;
+    overflow: hidden;
+   padding: 0 30px;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+    background-color: #aac0fa;
+    height: 120px;
+    color: #000;
+    box-sizing: border-box;
+    margin-bottom:20px;
 }
-.rankingBox dl:last-child{margin-right:0;}
-.rankingBox dl.centerBox{margin-top:15px;}
+.rankingBox dl.rank1{
+    background:#fff url(/resources/img/sub/ranking/rankingbox_bg1.png) top center no-repeat
+}
+.rankingBox dl.rank2{
+    background:#fff url(/resources/img/sub/ranking/rankingbox_bg2.png) top center no-repeat
+}
+.rankingBox dl.rank3{
+    background:#fff url(/resources/img/sub/ranking/rankingbox_bg3.png) top center no-repeat
+}
 .rankingBox dt{
-	width: 54px;
-    height: 54px;
-    line-height: 54px;
-    border-radius: 54px;
-    background: #fff;
-    text-align: center;
-    color: #96b3ff;
-    font-size: 20px;
-    font-family: 'OneShinhanB', sans-serif;
-    position: absolute;
-    top: -27px;
-    left: 50%;
-    margin-left: -31px;
-    border: 4px solid #96b3ff;
-    z-index: 1;
-}
-.rankingBox dl:last-child dt{
-	border: 4px solid #c8b4ff;
-	color: #c8b4ff;
-}
-.rankingBox dl.centerBox dt{
-	background-color:#fff;
-	color:#705dcf;
-	border:4px solid #705dcf;
-	width:68px;
-	height:68px;
-	box-sizing:border-box;
-	top:-34px;
-	line-height:68px;
-}
-.rankingBox dd{
-	width:161px;
-	height:97px;
-	line-height:35px;
-	border-radius:30px;
-	box-shadow: 1px 0 18px 10px rgb(0 0 0 / 7%);
-	font-family: 'OneShinhanB', sans-serif;
-	text-align:center;
-	font-weight:bold;
-	font-size:24px;
-	color:#fff;
-	padding-top:60px;
-	background-color:#96b3ff;
-}
-.rankingBox dl:last-child dd{
-	background-color:#c8b4ff;
-}
-.rankingBox dd.crown, .rankingBox dl.centerBox dd.crown {
-    width: 21px;
-    height: 15px;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    margin-left: -10px;
-	background:none;
-}
-.rankingBox dl.centerBox dd.crown {
-	top: -60px;
-}
-.rankingBox dl.centerBox dd{
-	width:214px;
-	height:140px;
-	background:#705dcf;
-	color:#fff;
-	line-height:38px;
-	padding-top:72px;
-	font-size:33px;
+    float:left;
+    margin-top: 3%;
 }
 
-.rankingBox dl.centerBox dd span{
-	font-size:25px;
-	display:block;
-	color:#fff;
-	font-family: 'OneShinhanB', sans-serif;
-	font-weight:200;
+.rankingBox dd{
+    float:right;
+    line-height: 120px;
 }
-.rankingBox dl dd span{
-	font-size:22px;
-	display:block;
-	color:#fff;
+
+.rankingBox dl dt em{
+    color:#fff;
+    font-size:28px;
 }
-.rankingBox dl dd span.myName{font-size:18px; color:#fff;}
-.rankingBox dl dd span.myName em{
-	color:#fff;
-	font-family: 'OneShinhanM', sans-serif;
-	font-weight:bold;
-	font-size:18px;
+.rankingBox dl dt span.myName{
+     color:#fff;
+    display:block;
 }
-.rankingBox dl.centerBox dd span.myName em{
-	color:#fff;
-	font-family: 'OneShinhanB', sans-serif;
-	font-weight:bold;
+.rankingBox dl dt span.myName em{
+    margin-left: 5px;
+    font-weight: bold;
+    font-size:32px;
 }
 .rankingUnit{
-	float:left;
-	width:100%;
-	margin-bottom:80px;
+    float:left;
+    width:100%;
+    margin-bottom:30px;
 }
 .rankingUnit li{
-	float:left;
-	font-size:20px;
-	font-family: 'OneShinhanM', sans-serif;
-	color:#705dcf;
+    float:left;
+    font-size:24px;
+    font-family: 'OneShinhanM', sans-serif;
+    color:#000;
+    letter-spacing: -1.2px;
 }
 .rankingUnit li:last-child{
-	float:right;
-	margin-right:5px;
+    float:right;
+    margin-right:5px;
 }
 .rankingList, .rankingList dl{
-	display:table;
-	margin:0 auto;
+    display:table;
+    margin:0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    width:100%;
+}
+.rankingList{
+    padding:0 5px;
+    box-sizing: border-box;
 }
 .rankingList dl{
-	margin-bottom:18px;
+    margin-top:5px;
+    margin-bottom:20px;
+    padding:0 30px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    line-height: 110px;
+    background-color:#fff;
+    height:110px;
+    color:#000;
+    box-sizing: border-box;
+}
+.rankingList dt{
+    float:left;
+    font-family: 'OneShinhanM', sans-serif;
+}
+.rankingList dd{
+    float:right;
+    font-family: 'OneShinhanB', sans-serif;
 }
 .rankingList dt, .rankingList dd{
-	float:left;
-	width:130px;
-	height:46px;
-	line-height:46px;
-	border-radius:40px;
-	text-align:center;
-	color:#fff;
-	font-size:20px;
-	font-family: 'OneShinhanB', sans-serif;
-	background:#bfbfbf;
-	box-shadow: 1px 0 18px 10px rgb(0 0 0 / 7%);
+    font-size:30px;
 }
-.rankingList.point dt{
-	width:207px;
-	font-size:18px;
+.rankingBox.point dt{
+    margin-top: 0;
+    line-height:120px;
 }
-.rankingList dt{margin-right:10px;}
-.rankingList dd{
-	width:376px;
-	background:#fff;
-	color:#000;
+.rankingBox.point dt em{
+   font-size:30px;
+   font-weight:bold;
+}
+.rankingBox.point dt em::after{
+    content: "";
+    width: 3px;
+    height: 25px;
+    background: #fff;
+    display: inline-block;
+    margin-left: 14px;
+    vertical-align: -1px;
+    margin-right: 3px;
+}
+.rankingList.point dt em::after{
+    content: "";
+    width: 3px;
+    height: 25px;
+    background: #000;
+    display: inline-block;
+    margin-left: 14px;
+    vertical-align: -1px;
+    margin-right: 3px;
+}
+.rankingBox.point .pointer{
+   color:#fff;
+    font-weight:bold;
+}
+.rankingList.point dt em{
+   font-weight:bold;
+}
+.rankingList.point dt span{
+   font-weight:bold;
+}
+.rankingList.point .pointer{
+    font-weight:bold;
 }
 
+
 .numbering{
-	display: table;
+    display: table;
     margin: 30px auto 0 auto;
 }
 .numbering li{
-	float:left;
+    float:left;
 }
 .numbering li a{
-	margin-right:20px;
-	color:#7d7d7d;
-	font-size:15px;
+    margin-right: 30px !important;
+    color: #000000;
+    font-size: 24px;
+    font-family: 'OneShinhanM', sans-serif;
 }
 .numbering li:first-child a,
 .numbering li:nth-child(6) a{
-	margin-right:30px;
+    margin-right:30px;
 }
 .numbering li a:hover, .numbering li a.current{
-	font-weight:bold;
-	color:#705dcf;
+    font-weight:bold;
+    color:#705dcf;
 }
 
+
+/* roulette */
+.event_roulette {
+    overflow: hidden; 
+    position: relative;
+}
+.roulette_box{
+    z-index: 1;
+    width: 100%;
+    height: 828px;
+    margin:0px auto;
+    text-align: center;
+    padding-top:700px;
+}
+.roulette_box::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    width: 96px;
+    height: 79px;
+    margin: 640px 0 0 -48px;
+    z-index: 10;
+    background: url(/resources/img/sub/event/event_kv02_pin.png) no-repeat center;
+}
+.roulette_box .obj{
+    position: relative;
+}
+.roulette_box .btn_roulette{
+    z-index: 1;
+    width: 572px;
+    margin-top:140px;
+}
+.roulette_box .roulette{
+    height:556px; 
+    background: url(/resources/img/sub/event/event_kv02_bg.png) center center no-repeat; 
+}
+.roulette_box .roulette img{
+    position:absolute; 
+    top:115px; 
+}
+.roulette_box .roulette img:nth-child(1){
+    left: 204px;
+    top: 110px;
+    transform: rotate(-30deg);
+}
+.roulette_box .roulette img:nth-child(2){
+    left: 119px;
+    top: 212px;
+    transform: rotate(-90deg);
+}
+.roulette_box .roulette img:nth-child(3){
+    left: 194px;
+    top: 373px;
+    transform: rotate(-150deg);
+} 
+.roulette_box .roulette img:nth-child(4){
+    left: 324px;
+    top: 329px;
+    transform: rotate(-210deg);
+}
+.roulette_box .roulette img:nth-child(5){
+    left: 425px;
+    top: 236px;
+    transform: rotate(-270deg);
+}
+.roulette_box .roulette img:nth-child(6){
+    left: 323px;
+    top: 84px;
+    transform: rotate(30deg);
+} 
+.roulette_box .item {
+    position: absolute; 
+    bottom: 116px;
+}
+.eventPage .replyContainer{
+    float:left;
+    margin-top:300px;
+}
+
+/* popup */
+.dimm {position:fixed;top:0;left:0;z-index:999;width:100%;height:100%;background:rgba(0,0,0,0.6);}
+.popup_wrap {display: none; position: fixed; top: 0; left: 0; bottom: 0; right: 0; z-index: 999; overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch; /*-ms-overflow-style: none;*/ text-align: center;}
+/* .popup-wrap::-webkit-scrollbar {display: none;} */
+.popup_wrap .popup_inner {position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); margin: auto; padding-bottom: 50px; z-index:1000;}
+.popup_wrap .popup_container {overflow: hidden; position: relative; background: #fff; width:600px; border-radius: 40px; padding:136px 0 90px 0;}
+.popup_wrap .popup_close {position:absolute;top: 20px;right: 20px;width: 77px;}
+.popup_wrap .popup_title p {
+    font-size: 58px;
+    font-weight:bold;
+    line-height:1.1;
+}
+.popup_wrap .popup_title p.sub_txt {
+    font-size: 34px;
+}
+.popup_wrap .popup_title p strong {color:#ff7113;}
+.popup_wrap .popup_cont {margin-top:45px;}
+.popup_wrap .popup_cont .btn {display:block;width: 523px;height: 122px;line-height: 122px;margin:50px auto 0;border-radius:5px;background:#ff7113;font-size: 60px;font-weight:700;color:#fff;}
+
+.popup_winning .popup_inner {height: 650px;}
+
+/*스크래치 이벤트*/
+.subMeta06.july{background:url(/resources/img/sub/event/scratch_bg_july.jpg) top center no-repeat; height:1550px !important;}
+.subMeta06.august{background:url(/resources/img/sub/event/scratch_bg_august.jpg) top center no-repeat; height:1550px !important;}
+
+.subMeta06.july h3.title{background:url(/resources/img/sub/event/scratch_title_july.png) top center no-repeat; width: 654px; height: 310px; margin: 0 auto;}
+.subMeta06.august h3.title{background:url(/resources/img/sub/event/scratch_title_august.png) top center no-repeat; width: 654px; height: 310px; margin: 0 auto;}
+
+.subMeta06.july #scratcEvent.eventPage .info_{background-image:url(/resources/img/sub/event/scratch_box_july.png);width: 100%;margin:0px auto;margin-top:10px;text-align: left;height: 65vw;background-size: contain;background-repeat: no-repeat;}
+.subMeta06.august #scratcEvent.eventPage .info_{background-image:url(/resources/img/sub/event/scratch_box_august.png);width: 100%;margin:0px auto;margin-top:10px;text-align: left;height: 65vw;background-size: contain;background-repeat: no-repeat;}
+
+.subMeta06.july #scratcEvent.eventPage .info_ li span{letter-spacing:-0.7px;  font-size:24px; padding:7px 0px; width:142px; border-radius:22px; color: #009fe6; font-family: 'OneShinhanM', sans-serif; background-color: #ffffff; text-align: center; position: absolute; top:-4px; left:0px;}
+.subMeta06.august #scratcEvent.eventPage .info_ li span{letter-spacing:-0.7px;  font-size:24px; padding:7px 0px; width:142px; border-radius:22px; color: #f969a4; font-family: 'OneShinhanM', sans-serif; background-color: #ffffff; text-align: center; position: absolute; top:-4px; left:0px;}
+
+#sub_wrap.subMeta06 .subContainer{margin:0;}
+#header.event{background: none;}
+#header.event.fixed{background: rgba(113,93,239,.75);}
+#scratcEvent.eventPage{padding-top:143px; margin-bottom:0px; text-align: center;}
+#scratcEvent.eventPage img{display: inline-block;}
+#scratcEvent.eventPage h4{margin-top:30px;}
+#scratcEvent.eventPage .info_ ul{ position: absolute; top: 70px;left: 110px;}
+#scratcEvent.eventPage .info_ li{letter-spacing:-0.7px;font-size: 24.1px;padding-left:150px;margin:18px 0px;line-height: 1.25;color: #ffffff;font-family: 'OneShinhanM', sans-serif;position: relative;}
+#scratcEvent.eventPage .info_ li + li span{top: 5px;}
+#scratcEvent.eventPage .scratchpad{width:536px;height:170px;margin:0px auto;text-align: center;position: absolute; top: 215px; left: calc(50% - 268px);}
+#scratcEvent.eventPage .scratchpad canvas{top:0px; left:0px;}
+
+
+.main_txt{
+    font-size:58px;
+    color:#705dcf;
+    font-family: 'OneShinhanB', sans-serif;
+    font-weight:bold;
+}
+.popup_fail .popup_inner.scratch{height:550px;}
+.popup_wrap .popup_inner.scratch .popup_container{width:580px; padding: 136px 0 186px 0; background-image: none; background:url(/resources/img/sub/event/scratch_popup_bg1.png) top center no-repeat; overflow: visible;}
+.popup_wrap .popup_inner.scratch .popup_close{top:-35px;}
+.popup_wrap.popup_fail .popup_inner.scratch .main_txt{font-size:150px;}
+.popup_wrap.popup_fail .popup_title .sub_txt span {font-family: 'OneShinhanB', sans-serif; font-weight:bold;}
+
+.popup_wrap.popup_fail .main_txt{
+    font-size:119px;
+    margin-bottom:60px;
+}
+.popup_wrap.popup_fail .sub_txt{
+    font-size:34px;
+    font-family: 'OneShinhanM', sans-serif;
+    font-weight:300;
+}
+.popup_winning .popup_title .sub_txt {margin-top:20px;font-weight:400;font-size:28px;}
+.popup_winning .popup_title .sub_txt span {font-family: 'OneShinhanB', sans-serif; font-weight:bold;}
+.popup_winning .input_group {overflow:hidden;font-size: 40px;margin-bottom:40px;}
+.popup_winning .input_group:last-of-type {margin-bottom:0;}
+.popup_winning .input_group label {float:left;width: 110px;text-align:right;}
+.popup_winning .input_group input {float:right;width:76%;height: 70px;padding:10px 20px;border:2px solid #bfbfbf;font-size:28px;}
+.popup_wrap.popup_winning .popup_inner.scratch .popup_title p{font-size:55px;}
+.popup_wrap.popup_winning .popup_inner.scratch .popup_title p.date{font-family: 'OneShinhanB', sans-serif; font-size:40px; font-weight: bold; margin-bottom:30px; line-height: 57px; letter-spacing:-2px; font-weight: bold; color: #705dcf;}
+.popup_wrap.popup_winning .popup_inner.scratch .popup_title p.sub_txt{font-family: 'OneShinhanM', sans-serif; margin-top: 27px; font-size:34px; line-height: 1.5; color:#000000; font-weight: 300;}
+.popup_wrap.popup_winning .popup_inner.scratch .popup_container{padding: 106px 0 186px 0; background-image: none; background:url(/resources/img/sub/event/scratch_popup_bg2.png) top center no-repeat;}
+
+/*  210623 추가 CSS */
+.bmRanking_box.personal{
+   
+}
+.bmRanking_box dl.canp dt, .bmRanking_box dl.canp dd{
+    color:#fff;
+}
+.bmRanking_box dl.canp dt{
+   
+}
+
+/* 210626-2 추가 */
+.dynamiteBanner img{
+    border: 1px solid transparent;
+    border-radius: 30px;
+    box-sizing: border-box;
+    width:642px;
+    height:200px;
+}
+.evaluationInfo, .evaluationInfo dl,
+.mandatory_standards{
+    float:left;
+    width:100%;
+}
+.evaluationInfo dl{
+    line-height:45px;
+}
+.evaluationInfo{
+    margin:25px 0;
+}
+strong{
+    font-weight:bold;
+}
+strong.purple{
+    color:#705dcf;
+    font-weight:bold;
+}
+.introduction {
+    float: left;
+    margin: 30px 0;
+}
+.introduction dt{
+    width: 100%;
+    margin-bottom: 5px;
+    float: left;
+    font-size: 34px;
+     font-weight: bold;
+     padding-left: 24px;
+    background: url(/resources/img/sub/measure/circle.png) left center no-repeat;
+    font-family: 'OneShinhanB', sans-serif;
+}
+.introduction dd{
+    font-family: 'OneShinhanM', sans-serif;
+    width: 100%;
+    float:left;
+    font-size:24px;
+    padding-left:27px;
+}
+.evaluationInfo dt, .evaluationInfo dd{
+    color:#000;
+    font-size:24px;
+    font-family: 'OneShinhanL', sans-serif;
+}
+.evaluationInfo dt .space{
+    width: 39px;
+    display: inline-block;
+}
+.evaluationInfo dt .space + .space{
+    width:12px;
+}
+.evaluationInfo dt{
+    font-weight: bold;
+    float:left;
+    background:url(/resources/img/sub/measure/circle.png) left center no-repeat;
+    font-family: 'OneShinhanB', sans-serif;
+    padding-left:20px;
+}
+.evaluationInfo dt span{
+    vertical-align: 4px;
+    display:inline-block;
+    margin:0 10px;
+    font-size:18px;
+    font-family: 'OneShinhanB', sans-serif;
+}
+.evaluationInfo dt span.sl_blank{margin-left:25px;}
+.subContainer.guide.sl .mandatory_standards dl{
+    width:100%;
+    height:174px;
+}
+.subContainer.guide.sl .evaluationInfo dl dt .space{
+    width: 48px;
+}
+.subContainer.guide.sl .evaluationInfo dl dt .space + .space{
+    width: 16px;
+}
+.subContainer.guide.sl .mandatory_standards dl dd{
+    line-height: 1.2;
+}
+.subContainer.guide.sl .mandatory_standards dl strong{
+    display:inline-block;
+    font-weight:normal;
+}
+.subContainer.guide.sl .mandatory_standards.gsl{
+    margin-bottom:30px;
+}
+.subContainer.guide.point .measureCon.bp .Con dl{
+    width:26%;
+}
+.subContainer.guide.point .measureCon.bp .Con dl:first-child dd{
+    font-size:22px;
+    line-height:1.33;
+}
+.subContainer.guide.point .measureCon.bp .Con dl:first-child dd strong{
+    font-size:24px;
+}
+.subContainer.guide.point .measureCon.bp .Con dl:first-child dd strong em{
+   font-size: 30px;
+    vertical-align: -1px;
+}
+.subContainer.guide.point .measureCon.bp .Con dl:nth-child(2){
+    width:48%;
+}
+.subContainer.guide.point .measureCon .Con dd.trip_area{
+    margin-top: -15px;
+}
+.subContainer.guide.point .measureCon.bp{
+    margin-top: 10px;
+}
+.subContainer.guide.point .measureCon.bp .Con dl:nth-child(2) dd{
+    margin-top:-18px;
+    font-size:22px;
+   line-height:1.33;
+   font-family: 'OneShinhanL', sans-serif;
+    font-weight: bold;
+}
+.subContainer.guide.point .measureCon.bp .Con dl:nth-child(2) dd *{
+   font-size:22px;
+   display:block;
+   font-family: 'OneShinhanB', sans-serif;
+}
+.subContainer.guide.point .measureCon.point dl:nth-child(1){
+    width: 22%;
+}
+
+.subContainer.guide.point .measureCon.point dl dt{
+    height: 48px;
+}
+.subContainer.guide.point .measureCon.point dl:nth-child(2) dd, .subContainer.guide.point .measureCon.point dl:nth-child(3) dd{
+    line-height:1.2;
+    font-size:22px;
+}
+.subContainer.guide.point .measureCon.point dl:nth-child(2) dd strong{
+    font-size:24px;
+}
+ .subContainer.guide.point .measureCon.point dl:nth-child(3) dd strong{
+     font-size:30px;
+ }
+.subContainer.guide.point .measureCon.point dl:nth-child(2){
+    width: 27%;
+}s
+.subContainer.guide.point .measureCon.point dl:nth-child(3) dd{
+    margin-top:-4px;
+}
+.subContainer.guide.point .measureCon.point dl:nth-child(3) dd em + em, .subContainer.guide.individual .measureCon dl:nth-child(2) dd em + em, .subContainer.guide.sl .measureCon dl:nth-child(2) dd em + em{
+    color:#000;
+    margin-left: 5px;
+}
+.subContainer.guide.group .evaluationInfo dl dt .space{
+    width: 48px;
+}
+.subContainer.guide.group .evaluationInfo dl dt .space + .space{
+    width:16px;
+}
+.subContainer.guide.group .measureCon dl{
+    width:30%;
+}
+.subContainer.guide.group .measureCon dl dd{
+   line-height: 75px;
+}
+.subContainer.guide.group .measureCon dl:first-child dt, .subContainer.guide.group .measureCon dl:last-child dt{
+    line-height: 62px;
+}
+.subContainer.guide.group .measureCon dl:nth-child(2){
+    width: 40%;
+}
+.subContainer.guide.group .measureCon dl:nth-child(2) dt span{
+    font-size: 20px;
+    font-weight:300;
+    font-family: 'OneShinhanM', sans-serif;
+}
+.subContainer.guide.group .measureCon .Con + .Con dl:first-child dd{
+    line-height: 75px;
+}
+.subContainer.guide.group .measureCon dl:nth-child(2) dd{
+    line-height: 72px;
+}
+.subContainer.guide.group .measureCon dl:nth-child(2) dd strong{
+    font-weight:bold;
+    font-size:30px;
+    font-family: 'OneShinhanB', sans-serif;
+}
+.subContainer.guide.group .measureCon dl:nth-child(2) dd strong em{
+    font-size:26px;
+}
+.subContainer.guide.group .evaluationInfo{
+    margin-bottom:0;
+} 
+.subContainer.guide.group .measureCon .Con dl:first-child dd {
+    line-height: 1.5;
+}
+.subContainer.guide.group .measureCon dl:nth-child(3) dd{
+    line-height: 1.2;
+    font-size: 22px;
+    margin-top: -5px;
+}
+.subContainer.guide.group .measureCon dl:nth-child(3) dd strong{
+    display:block;
+    font-family: 'OneShinhanB', sans-serif;
+}
+.subContainer.guide.group .measureCon.guinness dl:nth-child(2) dt{
+   line-height: 62px;
+}
+.subContainer.guide.group .measureCon.guinness dl:nth-child(2) dd{
+    line-height: 35px;
+}
+.subContainer.guide.group .measureCon.guinness dl:nth-child(3) dd{
+    line-height: 1.4;
+    margin-top: 5px;
+}
+.subContainer.guide.group .measureCon.guinness dl:nth-child(2) dd span{
+    margin:0 10px;
+}
+.subContainer.guide.group .measureCon.guinness dl:nth-child(2) dd *{
+    display:inline-block;
+    vertical-align: middle;
+}
+.subContainer.guide.group .measureCon.guinness dl:nth-child(2) dd strong{
+    text-align:left;
+}
+.mandatory_standards dl{
+    overflow: hidden;
+    background-color:#fff;
+    border-radius:20px;
+    width:48.5%;
+    height:230px;
+    float:left;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
+}
+.mandatory_standards dl.two{
+    float:right;
+}
+.mandatory_standards dt{
+    background-color:#705dcf;
+    line-height:60px;
+    color:#fff;
+    text-align:center;
+    font-size:28px;
+    font-family: 'OneShinhanM', sans-serif;
+}
+.mandatory_standards dd{
+    margin-top:20px;
+    font-size:24px;
+    font-family: 'OneShinhanM', sans-serif;
+    text-align:center;
+}
+.mandatory_standards dd strong{
+    color:#705dcf;
+    display:block;
+    font-family: 'OneShinhanM', sans-serif;
+    margin-bottom:10px;
+}
+.mandatory_standards dl.two dd{
+}
+.measureCon .Con dd.trip_area{
+    font-family: 'OneShinhanB', sans-serif;
+    font-size:30px;
+    color:#705dcf;
+}
+.measureCon .Con + .Con{
+    margin-top:30px;
+}
+.measureCon .Con dd.trip_area.one{
+   
+}
+.measureCon .Con dd em.jeju{
+    background-color:#705dcf;
+    color:#fff;
+    font-family: 'OneShinhanB', sans-serif;
+    font-size:21px;
+    width:79px;
+    height:30px;
+    line-height:30px;
+    display:block;
+    margin:0 auto;
+    letter-spacing: 0;
+}
+.measureCon
+.measureCon.headoffice .Con dl{
+    width:33%;
+}
+.measureCon.headoffice .Con dl:nth-child(2) dd {
+    margin-top: 23px;
+}
+.measureCon.headoffice .Con dl:last-child dd em{
+    font-size:44px;
+}
+.measureCon.point .Con dl:nth-child(2) dd em{
+    font-size:33px;
+}
+.measureCon.point .Con dl:first-child dd{
+    font-size:24px;
+}
+
+/*  210628 추가 */
+.product_price{
+    float:left;
+    width:100%;
+    text-align: center;
+}
+.product_price.esl{
+    margin:30px 0 0 21px;
+}
+.product_price dt, .product_price dd{
+    float:left;
+    font-size:24px;
+    color:#705dcf;
+    font-family: 'OneShinhanM', sans-serif;
+    font-weight:bold;
+}
+.product_price dt span{
+    display:inline-block;
+    float:right;
+    margin:0 10px;
+    color:#705dcf;
+}
+.product_price dd{
+    color:#000;
+}
+.product_price dd span{
+    font-size:15px;
+    font-family: 'OneShinhanL', sans-serif;
+}
+
+/* 220812 추가 */
+.event_vote.second{
+    background: url(/resources/img/sub/event/voteEvent_second_bg.jpg) top center no-repeat;
+    background-size: cover;
+    padding-bottom:30px;
+    height: 2516px !important;
+}
+.event_vote.second .event_kv .middle{
+    width: 84%;
+    margin: 0 auto;
+    margin-top: -50px;
+}
+.event_vote.second .event_kv .top{
+    padding-top:23%;
+}
+.event_vote.second .event_kv .wc_list{
+    width:79%;
+    padding-top: 0;
+}
+.event_vote.second .event_kv .wc_list li{
+    width: 44%;
+    margin: 2.5%;
+    margin-bottom: 31px;
+    float: none;
+    display: inline-block;
+}
+.event_vote.second input[type="radio"]+ em{
+    margin-top:7px;
+    border: 2px solid #b29ecf;
+    width: 22px;
+    height: 22px;
+    margin-left: -8px;
+}
+.event_vote.second input[type="radio"]:checked + em::before{
+    background-color: #705dcf;
+    left: 2px;
+    top: 2px;
+}
+.event_vote.second .btn_ucc{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 12px;
+}
+
+/*  210721 추가 */
+.event_vote{
+    background: url(/resources/img/sub/event/voteEvent_bg.jpg) top center no-repeat;
+    background-size: cover;
+    padding-bottom:30px;
+}
+.event_vote .subContainer{
+    margin:0;
+    padding-bottom:0;
+}
+.event_vote .event_kv .wc_list{
+    padding-top: 15px;
+    width: 89%;
+    margin: 0 auto;
+    text-align: center;
+    overflow:hidden;
+}
+.event_vote .event_kv .top{
+    width:100%;
+}
+.event_vote .event_kv .wc_list li{
+    display:block;
+    float:left;
+    width: 44%;
+    text-align: center;
+    margin:3%;
+    margin-bottom: 28px;
+}
+.event_vote .event_kv .wc_list li .img {
+    overflow:hidden;
+}
+.event_vote .event_kv .wc_list li .img img{
+    float:right;
+    width: 100%;
+}
+.event_vote .btn_ucc{
+    margin: 30px 0px;
+    display: block;
+}
+.event_vote .btn_ucc img{
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+}
+.event_vote input[type="radio"]{display:none;}
+.event_vote input[type="radio"]+ em {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border: 2px solid #715ecf;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-top: 10px;
+     }
+.event_vote input[type="radio"]:checked + em {
+   
+    }
+.event_vote input[type="radio"]:checked + em::before{
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    border-radius:50%;
+    width: 18px;
+    height: 18px;
+    z-index: 2;
+    background-color: #715ecf;
+    
+}
+    
+    
+    
+  .event_vote .logo_bottom img{
+      margin:0 auto;
+  }
+  
 /* 210804 비밀번호 찾기 추가 */
-.pwFind_wrap{
-	background: url(../img/sub/findpwIcon.png) top center no-repeat;
-    background-position-y: 50px;
+.pwFind_wrap{padding-top: 240px;}
+.pwFind_wrap .icon{
+    width: 130px;
+    background: url(/resources/img/sub/findpwIcon.png) top center no-repeat;
+    height: 130px;
+    margin: 0 auto;
 }
 .find_result{
-	font-size:46px;
-	font-family: 'OneShinhanL', sans-serif;
-	color:#705dcf;
-	padding: 200px 0 140px;
-	text-align:center;
-	line-height:62px;
+    line-height: 1.52;
+    font-size: 50px;
+    font-family: 'OneShinhanL', sans-serif;
+    color:#705dcf; 
+    padding:240px 0;
+    text-align:
+    center;
+     padding-top: 34px;
 }
 .find_result em.pw{
-	display:block;
+    display: inline-block;
+        color: #705dcf;
 }
-.find_result em.pw input{
-	font-weight:bold;
-	display:inline-block;
-	font-family: 'OneShinhanB', sans-serif;
-	border:none;
-	font-size:46px;
-	vertical-align: baseline;
-	width:100%;
-}
-.find_result em.pw input::placeholder{
-	color:#705dcf;
-}
-.find_result em.pw input[type="text"]{
-	color:#705dcf;
-	text-align:center;
-}
-
-/* My Reward */
-.rewardBox dl{
-	width: 100%;
-    box-sizing: border-box;
-    border-radius: 20px;
-	margin-bottom:50px;
-}
-.rewardBox dt{
-	background: none;
-    width: 100%;
-    font-size: 30px;
-    text-align: center;
-    height: 80px;
-    line-height: 80px;
-    background-color: #9486db;
-    border-radius: 20px 20px 0 0;
-    color: #fff;
+.find_result em.pw span{
+    font-weight:bold;
+    display:
+    inline-block;
     font-family: 'OneShinhanB', sans-serif;
-    font-weight: bold;
-    letter-spacing: normal;
+    font-size:50px;
+    color: #705dcf;
 }
-.rewardBox dd{
-	line-height: 141px;
-    float: none;
-    text-align: center;
-    font-size: 45px;
-    background-color: #f1ecff;
-    border-radius: 0 0 20px 20px;
-	font-family: 'OneShinhanB', sans-serif;
-    font-weight: bold;
-    color: #715def;
-}
-.rewardBox{
-	padding-top: 15px;
-}
-.update_date{
-	font-size:25px;
-	font-family: 'OneShinhanB', sans-serif;
-	text-align:center;
-	margin:0 0 30px 0;
-	color:#705dcf;
-	letter-spacing: normal;
-}
-.rewardCon{
-	width:100%;
-	clear:both;
-	min-height:300px;
-}
-.bmTabs.reward li{
-	float:left;
-	margin-right:15px;
-}
-.bmTabs.reward li:last-child{margin-right:0;}
-.bmTabs.reward li{
-	letter-spacing: normal;
-	display: inline-block;
-    width: 48.8%;
-    height: 69px;
-    line-height: 69px;
-    border: 2px solid #705def;
-    border-radius: 500px;
-    box-sizing: border-box;
-    color: #705def;
-    text-align: center;
-    font-size: 28px;
-    font-family: 'OneShinhanB', sans-serif;
-    cursor: pointer;
-}
-.bmTabs.reward li.current,
-.bmTabs.reward li.hover{
-	background:#705def;
-	color:#fff;
-}
-.promotion_total{
-	float:left;
-	border-bottom:1px solid #705def;
-	padding:0 0 27px;
-	width:100%;
-}
-.promotion_total li{
-	float:left;
-	letter-spacing: normal;
-	font-size:30px;
-	font-family: 'OneShinhanB', sans-serif;
-	color:#705def;
-}
-.promotion_total li:last-child{float:right;}
-.promotion_table, .charge_table{
-	float:left;
-	width:100%;
-	margin-top:15px;
-	padding-bottom: 10px;
-}
-.promotion_table th, .promotion_table td,
-.charge_table th, .charge_table td{
-	height:60px;
-	line-height:60px;
-}
-.promotion_table th, .charge_table th{
-	color:#705def;
-	font-size:25px;
-	font-family: 'OneShinhanB', sans-serif;
-}
-.promotion_table td, .charge_table td{
-	font-size:24px;
-	font-family: 'OneShinhanM', sans-serif;
-	text-align:center;
-}
-.charge_table.moreCon{
-	border-top:1px dashed #a296e0;
-	padding-top:20px;
-}
-.charge_table .moreBtn{
-	width:83px;
-	height:83px;
-	margin:30px auto;
-	cursor:pointer;
-}
-
-/* 211020 추가 */
-.reward_title{
-	border-bottom:1px dashed #705def;
-	width:100%;
-	height:22px;
-	margin:40px 0 50px;
-}
-.reward_title span{
-	display:table;
-	margin:0 auto;
-	padding:0 30px;
-	background-color:#fff;
-	font-size:27px;
-	font-family: 'OneShinhanB', sans-serif;
-	color: #705def;
-}
-
-/* 211209 추가 */
-.fees_noti{
-	margin-bottom: 40px;
-    width: 100%;
-    float: left;
-    margin-top: -24px;
-}
-.fees_noti li{
-	color:#705def;
-	font-size:18px;
-	font-weight:bold;
-	letter-spacing:0;
-	float:left;
-}
-.fees_noti li:first-child{
-	margin-bottom:5px;
-}
-
