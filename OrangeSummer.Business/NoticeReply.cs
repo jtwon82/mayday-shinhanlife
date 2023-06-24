@@ -45,6 +45,10 @@ namespace OrangeSummer.Business
         {
             return _noticeReply.UserList(page, size, id, member);
         }
+        public List<Model.NoticeReply> UserList_202206(int page, int size, string id, string member)
+        {
+            return _noticeReply.UserList_202206(page, size, id, member);
+        }
 
         /// <summary>
         /// 공지사항 댓글 등록

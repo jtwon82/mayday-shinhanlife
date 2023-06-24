@@ -43,6 +43,10 @@ namespace OrangeSummer.Business
         {
             return _notice.Detail(id);
         }
+        public Model.Notice Detail_202206(string id)
+        {
+            return _notice.Detail_202206(id);
+        }
 
         /// <summary>
         /// 공지사항 등록
