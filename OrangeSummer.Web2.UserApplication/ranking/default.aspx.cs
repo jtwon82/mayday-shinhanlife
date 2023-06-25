@@ -58,7 +58,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking
                     sb3.Clear();
                     sb4.Clear();
 
-                    List<Model.Achievement> persons = biz.UserRanking_202206(1, 100, "PERSON");
+                    List<Model.Achievement> persons = biz.UserRanking_202306(1, 100, "PERSON");
                     if (persons != null)
                     {
                         DateTime dt = DateTime.Parse(persons[0].Date);

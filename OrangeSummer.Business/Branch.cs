@@ -35,9 +35,9 @@ namespace OrangeSummer.Business
         {
             return _branch.Line();
         }
-        public List<Model.Branch> Line202302()
+        public List<Model.Branch> Line_new()
         {
-            return _branch.Line202302();
+            return _branch.Line_new();
         }
 
         /// <summary>

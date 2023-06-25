@@ -45,7 +45,7 @@ namespace OrangeSummer.Weblfc.MasterApplication.promotion
                 // 지점
                 using (Business.Branch biz = new Business.Branch(Common.Master.AppSetting.Connection))
                 {
-                    List<Model.Branch> list = biz.Line202302();
+                    List<Model.Branch> list = biz.Line_new();
                     if (list != null)
                     {
                         this.branch.DataSource = list;

@@ -44,7 +44,7 @@ namespace OrangeSummer.Weblfc.MasterApplication.ranking
                 // 지점
                 using (Business.Branch biz = new Business.Branch(Common.Master.AppSetting.Connection))
                 {
-                    List<Model.Branch> list = biz.Line202302();
+                    List<Model.Branch> list = biz.Line_new();
                     if (list != null)
                     {
                         this.branch.DataSource = list;
@@ -71,7 +71,7 @@ namespace OrangeSummer.Weblfc.MasterApplication.ranking
 
                 using (Business.Achievement biz = new Business.Achievement(Common.Master.AppSetting.Connection))
                 {
-                    List<Model.Achievement> list = biz.List202302(page, _size, _orderby, branch, level, code, name);
+                    List<Model.Achievement> list = biz.List_202302(page, _size, _orderby, branch, level, code, name);
                     if (list != null)
                     {
                         this.rptList.DataSource = list;

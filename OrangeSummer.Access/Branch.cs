@@ -11,7 +11,7 @@ namespace OrangeSummer.Access
     /// 전윤기 - 2020.06.18
     /// 지점관리 Access
     /// </summary>
-    public class Branch
+    public class Branch : IDisposable
     {
         private string _connection = string.Empty;
 
@@ -98,14 +98,14 @@ namespace OrangeSummer.Access
 
             return lists;
         }
-        public List<Model.Branch> Line202302()
+        public List<Model.Branch> Line_new()
         {
             List<Model.Branch> lists = null;
             StringBuilder query = new StringBuilder();
             query.Append($"SELECT COUNT(*) OVER() AS[TOTAL] ");
             query.Append($"    , ROW_NUMBER() OVER(ORDER BY BRANCH_NAME DESC) AS[SORT] ");
             query.Append($"    , BRANCH_NAME, 'N'[DEL_YN], CONVERT(VARCHAR(10), GETDATE(), 120) AS[REGIST_DATE] ");
-            query.Append($"FROM(SELECT DISTINCT BRANCH_NAME FROM MEMBER_BRANCH_202302) A ORDER BY[BRANCH_NAME] ASC ");
+            query.Append($"FROM(SELECT DISTINCT BRANCH_NAME FROM MEMBER_BRANCH_202306) A ORDER BY[BRANCH_NAME] ASC ");
             using (DataTable dt = DBHelper.ExecuteDataTableInQuery(_connection, query.ToString()))
             {
                 if (dt.Rows.Count > 0)
@@ -257,6 +257,11 @@ namespace OrangeSummer.Access
 
             return lists;
         }
+
         #endregion
+        public void Dispose()
+        {
+            _connection = null;
+        }
     }
 }

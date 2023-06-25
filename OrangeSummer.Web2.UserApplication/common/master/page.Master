@@ -21,8 +21,10 @@
 <script type="text/javascript" src="/resources/js/swiper.min.4.3.5.js"></script>
 <script type="text/javascript" src="/common/js/jquery-library.js?v=20220621154035"></script>
 
-
 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+    
+<script type="text/javascript" src="/resources/js/common.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
+<script type="text/javascript" src="/common/js/common.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
     
 </head>
     

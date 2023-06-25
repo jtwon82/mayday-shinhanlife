@@ -115,6 +115,10 @@ namespace OrangeSummer.Business
         {
             return _member.UserDetail202302(code);
         }
+        public Model.Member UserDetail_202306(string code)
+        {
+            return _member.UserDetail_202306(code);
+        }
         /// <summary>
         /// 회원 조회
         /// </summary>

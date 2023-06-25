@@ -32,9 +32,13 @@ namespace OrangeSummer.Business
         {
             return _achievement.List_new(page, size, orderby, branch, level, code, name);
         }
-        public List<Model.Achievement> List202302(int page, int size, string orderby, string branch, string level, string code, string name)
+        public List<Model.Achievement> List_202302(int page, int size, string orderby, string branch, string level, string code, string name)
         {
-            return _achievement.List202302(page, size, orderby, branch, level, code, name);
+            return _achievement.List_202302(page, size, orderby, branch, level, code, name);
+        }
+        public List<Model.Achievement> List_202306(int page, int size, string orderby, string branch, string level, string code, string name)
+        {
+            return _achievement.List_202306(page, size, orderby, branch, level, code, name);
         }
         public List<Model.Achievement> ListRewradPromotion(int page, int size, string orderby, string branch, string level, string code, string name)
         {
@@ -64,6 +68,10 @@ namespace OrangeSummer.Business
         public DataTable Regist_new(DataTable dt)
         {
             return _achievement.Regist_new(dt);
+        }
+        public DataTable Regist_202306(DataTable dt)
+        {
+            return _achievement.Regist_202306(dt);
         }
         public DataTable RegistPromotion(DataTable dt)
         {
@@ -138,6 +146,10 @@ namespace OrangeSummer.Business
         public List<Model.Achievement> UserRanking_202206(int page, int size, string part)
         {
             return _achievement.UserRanking_202206(page, size, part);
+        }
+        public List<Model.Achievement> UserRanking_202306(int page, int size, string part)
+        {
+            return _achievement.UserRanking_202306(page, size, part);
         }
 
         /// <summary>
