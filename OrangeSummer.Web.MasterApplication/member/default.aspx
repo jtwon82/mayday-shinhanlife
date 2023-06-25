@@ -50,8 +50,9 @@
             <i class="material-icons">vertical_align_bottom</i> 엑셀다운로드
         </asp:LinkButton>
     </div>
-
+    
     <p class="mb-1">* 총 <span class="text-danger font-weight-bold"><%= _total %></span>개의 회원이 있습니다.</p>
+    <p class="mb-1">* 회원코드는 있지만 (지점, 신분, 이름)이 없다면, 업적디비의 회원정보를 업데이트해주세요.</p>
 
     <div class="table-responsive">
         <table class="table table-bordered" style="min-width: 1110px;">

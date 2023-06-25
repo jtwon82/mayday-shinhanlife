@@ -71,7 +71,7 @@ namespace OrangeSummer.Web2.UserApplication.member.login
             string referer = Check.IsNone(Request["referer"], "");
             using (Business.Member biz = new Business.Member(OrangeSummer.Common.User.AppSetting.Connection))
             {
-                Model.Member member = biz.UserDetail202302(code);
+                Model.Member member = biz.UserDetail_202306(code);
                 if (member != null)
                 {
                     if(member.PwdDecode == pwd)

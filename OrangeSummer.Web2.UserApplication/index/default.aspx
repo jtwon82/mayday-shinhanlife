@@ -3,9 +3,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link rel="stylesheet" href="/resources/css/index.css?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>" />
-
-    <script type="text/javascript" src="/resources/js/common.js"></script>
-    <script type="text/javascript" src="/common/js/common.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
@@ -119,7 +116,7 @@
     
 					<!-- Initialize Swiper -->
 					<script type="text/javascript">
-					    $(window).load(function () {
+					    $(document).ready(function () {
 					        var mySwiper = new Swiper('.swiper-container', {
 					            slidesPerView: 1, //슬라이드를 한번에 3개를 보여준다
 					            spaceBetween: 30, //슬라이드간 padding 값 30px 씩 떨어뜨려줌

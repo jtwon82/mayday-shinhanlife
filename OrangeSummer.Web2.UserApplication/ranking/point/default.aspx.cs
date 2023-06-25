@@ -59,7 +59,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking.point
                     sb3.Clear();
                     sb4.Clear();
 
-                    List<Model.Achievement> branchs = biz.UserRanking_202206(page, 15, "BRANCH");
+                    List<Model.Achievement> branchs = biz.UserRanking_202306(page, 15, "BRANCH");
                     if (branchs != null)
                     {
                         DateTime dt = DateTime.Parse(branchs[0].Date);

@@ -41,7 +41,7 @@ namespace OrangeSummer.Web.MasterApplication.main.banner
                 if (!Check.IsNone(id))
                 {
                     Model.Banner banner = null;
-                    using (Business.Banner biz = new Business.Banner(Common.Master.AppSetting.Connection))
+                    using (Access.Banner biz = new Access.Banner(Common.Master.AppSetting.Connection))
                     {
                         banner = biz.Detail(id, "");
                         if (banner != null)
@@ -121,7 +121,7 @@ namespace OrangeSummer.Web.MasterApplication.main.banner
                 banner.Sdate = Element.Get(this.sdate);
                 banner.Edate = Element.Get(this.edate);
                 banner.UseYn = Element.Get(this.useyn);
-                using (Business.Banner biz = new Business.Banner(Common.Master.AppSetting.Connection))
+                using (Access.Banner biz = new Access.Banner(Common.Master.AppSetting.Connection))
                 {
                     bool result = biz.Regist(banner);
                     if (result)
@@ -195,7 +195,7 @@ namespace OrangeSummer.Web.MasterApplication.main.banner
                 banner.Sdate = Element.Get(this.sdate);
                 banner.Edate = Element.Get(this.edate);
                 banner.UseYn = Element.Get(this.useyn);
-                using (Business.Banner biz = new Business.Banner(Common.Master.AppSetting.Connection))
+                using (Access.Banner biz = new Access.Banner(Common.Master.AppSetting.Connection))
                 {
                     bool result = biz.Modify(banner);
                     if (result)
@@ -215,7 +215,7 @@ namespace OrangeSummer.Web.MasterApplication.main.banner
             try
             {
                 string id = Check.IsNone(Request["id"], true);
-                using (Business.Banner biz = new Business.Banner(Common.Master.AppSetting.Connection))
+                using (Access.Banner biz = new Access.Banner(Common.Master.AppSetting.Connection))
                 {
                     bool result = biz.Delete(id, _type);
                     if (result)

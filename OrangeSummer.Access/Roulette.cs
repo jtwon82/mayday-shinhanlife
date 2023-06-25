@@ -10,7 +10,7 @@ namespace OrangeSummer.Access
     /// 전윤기 - 2020.06.20
     /// 롤렛이벤트 Access
     /// </summary>
-    public class Roulette
+    public class Roulette : IDisposable
     {
         private string _connection = string.Empty;
 
@@ -62,26 +62,26 @@ namespace OrangeSummer.Access
                     lists = new List<Model.Roulette>();
                     foreach (DataRow dr in dt.Rows)
                     {
-                        Model.Roulette roulette = new Model.Roulette()
-                        {
-                            Total = Convert.ToInt32(dr["TOTAL"].ToString()),
-                            Id = dr["ID"].ToString().ToUpper(),
-                            Sort = Convert.ToInt32(dr["SORT"].ToString()),
-                            FkMember = dr["FK_MEMBER"].ToString().ToUpper(),
-                            Result = dr["RESULT"].ToString(),
-                            RegistDate = dr["REGIST_DATE"].ToString(),
-                            Member = new Model.Member()
-                            {
-                                Level = dr["LEVEL"].ToString(),
-                                Code = dr["CODE"].ToString(),
-                                Name = dr["MEMBER_NAME"].ToString(),
-                                Mobile = dr["MOBILE"].ToString()
-                            },
-                            Branch = new Model.Branch()
-                            {
-                                Name = dr["BRANCH_NAME"].ToString()
-                            }
-                        };
+                        Model.Roulette roulette = new Model.Roulette().getRoulette(dr);
+                        //{
+                        //    Total = Convert.ToInt32(dr["TOTAL"].ToString()),
+                        //    Id = dr["ID"].ToString().ToUpper(),
+                        //    Sort = Convert.ToInt32(dr["SORT"].ToString()),
+                        //    FkMember = dr["FK_MEMBER"].ToString().ToUpper(),
+                        //    Result = dr["RESULT"].ToString(),
+                        //    RegistDate = dr["REGIST_DATE"].ToString(),
+                        //    Member = new Model.Member()
+                        //    {
+                        //        Level = dr["LEVEL"].ToString(),
+                        //        Code = dr["CODE"].ToString(),
+                        //        Name = dr["MEMBER_NAME"].ToString(),
+                        //        Mobile = dr["MOBILE"].ToString()
+                        //    },
+                        //    Branch = new Model.Branch()
+                        //    {
+                        //        Name = dr["BRANCH_NAME"].ToString()
+                        //    }
+                        //};
 
                         lists.Add(roulette);
                     }
@@ -104,26 +104,26 @@ namespace OrangeSummer.Access
                     lists = new List<Model.Roulette>();
                     foreach (DataRow dr in dt.Rows)
                     {
-                        Model.Roulette roulette = new Model.Roulette()
-                        {
-                            Total = Convert.ToInt32(dr["TOTAL"].ToString()),
-                            Id = dr["ID"].ToString().ToUpper(),
-                            Sort = Convert.ToInt32(dr["SORT"].ToString()),
-                            FkMember = dr["FK_MEMBER"].ToString().ToUpper(),
-                            Result = dr["RESULT"].ToString(),
-                            RegistDate = dr["REGIST_DATE"].ToString(),
-                            Member = new Model.Member()
-                            {
-                                Level = dr["LEVEL"].ToString(),
-                                Code = dr["CODE"].ToString(),
-                                Name = dr["MEMBER_NAME"].ToString(),
-                                Mobile = dr["MOBILE"].ToString()
-                            },
-                            Branch = new Model.Branch()
-                            {
-                                Name = dr["BRANCH_NAME"].ToString()
-                            }
-                        };
+                        Model.Roulette roulette = new Model.Roulette().getRoulette(dr);
+                        //{
+                        //    Total = Convert.ToInt32(dr["TOTAL"].ToString()),
+                        //    Id = dr["ID"].ToString().ToUpper(),
+                        //    Sort = Convert.ToInt32(dr["SORT"].ToString()),
+                        //    FkMember = dr["FK_MEMBER"].ToString().ToUpper(),
+                        //    Result = dr["RESULT"].ToString(),
+                        //    RegistDate = dr["REGIST_DATE"].ToString(),
+                        //    Member = new Model.Member()
+                        //    {
+                        //        Level = dr["LEVEL"].ToString(),
+                        //        Code = dr["CODE"].ToString(),
+                        //        Name = dr["MEMBER_NAME"].ToString(),
+                        //        Mobile = dr["MOBILE"].ToString()
+                        //    },
+                        //    Branch = new Model.Branch()
+                        //    {
+                        //        Name = dr["BRANCH_NAME"].ToString()
+                        //    }
+                        //};
 
                         lists.Add(roulette);
                     }
@@ -200,6 +200,11 @@ namespace OrangeSummer.Access
             }
 
             return result;
+        }
+
+        public void Dispose()
+        {
+            _connection = null;
         }
     }
 

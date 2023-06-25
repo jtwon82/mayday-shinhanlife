@@ -689,6 +689,10 @@
       <Project>{96f3570b-c1ba-4e65-81f8-cd8be458306f}</Project>
       <Name>MLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OrangeSummer.Access\OrangeSummer.Access.csproj">
+      <Project>{025ca64e-8017-419f-b3ec-4b8095c7a1d4}</Project>
+      <Name>OrangeSummer.Access</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OrangeSummer.Business\OrangeSummer.Business.csproj">
       <Project>{ec61b561-2054-4808-81ed-cc027e28e84c}</Project>
       <Name>OrangeSummer.Business</Name>

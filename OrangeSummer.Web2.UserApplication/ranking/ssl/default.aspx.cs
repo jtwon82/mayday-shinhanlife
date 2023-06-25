@@ -49,7 +49,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking.ssl
                     sb3.Clear();
                     sb4.Clear();
 
-                    List<Model.Achievement> sls = biz.UserRanking_202206(1, 100, "S SL");
+                    List<Model.Achievement> sls = biz.UserRanking_202306(1, 100, "S SL");
                     if (sls != null)
                     {
                         DateTime dt = DateTime.Parse(sls[0].Date);
