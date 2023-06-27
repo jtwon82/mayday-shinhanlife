@@ -102,6 +102,7 @@ namespace OrangeSummer.Model
                 ItsMe = Check.getValue(dr, "ITS_ME"),
                 Date = Check.getValue(dr, "DATE"),
                 Code = Check.getValue(dr, "CODE"),
+                Part = Check.getValue(dr, "PART"),
                 Name = Check.getValue(dr, "MEMBER_NAME"),
                 MemberName = Check.getValue(dr, "MEMBER_NAME"),
                 Level = Check.getValue(dr, "LEVEL_NAME"),

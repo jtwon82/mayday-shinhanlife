@@ -10,19 +10,7 @@
 <body>
 	<div id="sub_wrap" class="subMeta02">
 		<uc1:menu runat="server" id="menu" />
-		<div class="subContainer guide">
-			<p class="subTitle"><img src="/resources/img/sub/bmTitle.png" alt="My업적" /></p>
-			<div class="cumulativePage">
-				<p class="endTxt">
-				<span>서비스 종료 안내</span>
-				2021년 8월 28일부터<br/>
-				썸머 업적 페이지와 썸머 랭킹 데이터를<br/>
-				제공하지 않습니다.<br/>
-				<strong>이벤트와 알림게시판은 8월 31일까지<br/>
-				운영하오니 많은 이용 부탁드립니다.</strong></p>
-			</div>
-		</div>
-		<div class="subContainer guide" style="display:none;">
+		<div class="subContainer guide" style="">
 			<p class="subTitle"><img src="/resources/img/sub/bmTitle.png" alt="My업적" /></p>
 			<ul class="bmTabs">
                 <li><a href="/achieve/bm">개인 부문</a></li>

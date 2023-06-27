@@ -39,6 +39,14 @@ namespace OrangeSummer.Model
         public Achievement Achievement { get; set; }
         public Member getMember(DataRow dr)
         {
+            string dateStr = "";
+            try
+            {
+                DateTime Tdt = DateTime.Parse(string.IsNullOrEmpty(dr["DATE"].ToString()) ? "0" : dr["DATE"].ToString());
+                dateStr = $"{Tdt.ToString("yyyy")}년 {Tdt.ToString("MM")}월 {Tdt.ToString("dd")}일";
+            }
+            catch (Exception e) { }
+
             return new Model.Member()
             {
                 Total = Check.getValueInt(dr, "TOTAL"), // Convert.ToInt32(dr["TOTAL"].ToString()),
@@ -67,7 +75,8 @@ namespace OrangeSummer.Model
                 Travel = new Model.Travel()
                 {
                 },
-            };
+                Achievement = new Model.Achievement().getAchievement(dr),
+        };
 
         }
     }

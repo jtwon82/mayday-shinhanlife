@@ -23,11 +23,11 @@ namespace OrangeSummer.Web2.UserApplication.achieve.sl
                 PageLoad();
             }
         }
-        private void PageLoad()
+        private void PageLoadx()
         {
         }
 
-        private void PageLoadx()
+        private void PageLoad()
         {
             try
             {
@@ -36,7 +36,7 @@ namespace OrangeSummer.Web2.UserApplication.achieve.sl
                 {
                     StringBuilder title = new StringBuilder();
                     StringBuilder contents = new StringBuilder();
-                    List<Model.Achievement> achievement = biz.UserList2(Common.User.Identify.Code
+                    List<Model.Achievement> achievement = biz.UserList_202306(Common.User.Identify.Code
                         , OrangeSummer.Common.User.Identify.LevelName);
 
                     if (achievement != null)
@@ -46,7 +46,7 @@ namespace OrangeSummer.Web2.UserApplication.achieve.sl
                             DateTime dt = DateTime.Parse(item.Date);
                             string cdate = $"{dt.ToString("yyyy")}년 {dt.ToString("MM")}월 {dt.ToString("dd")}";
 
-                            if (",SL,E SL,G SL,S SL".Contains("," + OrangeSummer.Common.User.Identify.Level))
+                            if (",SL,E SL,G SL,S SL".Contains("," + OrangeSummer.Common.User.Identify.LevelName))
                             {
                                 string itsMe = item.ItsMe == "0" ? "전 순위 업적" : item.ItsMe == "1" ? "나의 썸머순위" : item.ItsMe == "2" ? "후 순위 업적" : "";
 

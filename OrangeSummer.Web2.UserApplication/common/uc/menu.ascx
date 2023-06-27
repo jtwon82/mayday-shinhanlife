@@ -44,7 +44,7 @@
 								<a href="/measure">시책 안내</a>
 							</li>
 							<li>
-								<a href="/achieve/bm">SUMMER 업적</a>
+								<a href="/achieve">SUMMER 업적</a>
 							</li>
 							<li>
 								<a href="/ranking">SUMMER 랭킹</a>

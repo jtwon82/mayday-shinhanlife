@@ -116,6 +116,10 @@ namespace OrangeSummer.Business
         {
             return _achievement.UserList_202206(code, level);
         }
+        public List<Model.Achievement> UserList_202306(string code, string level)
+        {
+            return _achievement.UserList_202306(code, level);
+        }
         public List<Model.Achievement> UserListNsm_202206(string type)
         {
             return _achievement.UserListNsm_202206( type);

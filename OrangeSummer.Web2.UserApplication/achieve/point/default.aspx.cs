@@ -22,21 +22,21 @@ namespace OrangeSummer.Web2.UserApplication.achieve.point
                 PageLoad();
             }
         }
-        private void PageLoad()
+        private void PageLoadx()
         {
         }
 
-        private void PageLoadx()
+        private void PageLoad()
         {
             try
             {
                 #region [ 업적 ]
-                using (Business.Achievement biz = new Business.Achievement(Common.User.AppSetting.Connection))
+                using (Access.Achievement biz = new Access.Achievement(Common.User.AppSetting.Connection))
                 {
                     StringBuilder title = new StringBuilder();
                     StringBuilder contents = new StringBuilder();
-                    List<Model.Achievement> achievement = biz.UserList2(Common.User.Identify.Code, "BRANCH");
-
+                    List<Model.Achievement> achievement = biz.UserList_202306(Common.User.Identify.Code, "BRANCH");
+                    
                     if (achievement != null)
                     {
                         foreach (Model.Achievement item in achievement)
@@ -44,7 +44,7 @@ namespace OrangeSummer.Web2.UserApplication.achieve.point
                             DateTime dt = DateTime.Parse(item.Date);
                             string cdate = $"{dt.ToString("yyyy")}년 {dt.ToString("MM")}월 {dt.ToString("dd")}";
 
-                            if (",BM,EM,ERM".Contains("," + OrangeSummer.Common.User.Identify.Level))
+                            if (",BM,EM,ERM".Contains("," + OrangeSummer.Common.User.Identify.LevelName))
                             {
                                 string itsMe = item.ItsMe == "0" ? "전 순위 업적" : item.ItsMe == "1" ? "나의 썸머순위" : item.ItsMe == "2" ? "후 순위 업적" : "";
 
@@ -78,7 +78,7 @@ namespace OrangeSummer.Web2.UserApplication.achieve.point
                         _title = title.ToString();
                         _contents = contents.ToString();
                     }
-                }
+                } 
                 #endregion
 
                 //#region [ 이벤트 배너 ]
