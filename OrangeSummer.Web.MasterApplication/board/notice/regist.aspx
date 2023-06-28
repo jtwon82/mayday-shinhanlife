@@ -14,10 +14,11 @@
                     <th>구분</th>
                     <%--<td class="text-left"<%= (_command == "add") ? " colspan=\"3\"" : "" %>>--%>
                     <td colspan="3" class="text-left">
-                        <asp:DropDownList ID="type" ClientIDMode="Static" runat="server" CssClass="form-control w-20" disabled="disabled">
+                        <asp:DropDownList ID="type" ClientIDMode="Static" runat="server" CssClass="form-control w-20" >
                             <asp:ListItem Text="선택" Value=""></asp:ListItem>
-                            <asp:ListItem Text="일반" Value="NORMAL" Selected></asp:ListItem>
+                            <asp:ListItem Text="Normal" Value="NORMAL" Selected></asp:ListItem>
                             <asp:ListItem Text="Notice" Value="NOTICE" ></asp:ListItem>
+                            <asp:ListItem Text="Event" Value="EVENT" ></asp:ListItem>
                         </asp:DropDownList>
                     </td>
                     <%--<%
@@ -42,6 +43,10 @@
                 <tr>
                     <th>제목</th>
                     <td colspan="3" class="text-left"><asp:TextBox ID="title" ClientIDMode="Static" runat="server" MaxLength="100" CssClass="form-control"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <th>LINK</th>
+                    <td colspan="3" class="text-left"><asp:TextBox ID="url" runat="server" MaxLength="200" CssClass="form-control" autocomplete='off'></asp:TextBox></td>
                 </tr>
                 <tr>
                     <th>텍스트</th>

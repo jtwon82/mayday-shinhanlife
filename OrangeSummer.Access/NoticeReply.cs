@@ -11,7 +11,7 @@ namespace OrangeSummer.Access
     /// 전윤기 - 2020.06.20
     /// UCC이벤트 댓글 Access
     /// </summary>
-    public class NoticeReply
+    public class NoticeReply: IDisposable
     {
         private string _connection = string.Empty;
 
@@ -283,6 +283,11 @@ namespace OrangeSummer.Access
 
             return DBHelper.ExecuteNonQuery(_connection, "USP_NOTICE_REPLY_ANSWER", parameters);
         }
+
         #endregion
+        public void Dispose()
+        {
+            _connection = null;
+        }
     }
 }

@@ -7,8 +7,8 @@
 <script type="text/javascript" src="/resources/js/common.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-<body>
-	<div id="sub_wrap" class="subMeta02">
+<body class="bm_sl">
+	<div id="sub_wrap" class="subMeta03">
 		<uc1:menu runat="server" id="menu" />
 		<div class="subContainer guide" style="">
 			<p class="subTitle"><img src="/resources/img/sub/bmTitle.png" alt="My업적" /></p>
@@ -30,8 +30,8 @@
 					</div>
 				</div>
 				<ul class="referenceBox">
-					<li>* 본 데이터는 2021 Summer Contest 진도관리를 위한 보조자료이며,<br/>달성 결과가 아님을 알려드립니다.</li>
-					<%--<li>* 7월 11일부터 Ready for Summer 가중치가 반영된 환산 CMIP업적을 확인하실 수있습니다.</li>--%>
+					<li>* 본 데이터는 2022 Summer Contest 진도관리를 위한 보조자료이며, 달성 결과가 아님을 알려드립니다.</li>
+					
 					<li>* 자세한 내용은 해당공문을 반드시 참고하시기 바랍니다. </li>
 				</ul>
 			</div>
@@ -42,20 +42,22 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 		<script>
-		var swiper = new Swiper('.swiper-container3', {
-		    initialSlide: 1,
-			pagination: '.swiper-pagination',
-			paginationClickable: true,
-			nextButton: '.swiper-button-next',
-			prevButton: '.swiper-button-prev',
-			autoplay:false,
-			spaceBetween: 30
-		});
-		$('.swiper-container3 .swiper-slide').each(function (id) {
-		    if ($(this).hasClass("slide1")) {
-		        swiper.slideTo(id, 0, false);
-		    }
-		});
+		    $(document).ready(function () {
+		        var swiper = new Swiper('.swiper-container3', {
+		            initialSlide: 1,
+		            pagination: '.swiper-pagination',
+		            paginationClickable: true,
+		            nextButton: '.swiper-button-next',
+		            prevButton: '.swiper-button-prev',
+		            autoplay: false,
+		            spaceBetween: 30
+		        });
+		        $('.swiper-container3 .swiper-slide').each(function (id) {
+		            if ($(this).hasClass("slide1")) {
+		                swiper.slideTo(id, 0, false);
+		            }
+		        });
+		    });
 
 		</script>
 </asp:Content>

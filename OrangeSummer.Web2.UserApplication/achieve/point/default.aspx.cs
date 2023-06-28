@@ -51,11 +51,27 @@ namespace OrangeSummer.Web2.UserApplication.achieve.point
                                 contents.AppendLine($"<div class='swiper-slide slide{item.ItsMe}'>");
                                 contents.AppendLine("	<div class='bmRanking_box'>");
                                 contents.AppendLine($"		<p><span>{cdate}일 기준</span>{itsMe}<em>{item.BranchRank}</em></p>");
-                                contents.AppendLine("		<dl>");
-                                contents.AppendLine("			<dt><span>캠페인환산</span>CMIP</dt>");
-                                contents.AppendLine($"			<dd class='cmip'>{item.BranchCmip}</dd>");
-                                contents.AppendLine("		</dl>");
+
+                                contents.AppendLine($"<dl class='canp'>");
+                                contents.AppendLine($"	<dt><span>환산</span>CANP</dt>");
+                                contents.AppendLine($"	<dd class='canp'>{item.BranchCanp}</dd>");
+                                contents.AppendLine($"</dl>");
+                                contents.AppendLine($"<dl class='canpBp'>");
+                                contents.AppendLine($"	<dt>CANP BP <em>(%)</em></dt>");
+                                contents.AppendLine($"	<dd>{item.BranchCanp2}%</dd>");
+                                contents.AppendLine($"</dl>");
+                                contents.AppendLine($"<dl class='cmip'>");
+                                contents.AppendLine($"	<dt>CMIP</dt>");
+                                contents.AppendLine($"	<dd class='cmip'>{item.BranchCmip}</dd>");
+                                contents.AppendLine($"</dl>");
+                                contents.AppendLine($"<dl class='cmipBp'>");
+                                contents.AppendLine($"	<dt>CMIP BP <em>(%)</em></dt>");
+                                contents.AppendLine($"	<dd>{item.BranchCmip2}%</dd>");
+                                contents.AppendLine($"</dl>");
+
                                 contents.AppendLine("	</div>");
+
+
                                 if (item.ItsMe == "0")
                                 {
                                     contents.AppendLine($"	<div class='swiper-button-next'><span>내순위<span></div>");

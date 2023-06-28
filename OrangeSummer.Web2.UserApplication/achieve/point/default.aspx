@@ -10,17 +10,17 @@
     <script type="text/javascript" src="/resources/js/common.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-<body>
+<body class="bm_point">
 	<div id="sub_wrap" class="subMeta02">
             <uc1:menu runat="server" ID="menu" />
-            <div class="subContainer guide" style="">
-                <p class="subTitle"><img src="/resources/img/sub/bmTitle.png" alt="My업적" /></p>
+            <div class="subContainer guide bm point">
+                <p class="subTitle"><img src="/resources/img/sub/bmTitle.png" alt="SUMMER 업적" /></p>
                 <ul class="bmTabs">
                     <li><a href="/achieve/point" class="current">지점 부문</a></li>
                 </ul>
                 <div class="swiper-container3">
                     <div class="swiper-wrapper">
-                        xx <%=_contents %> xx
+                         <%=_contents %> 
                     </div>
                 </div>
 
@@ -28,8 +28,8 @@
 
 
                 <ul class="referenceBox">
-                    <li>* 본 데이터는 2021 Summer Contest 진도관리를 위한 보조자료이며,<br/>달성 결과가 아님을 알려드립니다.</li>
-				    <%--<li>* 7월 11일부터 Ready for Summer 가중치가 반영된 환산 CMIP업적을 확인하실 수있습니다.</li>--%>
+                    <li>* 본 데이터는 2022 Summer Contest 진도관리를 위한 보조자료이며, 달성 결과가 아님을 알려드립니다.</li>
+				    
                     <li>* 자세한 내용은 해당공문을 반드시 참고하시기 바랍니다. </li>
                 </ul>
             </div>

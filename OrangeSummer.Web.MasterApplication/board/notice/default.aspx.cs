@@ -44,7 +44,7 @@ namespace OrangeSummer.Web.MasterApplication.board.notice
                 Element.Set(this.sdate, sdate);
                 Element.Set(this.edate, edate);
 
-                using (Business.Notice biz = new Business.Notice(Common.Master.AppSetting.Connection))
+                using (Access.Notice biz = new Access.Notice(Common.Master.AppSetting.Connection))
                 {
                     List<Model.Notice> list = biz.List(page, _size, type, title, use, sdate, edate);
                     if (list != null)
@@ -70,7 +70,7 @@ namespace OrangeSummer.Web.MasterApplication.board.notice
             }
         }
 
-        protected string ListNumber(object obj, int index)
+        public string ListNumber(object obj, int index)
         {
             int page = Check.IsNone(Request["page"], 1);
             int number = (Convert.ToInt32(obj) - _size * (page - 1) - index);
