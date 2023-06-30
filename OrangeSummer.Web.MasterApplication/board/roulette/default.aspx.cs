@@ -32,7 +32,7 @@ namespace OrangeSummer.Web.MasterApplication.board.roulette
                 int page = Check.IsNone(Request["page"], 1);
                 using (Access.Roulette biz = new Access.Roulette(Common.Master.AppSetting.Connection))
                 {
-                    List<Model.Roulette> list = biz.List(page, _size);
+                    List<Model.Roulette> list = biz.List_202306(page, _size);
                     if (list != null)
                     {
                         this.rptList.DataSource = list;
