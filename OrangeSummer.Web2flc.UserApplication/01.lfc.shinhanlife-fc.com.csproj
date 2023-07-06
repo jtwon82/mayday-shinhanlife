@@ -87,6 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="achieve\bm\default.aspx" />
+    <Content Include="achieve\default.aspx" />
     <Content Include="achieve\point\default.aspx" />
     <Content Include="achieve\sl\default.aspx" />
     <Content Include="board\evt\default.aspx" />
@@ -99,6 +100,7 @@
     <Content Include="common\js\jquery-library.js" />
     <Content Include="common\js\site.js" />
     <Content Include="intro\default.aspx" />
+    <Content Include="measure\group\default.aspx" />
     <Content Include="measure\headoffice\default.aspx" />
     <Content Include="member\find_pw\default.aspx" />
     <Content Include="member\reward\default.aspx" />
@@ -123,118 +125,16 @@
     <Content Include="ranking\point\default.aspx" />
     <Content Include="ranking\sl\default.aspx" />
     <Content Include="resources\css\board.css" />
+    <Content Include="resources\css\board.css.bak" />
     <Content Include="resources\css\index.css" />
+    <Content Include="resources\css\index.css.bak" />
     <Content Include="resources\css\layout.css" />
+    <Content Include="resources\css\progress-bar.css" />
     <Content Include="resources\css\reset.css" />
     <Content Include="resources\css\sub.css" />
+    <Content Include="resources\css\sub.css.bak" />
     <Content Include="resources\css\swiper-bundle.css" />
     <Content Include="resources\css\swiper.css" />
-    <Content Include="resources\img\check.png" />
-    <Content Include="resources\img\check_on.png" />
-    <Content Include="resources\img\index\backgroundImg.png" />
-    <Content Include="resources\img\index\categoryBg_01.png" />
-    <Content Include="resources\img\index\categoryBg_02.png" />
-    <Content Include="resources\img\index\categoryBg_03.png" />
-    <Content Include="resources\img\index\categoryBg_04.png" />
-    <Content Include="resources\img\index\categoryIcon01.png" />
-    <Content Include="resources\img\index\categoryIcon02.png" />
-    <Content Include="resources\img\index\categoryIcon03.png" />
-    <Content Include="resources\img\index\fileIcon.png" />
-    <Content Include="resources\img\index\hamberger_button.png" />
-    <Content Include="resources\img\index\index_homeIcon.png" />
-    <Content Include="resources\img\index\index_logo.png" />
-    <Content Include="resources\img\index\mainBanner.jpg" />
-    <Content Include="resources\img\index\mainBanner.png" />
-    <Content Include="resources\img\index\mainTopImg.png" />
-    <Content Include="resources\img\index\main_person_img.png" />
-    <Content Include="resources\img\index\main_person_img2.png" />
-    <Content Include="resources\img\index\menu_cancel.png" />
-    <Content Include="resources\img\index\personImg2.png" />
-    <Content Include="resources\img\index\person_img.png" />
-    <Content Include="resources\img\index\person_img2.jpg" />
-    <Content Include="resources\img\index\rewardBox.png" />
-    <Content Include="resources\img\index\rewardIcon.png" />
-    <Content Include="resources\img\index\statusBg.png" />
-    <Content Include="resources\img\intro.jpg" />
-    <Content Include="resources\img\loginBg.jpg" />
-    <Content Include="resources\img\loginBtn.png" />
-    <Content Include="resources\img\login_txt.png" />
-    <Content Include="resources\img\metaImg.png" />
-    <Content Include="resources\img\sub\board\btn_reply_delBtn.png" />
-    <Content Include="resources\img\sub\board\btn_reply_modBtn.png" />
-    <Content Include="resources\img\sub\board\bu_arrow_d.png" />
-    <Content Include="resources\img\sub\board\bu_arrow_t.png" />
-    <Content Include="resources\img\sub\board\likeIcon2.png" />
-    <Content Include="resources\img\sub\board\popupImg.jpg" />
-    <Content Include="resources\img\sub\board\registBt.png" />
-    <Content Include="resources\img\sub\board\replyBt.png" />
-    <Content Include="resources\img\sub\board\replyIcon.png" />
-    <Content Include="resources\img\sub\board\replyIcon2.png" />
-    <Content Include="resources\img\sub\board\replyIcon3.png" />
-    <Content Include="resources\img\sub\board\unlike.png" />
-    <Content Include="resources\img\sub\board\writerImg.jpg" />
-    <Content Include="resources\img\sub\board\writerImg.png" />
-    <Content Include="resources\img\sub\board\writerImg2.png" />
-    <Content Include="resources\img\sub\event\btn_close.png" />
-    <Content Include="resources\img\sub\event\eventImg01.png" />
-    <Content Include="resources\img\sub\event\eventImg02.png" />
-    <Content Include="resources\img\sub\event\eventlistBanner.jpg" />
-    <Content Include="resources\img\sub\event\eventlistBanner2.jpg" />
-    <Content Include="resources\img\sub\event\event_kv02.png" />
-    <Content Include="resources\img\sub\event\event_kv02_bg.png" />
-    <Content Include="resources\img\sub\event\event_kv02_btn.png" />
-    <Content Include="resources\img\sub\event\event_kv02_coupon1.png" />
-    <Content Include="resources\img\sub\event\event_kv02_coupon2.png" />
-    <Content Include="resources\img\sub\event\event_kv02_pin.png" />
-    <Content Include="resources\img\sub\event\rouletteImg.jpg" />
-    <Content Include="resources\img\sub\findpwIcon.png" />
-    <Content Include="resources\img\sub\findpwTitle.png" />
-    <Content Include="resources\img\sub\noticeTitle.png" />
-    <Content Include="resources\img\sub\pwcTitle.png" />
-    <Content Include="resources\img\sub\rankingTitle.png" />
-    <Content Include="resources\img\sub\ranking\copper.png" />
-    <Content Include="resources\img\sub\ranking\gold.png" />
-    <Content Include="resources\img\sub\ranking\sliver.png" />
-    <Content Include="resources\img\sub\rewardTitle.png" />
-    <Content Include="resources\img\sub\reward\rewardIcon.png" />
-    <Content Include="resources\img\sub\reward\rewardStatus.png" />
-    <Content Include="resources\img\sub\reward\reword_more.png" />
-    <Content Include="resources\img\sub\signtermTitle.png" />
-    <Content Include="resources\img\sub\signupTitle.png" />
-    <Content Include="resources\img\sub\signup_editTitle.png" />
-    <Content Include="resources\img\sub\subMetaBg_member.jpg" />
-    <Content Include="resources\img\sub\subMetaBg_noti.jpg" />
-    <Content Include="resources\img\sub\subMetaBg_pw.jpg" />
-    <Content Include="resources\img\sub\subMetaBg_ranking.jpg" />
-    <Content Include="resources\img\sub\subMetaBg_reword.jpg" />
-    <Content Include="resources\img\sub\subTopImg.png" />
-    <Content Include="resources\js\common.js" />
-    <Content Include="resources\js\jquery-3.5.1.min.js" />
-    <Content Include="resources\js\jquery.1.11.0.min.js" />
-    <Content Include="resources\js\swiper-bundle.js" />
-    <Content Include="resources\js\swiper-bundle2.js" />
-    <Content Include="resources\js\swiper.js" />
-    <Content Include="resources\js\swiper3.js" />
-    <Content Include="robots.txt" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="packages.config" />
-    <Content Include="common\master\page.Master" />
-    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
-    <None Include="Properties\PublishProfiles\lfc.pubxml" />
-    <None Include="Properties\PublishProfiles\OrangeSummerFront.pubxml" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Web References\kr.co.youiwe.webservice\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
-    <Content Include="resources\css\board.css.bak" />
-    <Content Include="resources\css\index.css.bak" />
-    <Content Include="resources\css\sub.css.bak" />
     <Content Include="resources\css\swiper.css.bak" />
     <Content Include="resources\FONT\OneShinhan-Bold.eot" />
     <Content Include="resources\FONT\OneShinhan-Bold.woff" />
@@ -252,12 +152,295 @@
     <Content Include="resources\FONT\YoonGothic.ttf" />
     <Content Include="resources\FONT\YoonGothic.woff" />
     <Content Include="resources\FONT\YoonGothic.woff2" />
+    <Content Include="resources\img\bmRankingbox.png" />
+    <Content Include="resources\img\check.png" />
+    <Content Include="resources\img\check_on.png" />
+    <Content Include="resources\img\index\backgroundImg.gif" />
+    <Content Include="resources\img\index\backgroundImg.jpg" />
+    <Content Include="resources\img\index\backgroundImg.png" />
+    <Content Include="resources\img\index\categoryBg_01.png" />
+    <Content Include="resources\img\index\categoryBg_02.png" />
+    <Content Include="resources\img\index\categoryBg_03.png" />
+    <Content Include="resources\img\index\categoryBg_04.png" />
+    <Content Include="resources\img\index\categoryIcon01.png" />
+    <Content Include="resources\img\index\categoryIcon02.png" />
+    <Content Include="resources\img\index\categoryIcon03.png" />
+    <Content Include="resources\img\index\categoryIcon04.png" />
+    <Content Include="resources\img\index\categoryIcon05.png" />
+    <Content Include="resources\img\index\categoryIcon06.png" />
+    <Content Include="resources\img\index\categoryIconClose.png" />
+    <Content Include="resources\img\index\default_profile.png" />
+    <Content Include="resources\img\index\eventBanner.png" />
+    <Content Include="resources\img\index\eventBanner2.png" />
+    <Content Include="resources\img\index\eventEx.jpg" />
+    <Content Include="resources\img\index\fileIcon.png" />
+    <Content Include="resources\img\index\hamberger_button.png" />
+    <Content Include="resources\img\index\index_homeIcon.png" />
+    <Content Include="resources\img\index\index_logo.png" />
+    <Content Include="resources\img\index\mainBanner.jpg" />
+    <Content Include="resources\img\index\mainBanner.png" />
+    <Content Include="resources\img\index\mainImg_balii.jpg" />
+    <Content Include="resources\img\index\mainImg_hawai.jpg" />
+    <Content Include="resources\img\index\mainTopImg.png" />
+    <Content Include="resources\img\index\main_myRank_icon.png" />
+    <Content Include="resources\img\index\main_person_img.png" />
+    <Content Include="resources\img\index\main_person_img2.png" />
+    <Content Include="resources\img\index\menu_cancel.png" />
+    <Content Include="resources\img\index\notice_popup_close.png" />
+    <Content Include="resources\img\index\notice_popup_icon.jpg" />
+    <Content Include="resources\img\index\notice_popup_txt.png" />
+    <Content Include="resources\img\index\personImg2.jpg" />
+    <Content Include="resources\img\index\personImg2.png" />
+    <Content Include="resources\img\index\person_img.png" />
+    <Content Include="resources\img\index\person_img2.jpg" />
+    <Content Include="resources\img\index\rewardBox.png" />
+    <Content Include="resources\img\index\rewardIcon.png" />
+    <Content Include="resources\img\index\statusBg.png" />
     <Content Include="resources\img\index\Thumbs.db" />
+    <Content Include="resources\img\index\travelIicon.png" />
+    <Content Include="resources\img\intro.jpg" />
+    <Content Include="resources\img\intro_comingsoon.jpg" />
+    <Content Include="resources\img\intro_open.jpg" />
+    <Content Include="resources\img\loginBg.jpg" />
+    <Content Include="resources\img\loginBtn.png" />
+    <Content Include="resources\img\login_check.png" />
+    <Content Include="resources\img\login_txt.png" />
+    <Content Include="resources\img\metaImg.png" />
+    <Content Include="resources\img\sub\achieve_bg.gif" />
+    <Content Include="resources\img\sub\achieve_bg.jpg" />
+    <Content Include="resources\img\sub\bmTitle.png" />
+    <Content Include="resources\img\sub\bm\bmpersonal_Rankingbox.png" />
+    <Content Include="resources\img\sub\bm\bmRankingbox.png" />
+    <Content Include="resources\img\sub\bm\left_arrow.png" />
+    <Content Include="resources\img\sub\bm\right_arrow.png" />
+    <Content Include="resources\img\sub\board\btn_reply_delBtn.png" />
+    <Content Include="resources\img\sub\board\btn_reply_modBtn.png" />
+    <Content Include="resources\img\sub\board\bu_arrow_d.png" />
+    <Content Include="resources\img\sub\board\bu_arrow_t.png" />
+    <Content Include="resources\img\sub\board\likeIcon2.png" />
+    <Content Include="resources\img\sub\board\popupImg.jpg" />
+    <Content Include="resources\img\sub\board\registBt.png" />
+    <Content Include="resources\img\sub\board\replyBt.png" />
+    <Content Include="resources\img\sub\board\replyIcon.png" />
+    <Content Include="resources\img\sub\board\replyIcon2.png" />
+    <Content Include="resources\img\sub\board\replyIcon3.png" />
     <Content Include="resources\img\sub\board\Thumbs.db" />
+    <Content Include="resources\img\sub\board\unlike.png" />
+    <Content Include="resources\img\sub\board\writerImg.jpg" />
+    <Content Include="resources\img\sub\board\writerImg.png" />
+    <Content Include="resources\img\sub\board\writerImg2.png" />
+    <Content Include="resources\img\sub\change_hamberger_button.png" />
+    <Content Include="resources\img\sub\change_homeIcon.png" />
+    <Content Include="resources\img\sub\change_logo.png" />
+    <Content Include="resources\img\sub\cumulative\cumulativeBg.png" />
+    <Content Include="resources\img\sub\cumulative\cumulativeBg2.png" />
+    <Content Include="resources\img\sub\cumulative\endIcon.png" />
+    <Content Include="resources\img\sub\cumulative\evaluation_standardBox.png" />
+    <Content Include="resources\img\sub\eventTitle.png" />
+    <Content Include="resources\img\sub\event\btn_close.png" />
+    <Content Include="resources\img\sub\event\eventImg01.png" />
+    <Content Include="resources\img\sub\event\eventImg02.png" />
+    <Content Include="resources\img\sub\event\eventlistBanner.jpg" />
+    <Content Include="resources\img\sub\event\eventlistBanner2.jpg" />
+    <Content Include="resources\img\sub\event\event_kv02.png" />
+    <Content Include="resources\img\sub\event\event_kv02_bg.png" />
+    <Content Include="resources\img\sub\event\event_kv02_btn.png" />
+    <Content Include="resources\img\sub\event\event_kv02_coupon1.png" />
+    <Content Include="resources\img\sub\event\event_kv02_coupon2.png" />
+    <Content Include="resources\img\sub\event\event_kv02_pin.png" />
+    <Content Include="resources\img\sub\event\event_vote_btn.png" />
+    <Content Include="resources\img\sub\event\event_vote_logo.png" />
+    <Content Include="resources\img\sub\event\event_vote_top.jpg" />
+    <Content Include="resources\img\sub\event\event_vote_top.png" />
+    <Content Include="resources\img\sub\event\event_writing_1.png" />
+    <Content Include="resources\img\sub\event\event_writing_10.png" />
+    <Content Include="resources\img\sub\event\event_writing_11.png" />
+    <Content Include="resources\img\sub\event\event_writing_12.png" />
+    <Content Include="resources\img\sub\event\event_writing_13.png" />
+    <Content Include="resources\img\sub\event\event_writing_14.png" />
+    <Content Include="resources\img\sub\event\event_writing_15.png" />
+    <Content Include="resources\img\sub\event\event_writing_2.png" />
+    <Content Include="resources\img\sub\event\event_writing_3.png" />
+    <Content Include="resources\img\sub\event\event_writing_4.png" />
+    <Content Include="resources\img\sub\event\event_writing_5.png" />
+    <Content Include="resources\img\sub\event\event_writing_6.png" />
+    <Content Include="resources\img\sub\event\event_writing_7.png" />
+    <Content Include="resources\img\sub\event\event_writing_8.png" />
+    <Content Include="resources\img\sub\event\event_writing_9.png" />
+    <Content Include="resources\img\sub\event\notice_popup_close.png" />
+    <Content Include="resources\img\sub\event\notice_popup_icon.jpg" />
+    <Content Include="resources\img\sub\event\notice_popup_txt.png" />
+    <Content Include="resources\img\sub\event\rouletteImg.jpg" />
+    <Content Include="resources\img\sub\event\rouletteImg2.jpg" />
+    <Content Include="resources\img\sub\event\scratch_bg.jpg" />
+    <Content Include="resources\img\sub\event\scratch_bg_august.jpg" />
+    <Content Include="resources\img\sub\event\scratch_bg_july.jpg" />
+    <Content Include="resources\img\sub\event\scratch_box_august.png" />
+    <Content Include="resources\img\sub\event\scratch_box_july.png" />
+    <Content Include="resources\img\sub\event\scratch_pad_default.png" />
+    <Content Include="resources\img\sub\event\scratch_pad_lose.png" />
+    <Content Include="resources\img\sub\event\scratch_pad_win.png" />
+    <Content Include="resources\img\sub\event\scratch_popup_bg1.png" />
+    <Content Include="resources\img\sub\event\scratch_popup_bg2.png" />
+    <Content Include="resources\img\sub\event\scratch_popup_close.png" />
+    <Content Include="resources\img\sub\event\scratch_title_august.png" />
+    <Content Include="resources\img\sub\event\scratch_title_july.png" />
+    <Content Include="resources\img\sub\event\scratc_title.png" />
+    <Content Include="resources\img\sub\event\scratc_title2.png" />
     <Content Include="resources\img\sub\event\Thumbs.db" />
+    <Content Include="resources\img\sub\event\voteEvent_bg.jpg" />
+    <Content Include="resources\img\sub\event\voteEvent_second_bg.jpg" />
+    <Content Include="resources\img\sub\event\voteEvent_second_btn.png" />
+    <Content Include="resources\img\sub\event\voteEvent_second_txt.png" />
+    <Content Include="resources\img\sub\event\voteEvent_second_txt2.jpg" />
+    <Content Include="resources\img\sub\event\voteEvent_second_writing_1.png" />
+    <Content Include="resources\img\sub\event\voteEvent_second_writing_2.png" />
+    <Content Include="resources\img\sub\event\voteEvent_second_writing_3.png" />
+    <Content Include="resources\img\sub\event\voteEvent_second_writing_4.png" />
+    <Content Include="resources\img\sub\event\voteEvent_second_writing_5.png" />
+    <Content Include="resources\img\sub\event\voteEvent_second_writing_6.png" />
+    <Content Include="resources\img\sub\findpwIcon.png" />
+    <Content Include="resources\img\sub\findpwTitle.png" />
+    <Content Include="resources\img\sub\index\backgroundImg.gif" />
+    <Content Include="resources\img\sub\index\backgroundImg.jpg" />
+    <Content Include="resources\img\sub\index\categoryIcon01.png" />
+    <Content Include="resources\img\sub\index\categoryIcon02.png" />
+    <Content Include="resources\img\sub\index\categoryIcon03.png" />
+    <Content Include="resources\img\sub\index\categoryIcon04.png" />
+    <Content Include="resources\img\sub\index\categoryIcon05.png" />
+    <Content Include="resources\img\sub\index\categoryIcon06.png" />
+    <Content Include="resources\img\sub\index\default_profile.png" />
+    <Content Include="resources\img\sub\index\eventBanner.png" />
+    <Content Include="resources\img\sub\index\eventBanner2.png" />
+    <Content Include="resources\img\sub\index\eventEx.jpg" />
+    <Content Include="resources\img\sub\index\fileIcon.png" />
+    <Content Include="resources\img\sub\index\hamberger_button.png" />
+    <Content Include="resources\img\sub\index\index_homeIcon.png" />
+    <Content Include="resources\img\sub\index\index_logo.png" />
+    <Content Include="resources\img\sub\index\mainImg_balii.jpg" />
+    <Content Include="resources\img\sub\index\mainImg_hawai.jpg" />
+    <Content Include="resources\img\sub\index\mainTopImg.png" />
+    <Content Include="resources\img\sub\index\main_person_img.png" />
+    <Content Include="resources\img\sub\index\main_person_img2.png" />
+    <Content Include="resources\img\sub\index\measure_bg.gif" />
+    <Content Include="resources\img\sub\index\menu_cancel.png" />
+    <Content Include="resources\img\sub\index\personImg2.jpg" />
+    <Content Include="resources\img\sub\index\person_img.png" />
+    <Content Include="resources\img\sub\index\person_img2.jpg" />
+    <Content Include="resources\img\sub\index\statusBg.png" />
+    <Content Include="resources\img\sub\index\subMeta02.gif" />
+    <Content Include="resources\img\sub\index\subMeta05.gif" />
+    <Content Include="resources\img\sub\index\subMeta07.gif" />
+    <Content Include="resources\img\sub\index\travelIicon.png" />
+    <Content Include="resources\img\sub\measureTitle.png" />
+    <Content Include="resources\img\sub\measure\arrow.png" />
+    <Content Include="resources\img\sub\measure\bonusBox.png" />
+    <Content Include="resources\img\sub\measure\circle.png" />
+    <Content Include="resources\img\sub\measure\circle2.png" />
+    <Content Include="resources\img\sub\measure\dynamiteBanner.jpg" />
+    <Content Include="resources\img\sub\measure\dynamiteBanner.png" />
+    <Content Include="resources\img\sub\measure\individual_standardBox.png" />
+    <Content Include="resources\img\sub\measure\measureConBg.png" />
+    <Content Include="resources\img\sub\measure\measureEtc.png" />
+    <Content Include="resources\img\sub\measure\measureHeadoffice.png" />
+    <Content Include="resources\img\sub\measure\measureIndividual.png" />
+    <Content Include="resources\img\sub\measure\measurePoint.png" />
+    <Content Include="resources\img\sub\measure\measureSl.png" />
+    <Content Include="resources\img\sub\measure\measuretBg.png" />
+    <Content Include="resources\img\sub\measure\measuretBg2.png" />
+    <Content Include="resources\img\sub\measure\measuretBg3.png" />
+    <Content Include="resources\img\sub\measure_bg.gif" />
+    <Content Include="resources\img\sub\measure_bg.jpg" />
+    <Content Include="resources\img\sub\noticeTitle.png" />
+    <Content Include="resources\img\sub\processTitle.png" />
+    <Content Include="resources\img\sub\pwcTitle.png" />
+    <Content Include="resources\img\sub\rankingAchieveTitle.png" />
+    <Content Include="resources\img\sub\rankingTitle.png" />
+    <Content Include="resources\img\sub\ranking\achievebox_bg.png" />
+    <Content Include="resources\img\sub\ranking\achievebox_bg1.png" />
+    <Content Include="resources\img\sub\ranking\achievebox_bg2.png" />
+    <Content Include="resources\img\sub\ranking\achievebox_bg3.png" />
+    <Content Include="resources\img\sub\ranking\achievebox_icon1.png" />
+    <Content Include="resources\img\sub\ranking\achievebox_icon2.png" />
+    <Content Include="resources\img\sub\ranking\achieve_ico1.png" />
+    <Content Include="resources\img\sub\ranking\achieve_ico2.png" />
+    <Content Include="resources\img\sub\ranking\achieve_ico3.png" />
+    <Content Include="resources\img\sub\ranking\achieve_more.png" />
+    <Content Include="resources\img\sub\ranking\copper.png" />
+    <Content Include="resources\img\sub\ranking\gold.png" />
+    <Content Include="resources\img\sub\ranking\rankingbox_bg1.png" />
+    <Content Include="resources\img\sub\ranking\rankingbox_bg2.png" />
+    <Content Include="resources\img\sub\ranking\rankingbox_bg3.png" />
+    <Content Include="resources\img\sub\ranking\rankingbox_ico.png" />
+    <Content Include="resources\img\sub\ranking\rankinglist_ico.png" />
+    <Content Include="resources\img\sub\ranking\sliver.png" />
+    <Content Include="resources\img\sub\ranking\Thumbs.db" />
+    <Content Include="resources\img\sub\rewardTitle.png" />
+    <Content Include="resources\img\sub\reward\rewardIcon.png" />
+    <Content Include="resources\img\sub\reward\rewardStatus.png" />
+    <Content Include="resources\img\sub\reward\reword_more.png" />
     <Content Include="resources\img\sub\reward\Thumbs.db" />
+    <Content Include="resources\img\sub\signtermTitle.png" />
+    <Content Include="resources\img\sub\signupTitle.png" />
+    <Content Include="resources\img\sub\signup_editTitle.png" />
+    <Content Include="resources\img\sub\subMeta01.jpg" />
+    <Content Include="resources\img\sub\subMeta02.gif" />
+    <Content Include="resources\img\sub\subMeta02.jpg" />
+    <Content Include="resources\img\sub\subMeta03.jpg" />
+    <Content Include="resources\img\sub\subMeta04.jpg" />
+    <Content Include="resources\img\sub\subMeta05.gif" />
+    <Content Include="resources\img\sub\subMeta05.jpg" />
+    <Content Include="resources\img\sub\subMeta07.gif" />
+    <Content Include="resources\img\sub\subMeta07.jpg" />
+    <Content Include="resources\img\sub\subMeta08.gif" />
+    <Content Include="resources\img\sub\subMeta08.jpg" />
+    <Content Include="resources\img\sub\subMeta09.gif" />
+    <Content Include="resources\img\sub\subMeta09.jpg" />
+    <Content Include="resources\img\sub\subMeta10.jpg" />
+    <Content Include="resources\img\sub\subMetaBg_member.jpg" />
+    <Content Include="resources\img\sub\subMetaBg_noti.jpg" />
+    <Content Include="resources\img\sub\subMetaBg_pw.jpg" />
+    <Content Include="resources\img\sub\subMetaBg_ranking.jpg" />
+    <Content Include="resources\img\sub\subMetaBg_reword.jpg" />
+    <Content Include="resources\img\sub\subTopImg.png" />
     <Content Include="resources\img\sub\Thumbs.db" />
     <Content Include="resources\img\Thumbs.db" />
+    <Content Include="resources\js\common.js" />
+    <Content Include="resources\js\includeHTML.js" />
+    <Content Include="resources\js\jquery-3.5.1.min.js" />
+    <Content Include="resources\js\jquery.1.11.0.min.js" />
+    <Content Include="resources\js\swiper-bundle.js" />
+    <Content Include="resources\js\swiper-bundle2.js" />
+    <Content Include="resources\js\swiper.js" />
+    <Content Include="resources\js\swiper.min.4.3.5.js" />
+    <Content Include="resources\js\swiper.min.js" />
+    <Content Include="resources\js\swiper2.js" />
+    <Content Include="resources\js\swiper3.js" />
+    <Content Include="resources\js\wScratchPad.min.js" />
+    <Content Include="robots.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="packages.config" />
+    <Content Include="common\master\page.Master" />
+    <Content Include="board\evt\default.aspx.bak" />
+    <Content Include="board\evt\default.aspx.cs.bak" />
+    <None Include="Properties\PublishProfiles\01.lfc.shinhanlife-fc.com.pubxml" />
+    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\lfc.pubxml" />
+    <None Include="Properties\PublishProfiles\OrangeSummerFront.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\kr.co.youiwe.webservice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="resources\img\sub\bm\Thumbs.db" />
+    <Content Include="resources\img\sub\index\Thumbs.db" />
+    <Content Include="resources\img\sub\measure\Thumbs.db" />
+    <Content Include="resources\js\common.js.bak" />
     <None Include="Web References\kr.co.youiwe.webservice\ServiceSMS.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -272,6 +455,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="achieve\bm\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="achieve\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="achieve\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
     <Compile Include="achieve\point\default.aspx.cs">
@@ -345,7 +535,7 @@
       <DependentUpon>menu.ascx</DependentUpon>
     </Compile>
     <Compile Include="controllers\EventController.cs" />
-    <Compile Include="controllers\Member2Controller.cs" />
+    <Compile Include="controllers\MemberController.cs" />
     <Compile Include="controllers\NoticeController.cs" />
     <Compile Include="controllers\RouletteController.cs" />
     <Compile Include="controllers\Sms2Controller.cs" />
@@ -386,6 +576,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="measure\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="measure\group\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="measure\group\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
     <Compile Include="measure\headoffice\default.aspx.cs">
@@ -509,6 +706,10 @@
     <ProjectReference Include="..\MLib\MLib.csproj">
       <Project>{96f3570b-c1ba-4e65-81f8-cd8be458306f}</Project>
       <Name>MLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OrangeSummer.Access\OrangeSummer.Access.csproj">
+      <Project>{025ca64e-8017-419f-b3ec-4b8095c7a1d4}</Project>
+      <Name>OrangeSummer.Access</Name>
     </ProjectReference>
     <ProjectReference Include="..\OrangeSummer.Business\OrangeSummer.Business.csproj">
       <Project>{ec61b561-2054-4808-81ed-cc027e28e84c}</Project>

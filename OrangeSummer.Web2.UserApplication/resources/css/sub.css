@@ -475,6 +475,30 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
 
 /* 시책안내 */
 /* lfc */
+.subMeta05.measure.lfc .subContainer.guide.sl .mandatory_standards.gsl dl{
+    height: 333px;
+}
+.subMeta05.measure.lfc .subContainer.guide.sl .mandatory_standards.gsl dl dd{
+    margin-top: 40px;
+}
+.subMeta05.measure.lfc .subContainer.guide.point .mandatory_standards dl{
+    height:191px;
+}
+.subMeta05.measure.lfc .subContainer.guide.point .mandatory_standards dl dd{
+    margin-top: 38px;
+}
+.subMeta05.measure.lfc .measureCon.point .Con dl{
+    padding:0 5px;
+}
+.subMeta05.measure.lfc .measureCon.point .Con dl{
+    width:30%;
+}
+.subMeta05.measure.lfc .measureCon.point .Con dl:nth-child(1){
+    width:33%;
+}
+.subMeta05.measure.lfc .measureCon.point .Con dl:nth-child(3){
+    width:36%;
+}
 .subMeta05.measure.lfc ul.bmTabs.measure li a{
     width: 197px;
 }
@@ -483,6 +507,13 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
 }
 .measureCon.Con1{
     margin-top:20px;
+}
+.subMeta05.measure .individual .evaluationInfo dd.purple{
+    font-family: 'OneShinhanL', sans-serif;
+    padding-left: 160px;
+}
+.subMeta05.measure .individual .evaluationInfo dd.purple strong{
+    color: #705dcf;
 }
 .subMeta05.measure .individual .measureCon .Con{
     box-shadow: none;
@@ -581,6 +612,7 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
     font-family: 'OneShinhanB', sans-serif;
     border-top:1px solid #e5e5e5;
     padding-top:40px;
+    padding-bottom:15px;
 }
 #sub_wrap.measure .measure_list dl dt{
     font-weight:100;
@@ -633,7 +665,7 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
     float:left;
     width:100%;
     margin-bottom: -15px;
-    margin-top:30px;
+    margin-top:10px;
 }
 .measure_guide .titleBox.gsl{
     margin-top:50px;
@@ -683,19 +715,22 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
 }
 .measureCon .Con dl{
     border-right:1px dashed #c9c9c9;
-    width: 36%;
+    width: 33%;
     height: 100%;
     text-align:
     center;
     box-sizing: border-box;
    float:left;
     vertical-align: middle;
-    padding:0 18px;
+    padding:0 10px;
 }
 .measureCon .Con dl:nth-child(1){
     width:28%;
 }
-.measureCon .Con dl:last-child{border-right:none;}
+.measureCon .Con dl:last-child{
+    border-right:none;
+     width:36%;
+}
 
 .subMeta05.measure .sl .measureCon .Con{
     box-shadow: none;
@@ -726,7 +761,7 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
 }
 .subMeta05.measure .sl .measureCon .Con dl:nth-child(4) dd{
     height:180px;
-    padding-top: 29px;
+    padding-top: 5px;
 }
 .subMeta05.measure .sl .measureCon .Con dt{
     line-height: 70px;
@@ -777,7 +812,7 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
     margin-top: 20px;
 }
 .measureCon .Con dd strong{
-    font-size:40px;
+    font-size:38px;
     color:#705dcf;
     font-family: 'OneShinhanB', sans-serif;
 }
@@ -793,7 +828,9 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
     font-family: 'OneShinhanB', sans-serif;
     letter-spacing: -3px;
 }
-
+.subMeta05.measure .subContainer.guide .measureCon.point{
+    margin-top: 40px;
+}
 .measureCon.point + .point{
     margin-bottom:40px;
 }
@@ -1458,7 +1495,7 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
     line-height:45px;
 }
 .evaluationInfo{
-    margin:30px 0;
+    margin:10px 0;
 }
 strong{
     font-weight:bold;
@@ -1496,9 +1533,9 @@ strong.purple{
     width: 100%;
     float:left;
     font-size:28px;
-    padding-left:27px;
+    padding-left:24px;
     margin-bottom: 3px;
-    letter-spacing: -1.4px;
+    letter-spacing: -1.8px;
 }
 .introduction dd.purple{
     color:#705dcf;
@@ -1508,8 +1545,12 @@ strong.purple{
     font-size:28px;
     font-family: 'OneShinhanL', sans-serif;
 }
+.evaluationInfo dt, .evaluationInfo dd strong{
+    font-family: 'OneShinhanM', sans-serif;
+    font-weight:300;
+}
 .evaluationInfo dt .space{
-    width: 39px;
+    width: 59px;
     display: inline-block;
 }
 .evaluationInfo dt .space + .space{
@@ -1530,12 +1571,13 @@ strong.purple{
     font-family: 'OneShinhanB', sans-serif;
 }
 .evaluationInfo dt span.sl_blank{margin-left:25px;}
+.subContainer.guide.sl .evaluationInfo dd.purple{padding-left:163px;}
 .subContainer.guide.sl .mandatory_standards dl{
     width:100%;
-    height:339px;
+    height:425px;
 }
 .subContainer.guide.sl .evaluationInfo dl dt .space{
-    width: 48px;
+    width: 59px;
 }
 .subContainer.guide.sl .evaluationInfo dl dt .space + .space{
     width: 16px;
@@ -1543,13 +1585,31 @@ strong.purple{
 .subContainer.guide.sl .mandatory_standards dl dd{
     line-height:40px;
 }
-.subContainer.guide.sl .mandatory_standards dl dd span{
-    display: block;
-    height: 15px;
+
+.subContainer.guide.sl .mandatory_standards dl em{
+    color: #705dcf;
+    font-family: 'OneShinhanM', sans-serif;
 }
 .subContainer.guide.sl .mandatory_standards dl strong{
     display:inline-block;
     font-weight:normal;
+}
+.subContainer.guide.sl .Con1 .mandatory_standards dl span{
+    height:15px;
+    display:block;
+}
+.subContainer.guide.sl .mandatory_standards dl span strong{
+    font-size:28px;
+    color:#000;
+    margin-right: 5px;
+}
+.subContainer.guide.sl .mandatory_standards dl span{
+    font-family: 'OneShinhanM', sans-serif;
+}
+.subContainer.guide.sl .mandatory_standards dl span + span{
+    display: block;
+    margin-left: -61px;
+    margin-top: -5px;
 }
 .subContainer.guide.sl .mandatory_standards dl strong em{
     font-family: 'OneShinhanB', sans-serif;
@@ -1560,7 +1620,7 @@ strong.purple{
     margin-bottom:30px;
 }
 .subContainer.guide.sl .mandatory_standards.gsl dl{
-    height:243px;
+    height:284px;
 }
 .subContainer.guide.point .bp {
     float: left;
@@ -1622,7 +1682,7 @@ strong.purple{
     background-color:#fff;
     border-radius:20px;
     width:100%;
-    height:230px;
+    height:276px;
     float:left;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
 }
@@ -1638,7 +1698,7 @@ strong.purple{
     font-family: 'OneShinhanM', sans-serif;
 }
 .mandatory_standards dd{
-    margin-top:38px;
+    margin-top:34px;
     font-size:28px;
     font-family: 'OneShinhanM', sans-serif;
     text-align:center;

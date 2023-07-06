@@ -29,7 +29,7 @@ namespace OrangeSummer.Web2flc.UserApplication.member.login
         {
             try
             {
-                using (Business.Member biz = new Business.Member(OrangeSummer.Common.User.AppSetting.Connection))
+                using (Access.Member biz = new Access.Member(OrangeSummer.Common.User.AppSetting.Connection))
                 {
                     List<Model.Banner> list = biz.BackgroundInfo();
                     _json = JsonConvert.SerializeObject(list);
@@ -69,9 +69,9 @@ namespace OrangeSummer.Web2flc.UserApplication.member.login
         private void Login(string code, string pwd)
         {
             string referer = Check.IsNone(Request["referer"], "");
-            using (Business.Member biz = new Business.Member(OrangeSummer.Common.User.AppSetting.Connection))
+            using (Access.Member biz = new Access.Member(OrangeSummer.Common.User.AppSetting.Connection))
             {
-                Model.Member member = biz.UserDetail202302(code);
+                Model.Member member = biz.UserDetail_202306(code);
                 if (member != null)
                 {
                     if(member.PwdDecode == pwd)

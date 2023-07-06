@@ -2,6 +2,30 @@ $(function () {
 
     var scrollY;
 
+    // 상단바 고정
+    //$(window).on('scroll', function () {
+    //    var headerH = $('.title_wrap').height();
+    //    var scrollH = $(window).scrollTop();
+
+    //    if (scrollH >= headerH) {
+    //        $('.page_title').addClass('fixed');
+    //    } else {
+    //        $('.page_title').removeClass('fixed');
+    //    }
+    //});
+
+    // 상단바 고정
+    $(window).on('scroll', function () {
+        var headerH = $('#header').height();
+        var scrollH = $(window).scrollTop();
+
+        if (scrollH >= headerH) {
+            $('#header').addClass('fixed');
+        } else {
+            $('#header').removeClass('fixed');
+        }
+    });
+
     // 전체메뉴
     $('.btn_allmenu').on('click', 'a', function (e) {
         e.preventDefault();
@@ -15,22 +39,6 @@ $(function () {
         closePopup();
     });
 
-    // 팝업
-    function openPopup(obj) {
-        scrollY = $(window).scrollTop();
-
-        $('html, body').css({ top: -scrollY }).addClass('scroll-fiexd');
-        $('.wrapper').prepend('<div class="dimm"></di>');
-        $(obj).show();
-    }
-
-    function closePopup() {
-        $('html, body').removeAttr('style').removeClass('scroll-fiexd');
-        $('.dimm').remove();
-
-        $(window).scrollTop(scrollY);
-    }
-
     $('.popup_wrap .popup_close, .popup_wrap .btn_close').on('click', function (e) {
         e.preventDefault();
 
@@ -38,99 +46,87 @@ $(function () {
         closePopup();
     });
 
-    // 이벤트 키비 슬라이드
-    var eventSwiper = new Swiper('.swiper-event', {
-        speed: 400,
-        spaceBetween: 100,
-        loop: true,
-        pagination: {
-            el: '.pagination',
-            clickable: true
-        },
-    });
-
-    // 200702 수정 시작
-    // 이벤트 배너 업적
-    var eventbtSwiper = new Swiper('.swiper_event_bottom', {
-        autoHeight: true,
-        speed: 600,
-        loop: true,
-        autoplay: true
-    });
-    // 200702 수정 끝
-
-    // 탭 영역
-    var galleryThumbs = new Swiper('.tab_list', {
-        allowTouchMove: false,
-        slidesPerView: 3,
-        speed: 600
-    });
-    var galleryTop = new Swiper('.tab_cont_wrap', {
-        autoHeight: true,
-        slidesPerView: 1,
-        thumbs: {
-            swiper: galleryThumbs
-        }
-    });
-
     // 페이지 이동
     if ($("#tab").val() === "branch") {
         galleryTop.slideTo(2, 1000);
     }
 
+    // 이벤트 키비 슬라이드
+    //var eventSwiper = new Swiper('.swiper-event', {
+    //    speed: 400,
+    //    spaceBetween: 100,
+    //    loop: true,
+    //    pagination: {
+    //        el: '.pagination',
+    //        clickable: true
+    //    },
+    //});
+
     // 200702 수정 시작
-    // 탭 영역 - 업적
-    var galleryThumbsA = new Swiper('.rank_wrap .tab_list.type01', {
-        allowTouchMove: false,
-        slidesPerView: 1,
-        speed: 600
-    });
-    var galleryTopA = new Swiper('.rank_wrap .tab_cont_wrap.type01', {
-        autoHeight: true,
-        slidesPerView: 1,
-        thumbs: {
-            swiper: galleryThumbsA
-        }
-    });
-
-    var galleryThumbsB = new Swiper('.rank_wrap .tab_list.type02', {
-        allowTouchMove: false,
-        slidesPerView: 2,
-        speed: 600
-    });
-    var galleryTopB = new Swiper('.rank_wrap .tab_cont_wrap.type02', {
-        autoHeight: true,
-        slidesPerView: 1,
-        thumbs: {
-            swiper: galleryThumbsB
-        }
-    });
-
-    var galleryThumbsC = new Swiper('.rank_wrap .tab_list.type03', {
-        allowTouchMove: false,
-        slidesPerView: 3,
-        speed: 600
-    });
-    var galleryTopC = new Swiper('.rank_wrap .tab_cont_wrap.type03', {
-        autoHeight: true,
-        slidesPerView: 1,
-        thumbs: {
-            swiper: galleryThumbsC
-        }
-    });
+    // 이벤트 배너 업적
+    //var eventbtSwiper = new Swiper('.swiper_event_bottom', {
+    //    autoHeight: true,
+    //    speed: 600,
+    //    loop: true,
+    //    autoplay: true
+    //});
     // 200702 수정 끝
 
-    // 상단바 고정
-    $(window).on('scroll', function () {
-        var headerH = $('.title_wrap').height();
-        var scrollH = $(window).scrollTop();
+    // 탭 영역
+    //var galleryThumbs = new Swiper('.tab_list', {
+    //    allowTouchMove: false,
+    //    slidesPerView: 3,
+    //    speed: 600
+    //});
+    //var galleryTop = new Swiper('.tab_cont_wrap', {
+    //    autoHeight: true,
+    //    slidesPerView: 1,
+    //    thumbs: {
+    //        swiper: galleryThumbs
+    //    }
+    //});
 
-        if (scrollH >= headerH) {
-            $('.page_title').addClass('fixed');
-        } else {
-            $('.page_title').removeClass('fixed');
-        }
-    });
+    // 200702 수정 시작
+    // 탭 영역 - 업적
+    //var galleryThumbsA = new Swiper('.rank_wrap .tab_list.type01', {
+    //    allowTouchMove: false,
+    //    slidesPerView: 1,
+    //    speed: 600
+    //});
+    //var galleryTopA = new Swiper('.rank_wrap .tab_cont_wrap.type01', {
+    //    autoHeight: true,
+    //    slidesPerView: 1,
+    //    thumbs: {
+    //        swiper: galleryThumbsA
+    //    }
+    //});
+
+    //var galleryThumbsB = new Swiper('.rank_wrap .tab_list.type02', {
+    //    allowTouchMove: false,
+    //    slidesPerView: 2,
+    //    speed: 600
+    //});
+    //var galleryTopB = new Swiper('.rank_wrap .tab_cont_wrap.type02', {
+    //    autoHeight: true,
+    //    slidesPerView: 1,
+    //    thumbs: {
+    //        swiper: galleryThumbsB
+    //    }
+    //});
+
+    //var galleryThumbsC = new Swiper('.rank_wrap .tab_list.type03', {
+    //    allowTouchMove: false,
+    //    slidesPerView: 3,
+    //    speed: 600
+    //});
+    //var galleryTopC = new Swiper('.rank_wrap .tab_cont_wrap.type03', {
+    //    autoHeight: true,
+    //    slidesPerView: 1,
+    //    thumbs: {
+    //        swiper: galleryThumbsC
+    //    }
+    //});
+    // 200702 수정 끝
 
     // 룰렛 영역
     function roulette() {
@@ -206,16 +202,32 @@ $(function () {
     roulette();
 
     // UCC 영역
-    $('.ucc_box .img').on('click', 'a', function (e) {
-        e.preventDefault();
+    //$('.ucc_box .img').on('click', 'a', function (e) {
+    //    e.preventDefault();
 
-        var url = $(this).data('video');
-        $('.popup_ucc .video_box iframe').attr('src', url);
-        openPopup('.popup_ucc');
+    //    var url = $(this).data('video');
+    //    $('.popup_ucc .video_box iframe').attr('src', url);
+    //    openPopup('.popup_ucc');
+    //});
+
+    //$('.popup_ucc').on('click', '.popup_close', function (e) {
+    //    $('.popup_ucc .video_box iframe').attr('src', '');
+    //    closePopup('.popup_ucc');
+    //});
     });
 
-    $('.popup_ucc').on('click', '.popup_close', function (e) {
-        $('.popup_ucc .video_box iframe').attr('src', '');
-        closePopup('.popup_ucc');
-    });
-});
+// 팝업
+function openPopup(obj) {
+    scrollY = $(window).scrollTop();
+
+    $('html, body').css({ top: -scrollY }).addClass('scroll-fiexd');
+    $('.wrapper').prepend('<div class="dimm"></di>');
+    $(obj).show();
+}
+
+function closePopup() {
+    $('html, body').removeAttr('style').removeClass('scroll-fiexd');
+    $('.dimm').remove();
+
+    $(window).scrollTop(scrollY);
+}

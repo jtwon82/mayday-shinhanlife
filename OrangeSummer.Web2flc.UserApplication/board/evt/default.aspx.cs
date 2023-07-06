@@ -1,5 +1,4 @@
-﻿using MLib.Util;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,78 +9,40 @@ namespace OrangeSummer.Web2flc.UserApplication.board.evt
 {
     public partial class _default : System.Web.UI.Page
     {
-        protected int _total = 0;
-        protected string _paging = string.Empty;
-        private int _size = 10;
-        private int _block = 10;
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!IsPostBack)
-            {
-                PageLoad();
-            }
-        }
+        protected string _result = string.Empty;
 
-        /// <summary>
-        /// 관리자 리스트
-        /// </summary>
-        private void PageLoad()
+        protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-                int page = Check.IsNone(Request["page"], 1);
-                using (Business.Event biz = new Business.Event(Common.User.AppSetting.Connection))
+                using (Access.Roulette biz = new Access.Roulette(Common.User.AppSetting.Connection))
                 {
-                    List<Model.Event> list = biz.UserList(page, _size, "NOTICE");
-                    //if (list != null)
-                    //{
-                    //    this.rptNoticeList.DataSource = list;
-                    //    this.rptNoticeList.DataBind();
-                    //}
+                    Random random = new Random();
+                    bool check = true;
 
-                    list = biz.UserList(page, _size, "진행");
-                    if (list != null)
+                    // 일자별 당첨인원 채크
+                    if (biz.UserSuccessCnt()<=20)
                     {
-                        this.rptList.DataSource = list;
-                        this.rptList.DataBind();;
-                        _total = list[0].Total;
+                        // 기간내 당첨여부 채크
+                        check = biz.UserCheck_202306(Common.User.Identify.Id);
+                        if (check)
+                            _result = "lose_1";
+                        else
+                        {
+                            if (random.Next(1, 100)  <= 10)
+                                _result = "win";
+                            else
+                                _result = "lose_2";
+                        }
                     }
-
-                    Common.User.Paging paging = new Common.User.Paging("./", page, _size, _block, _total);
-                    _paging = paging.ToString();
+                    else
+                        _result = "lose_3";
                 }
-
-                #region [ 이벤트 배너 ]
-                using (Business.Banner biz = new Business.Banner(Common.User.AppSetting.Connection))
-                {
-                    List<Model.Banner> list = biz.UserList("EVENT");
-                    if (list != null)
-                    {
-                        this.rptBannerList.DataSource = list;
-                        this.rptBannerList.DataBind();
-                    }
-                }
-                #endregion
             }
             catch (Exception ex)
             {
                 MLib.Util.Error.WebHandler(ex);
             }
-        }
-
-        protected string ListNumber(object obj, int index)
-        {
-            int page = Check.IsNone(Request["page"], 1);
-            int number = (Convert.ToInt32(obj) - _size * (page - 1) - index);
-            return number.ToString();
-        }
-
-        protected string Parameters()
-        {
-            System.Text.StringBuilder sb = new System.Text.StringBuilder();
-            sb.Append("&page=" + Check.IsNone(Request["page"], "1"));
-
-            return sb.ToString();
         }
     }
 }

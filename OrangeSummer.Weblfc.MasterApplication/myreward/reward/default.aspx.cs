@@ -43,7 +43,7 @@ namespace OrangeSummer.Weblfc.MasterApplication.myreward.reward
                 string orderby = Check.IsNone(Request["orderby"], "ORDERBY");
 
                 // 지점
-                using (Business.Branch biz = new Business.Branch(Common.Master.AppSetting.Connection))
+                using (Access.Branch biz = new Access.Branch(Common.Master.AppSetting.Connection))
                 {
                     List<Model.Branch> list = biz.Line_new();
                     if (list != null)
@@ -70,9 +70,9 @@ namespace OrangeSummer.Weblfc.MasterApplication.myreward.reward
                 Element.Set(this.code, code);
                 Element.Set(this.name, name);
 
-                using (Business.Achievement biz = new Business.Achievement(Common.Master.AppSetting.Connection))
+                using (Access.Achievement biz = new Access.Achievement(Common.Master.AppSetting.Connection))
                 {
-                    List<Model.Achievement> list = biz.ListRewradCharge(page, _size, orderby, branch, level, code, name);
+                    List<Model.Achievement> list = biz.ListRewradCharge_202306(page, _size, orderby, branch, level, code, name);
                     if (list != null)
                     {
                         this.rptList.DataSource = list;
@@ -115,7 +115,7 @@ namespace OrangeSummer.Weblfc.MasterApplication.myreward.reward
                             DataSet ds = Reader(upload.SaveFilePath);
                             if (ds.Tables[1].Rows.Count > 0)
                             {
-                                using (Business.Achievement biz = new Business.Achievement(Common.Master.AppSetting.Connection))
+                                using (Access.Achievement biz = new Access.Achievement(Common.Master.AppSetting.Connection))
                                 {
                                     DataTable dt = biz.RegistCharge(ds.Tables[1]);
                                     if (dt.Rows.Count == 1)

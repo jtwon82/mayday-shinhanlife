@@ -8,8 +8,9 @@
                     <label>구분</label>
                     <asp:DropDownList ID="type" ClientIDMode="Static" runat="server" CssClass="form-control">
                         <asp:ListItem Text="선택" Value=""></asp:ListItem>
-                        <asp:ListItem Text="일반" Value="NORMAL"></asp:ListItem>
+                        <asp:ListItem Text="Normal" Value="NORMAL"></asp:ListItem>
                         <asp:ListItem Text="Notice" Value="NOTICE"></asp:ListItem>
+                        <asp:ListItem Text="Event" Value="EVENT"></asp:ListItem>
                     </asp:DropDownList>
                 </div>
                 <div class="form-group col-md-2">
@@ -50,7 +51,7 @@
         <table class="table table-bordered" style="min-width: 1110px;">
             <colgroup>
                 <col style="width: 5%;" />
-                <%--<col style="width: 10%;" />--%>
+                <col style="width: 10%;" />
                 <col />
                 <col style="width: 10%;" />
                 <col style="width: 10%;" />
@@ -59,7 +60,7 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <%--<th>구분</th>--%>
+                    <th>구분</th>
                     <th>제목</th>
                     <th>노출 여부</th>
                     <th>관리자</th>
@@ -71,7 +72,7 @@
                     <ItemTemplate>
                         <tr>
                             <td><%# ListNumber(Eval("Total"), Container.ItemIndex) %></td>
-                            <%--<td><%# Eval("Type").ToString() == "NOTICE" ? "Notice" : "일반" %></td>--%>
+                            <td><%# Eval("Type").ToString()%></td>
                             <td class="text-left"><a href="regist.aspx?id=<%# Eval("Id").ToString() + Parameters() %>"><%# Eval("Title") %></a></td>
                             <td><%# Eval("UseYn").ToString() == "Y" ? "노출" : "미노출" %></td>
                             <td><%# Eval("Admin.Name") %></td>

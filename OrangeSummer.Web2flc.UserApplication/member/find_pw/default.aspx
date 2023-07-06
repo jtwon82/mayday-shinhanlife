@@ -1,18 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/common/master/page.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="OrangeSummer.Web2flc.UserApplication.member.find_pw._default" %>
 <%@ Register Src="~/common/uc/menu.ascx" TagPrefix="uc1" TagName="menu" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <link rel="stylesheet" href="/resources/css/reset.css?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>" />
-    <link rel="stylesheet" href="/resources/css/layout.css?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>" />
     <link rel="stylesheet" href="/resources/css/sub.css?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>" />
-    
     <script type="text/javascript" src="/resources/js/common.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 <body>
-	<div class="background sub">
-		<p class="cover"></p>
-		<p class="upload"><img src="/resources/img/sub/subMetaBg_pw.jpg" alt=""/></p>
-	</div>
 	<div id="sub_wrap" class="subMeta10">
             <uc1:menu runat="server" ID="menu" />
 
@@ -25,6 +20,7 @@
 					<div class="form_group">
 						<label for="user_name">성명</label>
                         <asp:TextBox ID="user_name" runat="server" ClientIDMode="Static" MaxLength="10" placeholder="실명으로 등록해주세요." CssClass="form_control"></asp:TextBox>
+					    <p class="warning">※ 반드시 실명으로 등록하여 가입해 주세요.</p>
 					</div>
 
 					<div class="form_group">
@@ -43,8 +39,8 @@
 						<p class="warning one">* 성명/연락처 인증 후 코드 중복확인 해주세요.</p>
 					</div>
 				</div>
-			</div>
 			<button class="btn_signup findpw" id="btnRegist" runat="server" onserverclick="btnRegist_Click" onclick="if (!member.regist()) { return false; }">비밀번호찾기</button>
+		</div>
 		</div>
 
 		<div class="subContainer" runat="server" id="result">
@@ -60,6 +56,7 @@
 	</div>
 </body>
 </asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 <script>
 

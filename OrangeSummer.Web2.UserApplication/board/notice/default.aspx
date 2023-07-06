@@ -49,7 +49,7 @@
                             <ItemTemplate>
                                 <div class="listBox">
                                     <a href="detail.aspx?id=<%# Eval("Id").ToString() + "&type=" + Eval("Type").ToString() %>">
-                                        <p class="title"><span><%# ListNumber(Eval("Total"), Container.ItemIndex) %></span> [이벤트] <%# Eval("Title") %></p>
+                                        <p class="title">[이벤트] <%# Eval("Title") %></p>
                                         <p class="replyNum"><%# Eval("ReplyCount") %></p>
                                         <ul class="info">
                                             <li class="name"><%# Eval("Admin.Name") %><span>ㅣ</span></li>

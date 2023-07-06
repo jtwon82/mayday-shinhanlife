@@ -109,7 +109,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking.gsl
 
                     sb.Append("<ul class='rankingUnit'>\n");
                     sb.Append("	<li>[날짜 기준] " + _date + "</li>\n");
-                    sb.Append("	<li>[ 단위 ] 환산 CANP</li>\n");
+                    sb.Append("	<li>[단위] 환산 CANP</li>\n");
                     sb.Append("</ul>\n");
                     if (sb1.ToString() != "" || sb2.ToString() != "" || sb3.ToString() != "")
                     {

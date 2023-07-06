@@ -34,7 +34,7 @@ namespace OrangeSummer.Web2flc.UserApplication.ranking
         {
             try
             {
-                using (Business.Member biz = new Business.Member(OrangeSummer.Common.User.AppSetting.Connection))
+                using (Access.Member biz = new Access.Member(OrangeSummer.Common.User.AppSetting.Connection))
                 {
                     List<Model.Banner> list = biz.BackgroundInfo();
                     _json = JsonConvert.SerializeObject(list);
@@ -49,7 +49,7 @@ namespace OrangeSummer.Web2flc.UserApplication.ranking
                 StringBuilder sb3 = new StringBuilder();
                 StringBuilder sb4 = new StringBuilder();
                 StringBuilder uniqueChk = new StringBuilder();
-                using (Business.Achievement biz = new Business.Achievement(Common.User.AppSetting.Connection))
+                using (Access.Achievement biz = new Access.Achievement(Common.User.AppSetting.Connection))
                 {
                     #region [ 개인 ]
                     sb.Clear();
@@ -58,7 +58,7 @@ namespace OrangeSummer.Web2flc.UserApplication.ranking
                     sb3.Clear();
                     sb4.Clear();
 
-                    List<Model.Achievement> persons = biz.UserRanking_new(1, 100, "PERSON");
+                    List<Model.Achievement> persons = biz.UserRanking_202306(1, 100, "PERSON");
                     if (persons != null)
                     {
                         DateTime dt = DateTime.Parse(persons[0].Date);
@@ -66,7 +66,7 @@ namespace OrangeSummer.Web2flc.UserApplication.ranking
                         int index = 1;
                         foreach (Model.Achievement item in persons)
                         {
-                            string key = $"{item.PersonRank}|{item.Cost}";
+                            string key = $"{item.PersonRank}|{item.PersonCanp}";
                             if (uniqueChk.ToString().Contains(key))
                             {
                                 continue;
@@ -75,64 +75,63 @@ namespace OrangeSummer.Web2flc.UserApplication.ranking
 
                             if (item.PersonRank == "2")
                             {
-                                sb2.Append("<dl>");
-                                sb2.Append("	<dd class='crown'><img src='/resources/img/sub/ranking/sliver.png' alt='' /></dd>");
-                                sb2.Append($"	<dt>{item.PersonRank}위</dt>");
-                                sb2.Append("	<dd>");
-                                sb2.Append($"	<span class='myName'>{item.BranchName}<em> {item.MemberName}</em></span>");
-                                sb2.Append($"	{item.Cost}");
-                                sb2.Append("	</dd>");
-                                sb2.Append("</dl>");
+                                sb2.Append("<dl class='rank2'>\n");
+                                sb2.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankingbox_ico.png' alt=''></span>\n");
+                                sb2.Append($"	<dt><em>{item.PersonRank}위</em><span class='myName'>{item.BranchName}<em> {item.MemberName}</em></span></dt>\n");
+                                sb2.Append($"	<dd>{item.PersonCanp}</dd>\n");
+                                sb2.Append("</dl>\n");
                             }
                             else if (item.PersonRank == "1")
                             {
-                                sb1.Append("<dl class='centerBox'>");
-                                sb1.Append("	<dd class='crown'><img src='/resources/img/sub/ranking/gold.png' alt='' /></dd>");
-                                sb1.Append($"	<dt>{item.PersonRank}위</dt>");
-                                sb1.Append("	<dd>");
-                                sb1.Append($"	<span class='myName'>{item.BranchName}<em> {item.MemberName}</em></span>");
-                                sb1.Append($"	{item.Cost}");
-                                sb1.Append("	</dd>");
-                                sb1.Append("</dl>");
+                                sb1.Append("<dl class='rank1'>\n");
+                                sb1.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankingbox_ico.png' alt=''></span>\n");
+                                sb1.Append($"	<dt><em>{item.PersonRank}위</em><span class='myName'>{item.BranchName}<em> {item.MemberName}</em></span></dt>\n");
+                                sb1.Append($"	<dd>{item.PersonCanp}</dd>\n");
+                                sb1.Append("</dl>\n");
                             }
                             else if (item.PersonRank == "3")
                             {
-                                sb3.Append("<dl>");
-                                sb3.Append("	<dd class='crown'><img src='/resources/img/sub/ranking/copper.png' alt='' /></dd>");
-                                sb3.Append($"        <dt>{item.PersonRank}위</dt>");
-                                sb3.Append("        <dd>");
-                                sb3.Append($"        <span class=\"myName\">{item.BranchName}<em> {item.MemberName}</em></span>");
-                                sb3.Append($"        {item.Cost}");
-                                sb3.Append("	</dd>");
-                                sb3.Append("</dl>");
+                                sb3.Append("<dl class='rank3'>\n");
+                                sb3.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankingbox_ico.png' alt=''></span>\n");
+                                sb3.Append($"	<dt><em>{item.PersonRank}위</em><span class='myName'>{item.BranchName}<em> {item.MemberName}</em></span></dt>\n");
+                                sb3.Append($"	<dd>{item.PersonCanp}</dd>\n");
+                                sb3.Append("</dl>\n");
+                            }
+                            else if (Int32.Parse(item.PersonRank) < 11)
+                            {
+                                sb3.Append("<dl>\n");
+                                sb3.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankingbox_ico.png' alt=''></span>\n");
+                                sb3.Append($"	<dt><em>{item.PersonRank}위</em><span class='myName'>{item.BranchName}<em> {item.MemberName}</em></span></dt>\n");
+                                sb3.Append($"	<dd>{item.PersonCanp}</dd>\n");
+                                sb3.Append("</dl>\n");
                             }
                             else {
-
-                                sb4.Append("<dl>");
-                                sb4.Append($"    <dt>{item.PersonRank}위</dt>");
-                                sb4.Append($"    <dd>{item.Cost}</dd>");
-                                sb4.Append("</dl>");
+                                sb4.Append("<dl>\n");
+                                sb4.Append("<span class='icon'><img src = '/resources/img/sub/ranking/rankinglist_ico.png' alt=''></span>\n");
+                                sb4.Append($"	<dt>{item.PersonRank}위</dt>\n");
+                                sb4.Append($"	<dd>{item.PersonCanp}</dd>\n");
+                                sb4.Append("</dl>\n");
                             }
 
                             index++;
                         }
                     }
 
-                    sb.Append("<!-- 개인부문 -->");
-                    sb.Append("<ul class='rankingUnit'>");
-                    sb.Append("	<li>[날짜 기준] " + _date + "</li>");
-                    sb.Append("	<li>[ 단위 ]  월납화보험료</li>");
-                    sb.Append("</ul>");
+                    sb.Append("<!-- 개인부문 -->\n");
+                    sb.Append("<ul class='rankingUnit'>\n");
+                    sb.Append("	<li>[날짜 기준] " + _date + "</li>\n");
+                    sb.Append("	<li>[ 단위 ] 환산 P</li>\n");
+                    sb.Append("</ul>\n");
                     if (sb1.ToString() != "" || sb2.ToString() != "" || sb3.ToString() != "") {
-                        sb.Append("<div class=\"rankingBox\">");
-                        sb.Append(sb2.ToString() + sb1.ToString() + sb3.ToString());
-                        sb.Append("</div>");
+                        sb.Append("<div class=\"rankingBox\">\n");
+                        sb.Append(sb1.ToString() + sb2.ToString() + sb3.ToString());
+                        sb.Append("</div>\n");
                     }
                     if (sb4.ToString() != "")
                     {
-                        sb.Append("<div class=\"rankingList\">");
+                        sb.Append("<div class=\"rankingList\">\n");
                         sb.Append(sb4.ToString());
-                        sb.Append("</div>");
+                        sb.Append("</div>\n");
                     }
                     _person = sb.ToString();
 

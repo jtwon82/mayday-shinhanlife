@@ -23,20 +23,20 @@ namespace OrangeSummer.Web2flc.UserApplication.achieve.sl
                 PageLoad();
             }
         }
-        private void PageLoad()
+        private void PageLoadx()
         {
         }
 
-        private void PageLoadx()
+        private void PageLoad()
         {
             try
             {
                 #region [ 업적 ]
-                using (Business.Achievement biz = new Business.Achievement(Common.User.AppSetting.Connection))
+                using (Access.Achievement biz = new Access.Achievement(Common.User.AppSetting.Connection))
                 {
                     StringBuilder title = new StringBuilder();
                     StringBuilder contents = new StringBuilder();
-                    List<Model.Achievement> achievement = biz.UserList2(Common.User.Identify.Code
+                    List<Model.Achievement> achievement = biz.UserList_202306(Common.User.Identify.Code
                         , OrangeSummer.Common.User.Identify.LevelName);
 
                     if (achievement != null)
@@ -46,30 +46,39 @@ namespace OrangeSummer.Web2flc.UserApplication.achieve.sl
                             DateTime dt = DateTime.Parse(item.Date);
                             string cdate = $"{dt.ToString("yyyy")}년 {dt.ToString("MM")}월 {dt.ToString("dd")}";
 
-                            if (",SL,E SL,G SL,S SL".Contains("," + OrangeSummer.Common.User.Identify.Level))
+                            if (",SL,E SL,G SL,S SL".Contains("," + OrangeSummer.Common.User.Identify.LevelName))
                             {
                                 string itsMe = item.ItsMe == "0" ? "전 순위 업적" : item.ItsMe == "1" ? "나의 썸머순위" : item.ItsMe == "2" ? "후 순위 업적" : "";
 
                                 contents.AppendLine($"<div class='swiper-slide slide{item.ItsMe}'>");
                                 contents.AppendLine("	<div class='bmRanking_box'>");
-                                //contents.AppendLine($"          썸머순위<em>-</em></p>");
                                 if(OrangeSummer.Common.User.Identify.LevelName=="E SL")
                                     contents.AppendLine($"		<p><span>{cdate}일 기준</span>{itsMe}<em>{item.SlRank}</em></p>");
                                 if (OrangeSummer.Common.User.Identify.LevelName == "S SL")
                                     contents.AppendLine($"		<p><span>{cdate}일 기준</span>{itsMe}<em>{item.SlRank2}</em></p>");
                                 if (OrangeSummer.Common.User.Identify.LevelName == "G SL")
                                     contents.AppendLine($"		<p><span>{cdate}일 기준</span>{itsMe}<em>{item.SlRank3}</em></p>");
-                                contents.AppendLine("		<dl>");
-                                contents.AppendLine("			<dt><span>캠페인환산</span>CMIP</dt>");
+
+                                contents.AppendLine("<dl class='canp'>");
+                                contents.AppendLine("    <dt>환산 P</dt> ");
+                                if (OrangeSummer.Common.User.Identify.LevelName == "E SL")
+                                    contents.AppendLine($"    <dd class='canp'>{item.SlCanp}</dd>");
+                                if (OrangeSummer.Common.User.Identify.LevelName == "S SL")
+                                    contents.AppendLine($"    <dd class='canp'>{item.SlCanp2}</dd>");
+                                if (OrangeSummer.Common.User.Identify.LevelName == "G SL")
+                                    contents.AppendLine($"    <dd class='canp'>{item.SlCanp3}</dd>");
+                                contents.AppendLine("</dl>");
+                                contents.AppendLine("<dl class='cmip'>");
+                                contents.AppendLine("	<dt>월초 P</dt>");
                                 if (OrangeSummer.Common.User.Identify.LevelName == "E SL")
                                     contents.AppendLine($"			<dd class='cmip'>{item.SlCmip}</dd>");
                                 if (OrangeSummer.Common.User.Identify.LevelName == "S SL")
                                     contents.AppendLine($"			<dd class='cmip'>{item.SlCmip2}</dd>");
                                 if (OrangeSummer.Common.User.Identify.LevelName == "G SL")
                                     contents.AppendLine($"			<dd class='cmip'>{item.SlCmip3}</dd>");
-                                //contents.AppendLine($"			<dd>-</dd>");
                                 contents.AppendLine("		</dl>");
                                 contents.AppendLine("	</div>");
+
                                 if (item.ItsMe == "0")
                                 {
                                     contents.AppendLine($"	<div class='swiper-button-next'><span>내순위<span></div>");

@@ -18,7 +18,7 @@
                         <li><a href="/measure/individual">개인 부문</a></li>
                         <li><a href="/measure/sl">SL 부문</a></li>
                         <li><a href="/measure/point">지점 부문</a></li>
-                        <li><a href="/measure/group" class="current">그룹부문</a></li>
+                        <li><a href="/measure/group" class="current">기타부문</a></li>
                     </ul>
                   
                   <div class="evaluationInfo">
@@ -59,7 +59,7 @@
 						</dl>
 						<dl>
 							<dt>CANP BP 달성률<br><span>7~8월 MI</span></dt>
-							<dd><strong>150% ↑</strong></dd>
+							<dd><strong>180% ↑</strong></dd>
 						</dl>
 						<dl>
 							<dt>혜택</dt>
@@ -76,7 +76,7 @@
 						</dl>
 						<dl>
 							<dt>CANP BP 달성률<br><span>7~8월 MI</span></dt>
-							<dd><strong>150% ↑</strong></dd>
+							<dd><strong>200% ↑</strong></dd>
 						</dl>
 						<dl>
 							<dt>혜택</dt>

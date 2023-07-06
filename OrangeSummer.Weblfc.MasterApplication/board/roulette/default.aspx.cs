@@ -30,9 +30,9 @@ namespace OrangeSummer.Weblfc.MasterApplication.board.roulette
             try
             {
                 int page = Check.IsNone(Request["page"], 1);
-                using (Business.Roulette biz = new Business.Roulette(Common.Master.AppSetting.Connection))
+                using (Access.Roulette biz = new Access.Roulette(Common.Master.AppSetting.Connection))
                 {
-                    List<Model.Roulette> list = biz.List(page, _size);
+                    List<Model.Roulette> list = biz.List_202306(page, _size);
                     if (list != null)
                     {
                         this.rptList.DataSource = list;
@@ -70,7 +70,7 @@ namespace OrangeSummer.Weblfc.MasterApplication.board.roulette
         {
             try
             {
-                using (Business.Roulette biz = new Business.Roulette(Common.Master.AppSetting.Connection))
+                using (Access.Roulette biz = new Access.Roulette(Common.Master.AppSetting.Connection))
                 {
                     List<Model.Roulette> list = biz.Excel();
                     if (list != null)

@@ -41,6 +41,7 @@ namespace OrangeSummer.Weblfc.MasterApplication.member
             {
                 //string code = Check.IsNone(Request["code"], true);
                 string id = Check.IsNone(Request["id"], true);
+
                 using (Business.Member biz = new Business.Member(Common.Master.AppSetting.Connection))
                 {
                     Model.Member member = biz.Detail202302(id);

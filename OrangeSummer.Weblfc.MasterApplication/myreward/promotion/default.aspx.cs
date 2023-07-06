@@ -43,7 +43,7 @@ namespace OrangeSummer.Weblfc.MasterApplication.promotion
                 string orderby = Check.IsNone(Request["orderby"], "ORDERBY");
 
                 // 지점
-                using (Business.Branch biz = new Business.Branch(Common.Master.AppSetting.Connection))
+                using (Access.Branch biz = new Access.Branch(Common.Master.AppSetting.Connection))
                 {
                     List<Model.Branch> list = biz.Line_new();
                     if (list != null)
@@ -58,6 +58,7 @@ namespace OrangeSummer.Weblfc.MasterApplication.promotion
                 }
 
                 // 신분
+
                 Dictionary<string, string> dic = Code.MemberLevel;
                 this.level.DataSource = dic;
                 this.level.DataTextField = "Value";
@@ -70,9 +71,9 @@ namespace OrangeSummer.Weblfc.MasterApplication.promotion
                 Element.Set(this.code, code);
                 Element.Set(this.name, name);
 
-                using (Business.Achievement biz = new Business.Achievement(Common.Master.AppSetting.Connection))
+                using (Access.Achievement biz = new Access.Achievement(Common.Master.AppSetting.Connection))
                 {
-                    List<Model.Achievement> list = biz.ListRewradPromotion(page, _size, orderby, branch, level, code, name);
+                    List<Model.Achievement> list = biz.ListRewradPromotion_202306(page, _size, orderby, branch, level, code, name);
                     if (list != null)
                     {
                         this.rptList.DataSource = list;
@@ -115,7 +116,7 @@ namespace OrangeSummer.Weblfc.MasterApplication.promotion
                             DataSet ds = Reader(upload.SaveFilePath);
                             if (ds.Tables[0].Rows.Count > 0)
                             {
-                                using (Business.Achievement biz = new Business.Achievement(Common.Master.AppSetting.Connection))
+                                using (Access.Achievement biz = new Access.Achievement(Common.Master.AppSetting.Connection))
                                 {
                                     DataTable dt = biz.RegistPromotion(ds.Tables[0]);
                                     if (dt.Rows.Count == 1)

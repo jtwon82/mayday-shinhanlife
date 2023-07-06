@@ -16,7 +16,7 @@
                         <li><a href="/measure/individual" class="current">개인 부문</a></li>
                         <li><a href="/measure/sl">SL 부문</a></li>
                         <li><a href="/measure/point">지점 부문</a></li>
-                        <li><a href="/measure/group">그룹부문</a></li>
+                        <li><a href="/measure/group">기타부문</a></li>
                     </ul>
 				<!-- 개인부문 -->
 				<div class="evaluationInfo">
@@ -26,16 +26,18 @@
 					</dl>
 					<dl>
 						<dt>평가 기준<span>|</span></dt>
-						<dd>시책 기간 내 <strong>환산 CANP 순위</strong></dd>
-					</dl>
-					<dl>
-						<dt>필수 기준<span>|</span></dt>
-						<dd>7월, 8월 각각 정예화</dd>
-						<dd class="purple">(CMIP 30만↑ or CANP 150만↑)</dd>
+						<dd>시책 기간 내 <strong>평가 환산 CANP 순위</strong></dd>
+						<dd class="purple"><strong>순 위 :</strong> 환산 CANP평가</dd>
+						<dd class="purple"><strong>필수 기준 :</strong> 원 CMIP평가</dd>
 					</dl>
 					<dl>
 						<dt>선발 인원<span>|</span></dt>
-						<dd>상위 1000명</dd>
+						<dd>상위 1,050명</dd>
+					</dl>
+					<dl>
+						<dt>최소 필수 조건<span>|</span></dt>
+						<dd>7월 - 8월, 각 월 원 CMIP 30만↑ 또는 </dd>
+						<dd>환산 CANP 150만↑</dd>
 					</dl>
 				</div>
 				<!--ul>
@@ -47,20 +49,20 @@
 					<p class="Con_t">TRIPLE+</p>
 					<div class="Con">
 						<dl>
-							<dt>CANP 순위</dt>
+							<dt>평가 CANP 순위</dt>
 							<dd><strong>1-50</strong>위</dd>
 						</dl>
 						<dl>
 							<dt>혜택</dt>
-							<dd><strong>스페인+다낭</strong><br>+ 200만원</dd>
+							<dd><strong>스페인+다낭</strong><br>+ 금5돈</dd>
 						</dl>
 						<dl>
 							<dt>필수조건 01</dt>
-							<dd><strong>건수 10건↑</strong><br>7~8월</dd>
+							<dd>원 CMIP<br><strong>1,500만↑</strong></dd>
 						</dl>
 						<dl>
 							<dt>필수조건 02</dt>
-							<dd><strong>1,500만 ↑</strong><br>& CANP 7천만↑</dd>
+							<dd><strong>10건 이상</strong><br>7~8월</dd>
 						</dl>
 					</div>
 				</div>
@@ -69,8 +71,8 @@
 					<p class="Con_t">TRIPLE</p>
 					<div class="Con">
 						<dl>
-							<dt>CANP 순위</dt>
-							<dd><strong>51-150</strong>위</dd>
+							<dt>평가 CANP 순위</dt>
+							<dd><strong>51-200</strong>위</dd>
 						</dl>
 						<dl>
 							<dt>혜택</dt>
@@ -78,11 +80,11 @@
 						</dl>
 						<dl>
 							<dt>필수조건 01</dt>
-							<dd><strong>건수 10건↑</strong><br>7~8월</dd>
+							<dd>원 CMIP<br><strong>1,100만↑</strong></dd>
 						</dl>
 						<dl>
 							<dt>필수조건 02</dt>
-							<dd><strong>1,100만 ↑</strong><br>& CANP 6천만↑</dd>
+							<dd><strong>10건 이상</strong><br>7~8월</dd>
 						</dl>
 					</div>
 				</div>
@@ -91,8 +93,8 @@
 					<p class="Con_t">Double</p>
 					<div class="Con">
 						<dl>
-							<dt>CANP 순위</dt>
-							<dd><strong>151-400</strong>위</dd>
+							<dt>평가 CANP 순위</dt>
+							<dd><strong>201-450</strong>위</dd>
 						</dl>
 						<dl>
 							<dt>혜택</dt>
@@ -100,11 +102,11 @@
 						</dl>
 						<dl>
 							<dt>필수조건 01</dt>
-							<dd><strong>건수 10건↑</strong><br>7~8월</dd>
+							<dd>원 CMIP<br><strong>700만↑</strong></dd>
 						</dl>
 						<dl>
 							<dt>필수조건 02</dt>
-							<dd><strong>700만 ↑</strong><br>& CANP 4천만↑</dd>
+							<dd><strong>10건 이상</strong><br>7~8월</dd>
 						</dl>
 					</div>
 				</div>
@@ -113,8 +115,8 @@
 					<p class="Con_t">일반</p>
 					<div class="Con">
 						<dl>
-							<dt>CANP 순위</dt>
-							<dd><strong>401-1,000</strong>위</dd>
+							<dt>평가 CANP 순위</dt>
+							<dd><strong>451-1,050</strong>위</dd>
 						</dl>
 						<dl>
 							<dt>혜택</dt>
@@ -122,11 +124,11 @@
 						</dl>
 						<dl>
 							<dt>필수조건 01</dt>
-							<dd><strong>건수 10건↑</strong><br>7~8월</dd>
+							<dd>원 CMIP<br><strong>300만↑</strong></dd>
 						</dl>
 						<dl>
 							<dt>필수조건 02</dt>
-							<dd><strong>300만 ↑</strong><br>& CANP 2천만↑</dd>
+							<dd><strong>10건 이상</strong><br>7~8월</dd>
 						</dl>
 					</div>
 				</div>

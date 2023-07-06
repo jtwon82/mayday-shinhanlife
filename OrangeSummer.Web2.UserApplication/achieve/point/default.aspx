@@ -11,7 +11,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 <body class="bm_point">
-	<div id="sub_wrap" class="subMeta02">
+	<div id="sub_wrap" class="subMeta04">
             <uc1:menu runat="server" ID="menu" />
             <div class="subContainer guide bm point">
                 <p class="subTitle"><img src="/resources/img/sub/bmTitle.png" alt="SUMMER 업적" /></p>
@@ -26,9 +26,9 @@
 
                 <!-- Initialize Swiper -->
 
-
+                
                 <ul class="referenceBox">
-                    <li>* 본 데이터는 2022 Summer Contest 진도관리를 위한 보조자료이며, 달성 결과가 아님을 알려드립니다.</li>
+                    <li>* 본 데이터는 2023 Summer Festival 진도관리를 위한 보조자료이며, 달성 결과가 아님을 알려드립니다.</li>
 				    
                     <li>* 자세한 내용은 해당공문을 반드시 참고하시기 바랍니다. </li>
                 </ul>

@@ -91,7 +91,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking.sl
                             else if (Int32.Parse(item.SlRank) < 11)
                             {
                                 sb3.Append("<dl>");
-                                sb3.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankingbox_ico.png' alt=''></span>\n");
+                                sb3.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankinglist_ico.png' alt=''></span>\n");
                                 sb3.Append($"	<dt><em>{item.SlRank}위</em><span class='myName'>{item.BranchName}<em> {item.MemberName}</em></span></dt>\n");
                                 sb3.Append($"	<dd>{item.SlCanp}</dd>\n");
                                 sb3.Append("</dl>");
@@ -110,7 +110,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking.sl
 
                     sb.Append("<ul class='rankingUnit'>");
                     sb.Append("	<li>[날짜 기준] " + _date + "</li>");
-                    sb.Append("	<li>[ 단위 ] 환산 CANP</li>");
+                    sb.Append("	<li>[단위] 환산 CANP</li>");
                     sb.Append("</ul>");
                     if (sb1.ToString() != "" || sb2.ToString() != "" || sb3.ToString() != "")
                     {

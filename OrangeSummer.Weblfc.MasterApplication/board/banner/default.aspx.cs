@@ -29,7 +29,7 @@ namespace OrangeSummer.Weblfc.MasterApplication.main.banner
             try
             {
                 int page = Check.IsNone(Request["page"], 1);
-                using (Business.Banner biz = new Business.Banner(Common.Master.AppSetting.Connection))
+                using (Access.Banner biz = new Access.Banner(Common.Master.AppSetting.Connection))
                 {
                     List<Model.Banner> list = biz.List(page, _size, "");
                     if (list != null)

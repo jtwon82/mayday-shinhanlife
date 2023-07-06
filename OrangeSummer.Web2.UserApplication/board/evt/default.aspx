@@ -27,7 +27,7 @@
 					<div class="scratchpad"></div>
 				</div>
 				<script>
-					var result = "<%= _result %>" //꽝=lose, 당첨=win
+					var result = "<%= _result %>"
 					var scratchEnd = false;
 					var resultBg;
 					if (result != "win") resultBg = "/resources/img/sub/event/scratch_pad_lose.png";
@@ -46,11 +46,10 @@
 					});
 					function completeScratch(){
 						scratchEnd = true;
-						setTimeout(function(){
-						    if (result != "win") openPopup('.popup_fail');
-							if (result == "win") openPopup('.popup_winning');
+						setTimeout(function () {
+						    $(".dimmed").show();
 
-							if (result !== "win") {
+							if (result != "") {
 							    $.ajax({
 							        type: "POST",
 							        contentType: "application/json; charset=utf-8",
@@ -59,6 +58,8 @@
 							        dataType: "json",
 							        async: false,
 							        success: function (json) {
+						                if (result != "win") openPopup('.popup_fail');
+							            if (result == "win") openPopup('.popup_winning');
 							            if (json.result != "SUCCESS") {
 							                //alert("정상적으로 참여되지 않았습니다.");
 							                return false;
@@ -106,7 +107,8 @@
 		</div>
 	</div>
 	<!-- //popup -->
-
+<style>.hide{display:none;}</style>
+<div class='dimmed hide' style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 100; opacity: 0.5; background-color: rgb(0, 0, 0); "></div>
 </body>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">

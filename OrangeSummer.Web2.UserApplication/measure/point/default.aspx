@@ -17,21 +17,41 @@
                         <li><a href="/measure/individual">개인 부문</a></li>
                         <li><a href="/measure/sl">SL 부문</a></li>
                         <li><a href="/measure/point" class="current">지점 부문</a></li>
-                        <li><a href="/measure/group">그룹부문</a></li>
+                        <li><a href="/measure/group">기타부문</a></li>
                     </ul>
                     
+					<div class="evaluationInfo">
+						<dl>
+							<dt>평가 대상<span>|</span></dt>
+							<dd>BM, EM, ERM, IRM</dd>
+						</dl>
+						<dl>
+							<dt>평가 기준<span>|</span></dt>
+							<dd><strong>순위부문 :</strong> 환산 CANP</dd>
+							<dd><strong>BP부문 :</strong> CANP BP 달성률</dd>
+						</dl>
+						<dl>
+							<dt>선발 인원<span>|</span></dt>
+							<dd>상위 65명 + α</dd>
+						</dl>
+						<dl>
+							<dt>특<em class="space"></em>징<span>|</span></dt>
+							<dd class="purple">순위부문 우선 선발 후 BP부문 선발</dd>
+						</dl>
+					</div>
+
 					<div class="measureCon ranking point">
 						<p class="Con_t">순위부문</p>
 						<div class="mandatory_standards gsl">
 							<dl>
 								<dt>필수기준</dt>
-								<dd><strong>CMIP 3천만↑</strong><br>지점 내 개인부문 5명 이상 달성 & 7~8월 합산</dd>
+								<dd><strong>CMIP 3천만↑</strong><br>지점 내 개인부문 5명 이상 달성<br>& 7~8월 합산 원 CMIP 3천만 ↑</dd>
 							</dl>
 						</div>
 						<div class="Con">
 							<dl>
-								<dt>CANP 순위</dt>
-								<dd><strong>1-5</strong>위</dd>
+								<dt>평가 CANP 순위</dt>
+								<dd><strong>1-10</strong>위</dd>
 							</dl>
 							<dl>
 								<dt>CMIP</dt>
@@ -39,14 +59,14 @@
 							</dl>
 							<dl>
 								<dt>혜택</dt>
-								<dd><strong>유럽+다낭</strong></dd>
+								<dd><strong>스페인+다낭</strong></dd>
 							</dl>
 						</div>
 						
 						<div class="Con">
 							<dl>
-								<dt>CANP 순위</dt>
-								<dd><strong>6-15</strong>위</dd>
+								<dt>평가 CANP 순위</dt>
+								<dd><strong>11-25</strong>위</dd>
 							</dl>
 							<dl>
 								<dt>CMIP</dt>
@@ -60,8 +80,8 @@
 
 						<div class="Con">
 							<dl>
-								<dt>CANP 순위</dt>
-								<dd><strong>16-55</strong>위</dd>
+								<dt>평가 CANP 순위</dt>
+								<dd><strong>26-65</strong>위</dd>
 							</dl>
 							<dl>
 								<dt>CMIP</dt>
@@ -76,12 +96,12 @@
 				   
 				<div class="bp">
 					<dt>BP 부문</dt>
-					<dd class="purple">CMIP or CANP BP 120% 이상</dd>
-					<dd>지점 내 개인부문 5명 이상 달성 </dd>
-					<dd>& 7~8월 합산 CMIP 3천만 ↑</dd>
+					<dd class="purple">CANP BP 100% 이상 달성 시 다낭 Trip 확정!</dd>
+					<dd>지점 내 개인부문 5명 이상 달성</dd>
+					<dd>& 7~8월 합산 원 CMIP 3천만 ↑</dd>
 				</div>	
 				
-			</div>
+			</div> 
 		</div>
 				
 	</div>
