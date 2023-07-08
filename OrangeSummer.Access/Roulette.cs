@@ -157,7 +157,7 @@ namespace OrangeSummer.Access
         public int UserSuccessCnt()
         {
             int result = 0;
-            using (DataTable dt = DBHelper.ExecuteDataTable(_connection, "USP_ROULETTE_SUCCESS"))
+            using (DataTable dt = DBHelper.ExecuteDataTable(_connection, "USP_ROULETTE_SUCCESS_202306"))
             {
                 if (dt.Rows.Count == 1)
                 {

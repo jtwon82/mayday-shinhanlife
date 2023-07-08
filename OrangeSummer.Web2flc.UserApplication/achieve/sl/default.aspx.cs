@@ -60,7 +60,7 @@ namespace OrangeSummer.Web2flc.UserApplication.achieve.sl
                                     contents.AppendLine($"		<p><span>{cdate}일 기준</span>{itsMe}<em>{item.SlRank3}</em></p>");
 
                                 contents.AppendLine("<dl class='canp'>");
-                                contents.AppendLine("    <dt>환산 P</dt> ");
+                                contents.AppendLine("    <dt>평가 환산P</dt> ");
                                 if (OrangeSummer.Common.User.Identify.LevelName == "E SL")
                                     contents.AppendLine($"    <dd class='canp'>{item.SlCanp}</dd>");
                                 if (OrangeSummer.Common.User.Identify.LevelName == "S SL")

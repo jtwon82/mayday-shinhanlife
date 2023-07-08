@@ -83,12 +83,12 @@ namespace OrangeSummer.Web2flc.UserApplication.member.login
                     if (remember == "Y")
                         MLib.Auth.Web.Cookies("ORANGESUMMER", "SECRET", AES.Encrypt(Common.User.AppSetting.EncKey, $"{code}|{pwd}|{DateTime.Now.ToString("yyyyMMddHHmmss")}"), 360);
 
-                    if (!Check.IsNone(referer))
-                        Tool.RR(referer);
-                    else
-                    {
-                        Tool.RR("/index");
-                        }
+                        //if (!Check.IsNone(referer))
+                        //    Tool.RR(referer);
+                        //else
+                        //{
+                            Tool.RR("/index");
+                        //}
                     }
                     else
                     {

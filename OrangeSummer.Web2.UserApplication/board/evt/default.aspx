@@ -22,7 +22,7 @@
 				<div class="info_">
 					<ul>
 						<li><span>이벤트기간</span>2023년 7월 10일 ~ 8월 31일 까지</li>
-						<li><span>이벤트경품</span>썸머 기간 커피쿠폰 총 1,500명<br>랜덤 추첨 증정</li>
+						<li><span>이벤트경품</span>썸머 기간 커피쿠폰 총 1,600명<br>랜덤 추첨 증정</li>
 					</ul>
 					<div class="scratchpad"></div>
 				</div>

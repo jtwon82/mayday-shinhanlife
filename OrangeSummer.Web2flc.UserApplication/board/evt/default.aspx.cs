@@ -21,22 +21,22 @@ namespace OrangeSummer.Web2flc.UserApplication.board.evt
                     bool check = true;
 
                     // 일자별 당첨인원 채크
-                    if (biz.UserSuccessCnt()<=20)
+                    if (biz.UserSuccessCnt() > 0)
                     {
                         // 기간내 당첨여부 채크
                         check = biz.UserCheck_202306(Common.User.Identify.Id);
                         if (check)
-                            _result = "lose_1";
+                            _result = "lose_over";
                         else
                         {
-                            if (random.Next(1, 100)  <= 10)
+                            if (random.Next(1, 100) <= 10)
                                 _result = "win";
                             else
-                                _result = "lose_2";
+                                _result = "lose_random";
                         }
                     }
                     else
-                        _result = "lose_3";
+                        _result = "lose_limit";
                 }
             }
             catch (Exception ex)

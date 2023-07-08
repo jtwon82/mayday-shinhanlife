@@ -45,7 +45,7 @@
 						<div class="mandatory_standards gsl">
 							<dl>
 								<dt>필수기준</dt>
-								<dd><strong>CMIP 3천만↑</strong><br>지점 내 개인부문 5명 이상 달성<br>& 7~8월 합산 원 CMIP 3천만 ↑</dd>
+								<dd><strong>CMIP 3천만↑</strong><br>지점 내 개인부문 5명 이상 달성<br>& 7~8월 합산 CMIP(MI 기준) 3천만 ↑</dd>
 							</dl>
 						</div>
 						<div class="Con">
@@ -98,7 +98,7 @@
 					<dt>BP 부문</dt>
 					<dd class="purple">CANP BP 100% 이상 달성 시 다낭 Trip 확정!</dd>
 					<dd>지점 내 개인부문 5명 이상 달성</dd>
-					<dd>& 7~8월 합산 원 CMIP 3천만 ↑</dd>
+					<dd>& 7~8월 합산 CMIP(MI 기준) 3천만 ↑</dd>
 				</div>	
 				
 			</div> 

@@ -26,9 +26,9 @@
 
                 <!-- Initialize Swiper -->
 
-
+                
                 <ul class="referenceBox">
-                    <li>* 본 데이터는 2022 Summer Contest 진도관리를 위한 보조자료이며, 달성 결과가 아님을 알려드립니다.</li>
+                    <li>* 본 데이터는 2023 Summer Festival 진도관리를 위한 보조자료이며, 달성 결과가 아님을 알려드립니다.</li>
 				    
                     <li>* 자세한 내용은 해당공문을 반드시 참고하시기 바랍니다. </li>
                 </ul>

@@ -69,7 +69,7 @@ namespace OrangeSummer.Web2.UserApplication.achieve.sl
                                     contents.AppendLine($"    <dd class='canp'>{item.SlCanp3}</dd>");
                                 contents.AppendLine("</dl>");
                                 contents.AppendLine("<dl class='cmip'>");
-                                contents.AppendLine("	<dt>CMIP</dt>");
+                                contents.AppendLine("	<dt>원 CMIP</dt>");
                                 if (OrangeSummer.Common.User.Identify.LevelName == "E SL")
                                     contents.AppendLine($"	<dd class='cmip'>{item.SlCmip}</dd>");
                                 if (OrangeSummer.Common.User.Identify.LevelName == "S SL")

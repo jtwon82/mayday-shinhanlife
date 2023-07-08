@@ -61,13 +61,13 @@ namespace OrangeSummer.Web2.UserApplication.achieve.point
                                 contents.AppendLine($"	<dd>{item.BranchCanp2}%</dd>");
                                 contents.AppendLine($"</dl>");
                                 contents.AppendLine($"<dl class='cmip'>");
-                                contents.AppendLine($"	<dt>CMIP</dt>");
+                                contents.AppendLine($"	<dt>원 CMIP</dt>");
                                 contents.AppendLine($"	<dd class='cmip'>{item.BranchCmip}</dd>");
                                 contents.AppendLine($"</dl>");
-                                contents.AppendLine($"<dl class='cmipBp'>");
-                                contents.AppendLine($"	<dt>CMIP BP <em>(%)</em></dt>");
-                                contents.AppendLine($"	<dd>{item.BranchCmip2}%</dd>");
-                                contents.AppendLine($"</dl>");
+                                //contents.AppendLine($"<dl class='cmipBp'>");
+                                //contents.AppendLine($"	<dt>CMIP BP <em>(%)</em></dt>");
+                                //contents.AppendLine($"	<dd>{item.BranchCmip2}%</dd>");
+                                //contents.AppendLine($"</dl>");
 
                                 contents.AppendLine("	</div>");
 

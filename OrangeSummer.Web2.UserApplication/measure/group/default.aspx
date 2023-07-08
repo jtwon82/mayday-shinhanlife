@@ -30,7 +30,7 @@
 				</div>
 				  
 				<div class="measureCon bi">
-					<p class="Con_t">BI 부문</p>
+					<p class="Con_t">그룹 부문</p>
 					<div class="Con">
 						<dl>
 							<dt>그룹</dt>
@@ -45,8 +45,7 @@
 						<dl>
 							<dt>혜택</dt>
 							<dd class="small">CMIP 250만 이상<br>
-								소속 FC/SL 전원 초대<br>
-								(그 외, 필수조건 없음)
+								소속 FC/SL 전원 초대
 							</dd>
 						</dl>
 					</div>
@@ -64,8 +63,7 @@
 						<dl>
 							<dt>혜택</dt>
 							<dd class="small">CMIP 250만 이상<br>
-								소속 FC/SL 전원 초대<br>
-								(그 외, 필수조건 없음)
+								소속 FC/SL 전원 초대
 							</dd>
 						</dl>
 					</div>
@@ -81,8 +79,7 @@
 						<dl>
 							<dt>혜택</dt>
 							<dd class="small">CMIP 250만 이상<br> 
-								소속 FC/SL 전원 초대<br>
-								(그 외, 필수조건 없음)
+								소속 FC/SL 전원 초대
 							</dd>
 						</dl>
 					</div>

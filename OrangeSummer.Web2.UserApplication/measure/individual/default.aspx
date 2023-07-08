@@ -36,7 +36,7 @@
 					</dl>
 					<dl>
 						<dt>최소 필수 조건<span>|</span></dt>
-						<dd>7월 - 8월, 각 월 원 CMIP 30만↑ 또는 </dd>
+						<dd>7월 - 8월, 각 월 CMIP(MI 기준) 30만↑ 또는 </dd>
 						<dd>환산 CANP 150만↑</dd>
 					</dl>
 				</div>

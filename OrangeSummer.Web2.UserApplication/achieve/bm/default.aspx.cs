@@ -91,7 +91,7 @@ namespace OrangeSummer.Web2.UserApplication.achieve.bm
                                 contents.AppendLine($"			<dd class='cmip'>{item.Canp}</dd>");
                                 contents.AppendLine($"		</dl>");
                                 contents.AppendLine($"		<dl class='cmip'>");
-                                contents.AppendLine($"			<dt>CMIP</dt>");
+                                contents.AppendLine($"			<dt>원 CMIP</dt>");
                                 contents.AppendLine($"			<dd>{item.Cmip}</dd>");
                                 contents.AppendLine($"		</dl>");
                                 contents.AppendLine($"		<dl class='number'>");

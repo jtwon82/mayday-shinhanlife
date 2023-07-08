@@ -53,7 +53,7 @@ namespace OrangeSummer.Web2flc.UserApplication.achieve.point
                                 contents.AppendLine($"		<p><span>{cdate}일 기준</span>{itsMe}<em>{item.BranchRank}</em></p>");
 
                                 contents.AppendLine($"<dl class='canp'>");
-                                contents.AppendLine($"  <dt>환산 P</dt>");
+                                contents.AppendLine($"  <dt>평가 환산P</dt>");
                                 contents.AppendLine($"	<dd class='canp'>{item.BranchCanp}</dd>");
                                 contents.AppendLine($"</dl>");
                                 contents.AppendLine($"<dl class='canpBp'>");

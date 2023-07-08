@@ -87,7 +87,7 @@ namespace OrangeSummer.Web2flc.UserApplication.achieve.bm
                                 contents.AppendLine($"	<div class='bmRanking_box personal'>");
                                 contents.AppendLine($"		<p><span>{cdate} 기준</span>{itsMe}<em>{item.Rank}</em></p>");
                                 contents.AppendLine($"		<dl class='canp'>");
-                                contents.AppendLine($"			<dt>환산 P</dt>");
+                                contents.AppendLine($"			<dt>평가 환산P</dt>");
                                 contents.AppendLine($"			<dd class='cmip'>{item.Canp}</dd>");
                                 contents.AppendLine($"		</dl>");
                                 contents.AppendLine($"		<dl class='cmip'>");

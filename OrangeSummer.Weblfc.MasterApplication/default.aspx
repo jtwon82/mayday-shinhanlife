@@ -78,7 +78,7 @@
                         console.log(json);
                         if (json.result == 'SUCCESS') {
                             $pno.attr("readonly", true);
-                            alert("문자로 전송된 인증번호를 입력하고 로그인을 진행해주세요.");
+                            alert("문자로 전송된 인증번호를 입력하고 로그인을 진행해주세요.");// + json.message);
                         }
                         else {
                             alert("오류가 발생했습니다.\n새로고침 후 다시 시도해주세요.\n" + json.message);
