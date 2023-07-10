@@ -30,7 +30,7 @@
 					</dl>
 					<dl>
 						<dt>평가 기준<span>|</span></dt>
-						<dd><strong>순위부문 :</strong>환산P</dd>
+						<dd><strong>순위부문 :</strong>평가 환산P</dd>
 						<dd><strong>도입부문 :</strong>도입 인원 5명 이상</dd>
 					</dl>
 					<dl>
@@ -64,7 +64,7 @@
 					</div>
 					<div class="Con">
 						<dl>
-							<dt>환산P 순위</dt>
+							<dt>평가 환산P 순위</dt>
 							<dd><strong>1-5</strong>위</dd>
 						</dl>
 						<dl>
@@ -88,7 +88,7 @@
 				<div class="measureCon Con2">
 					<div class="Con">
 						<dl>
-							<dt>환산P 순위</dt>
+							<dt>평가 환산P 순위</dt>
 							<dd><strong>6-15</strong>위</dd>
 						</dl>
 						<dl>
@@ -112,7 +112,7 @@
 				<div class="measureCon Con3">
 					<div class="Con">
 						<dl>
-							<dt>환산P 순위</dt>
+							<dt>평가 환산P 순위</dt>
 							<dd><strong>16-50</strong>위</dd>
 						</dl>
 						<dl>
@@ -140,6 +140,30 @@
 				</div>
 				
 				
+				<!-- S SL부문 -->
+				<div class="titleBox">
+					<p class="titleBox_t">S SL부문</p>
+				</div>
+				<div class="evaluationInfo">
+					<dl>
+						<dt>평가 대상<span>|</span></dt>
+						<dd>S SL</dd>
+					</dl>
+						<dt>선발 인원<span>|</span></dt>
+						<dd>평가 환산P <strong>상위 5명</strong></dd>
+					</dl>
+				</div>
+				<div class="mandatory_standards gsl">
+					<dl>
+						<dt>필수기준</dt>
+						<dd>
+							<strong><em>피 도입자 합산 (본인 업적 제외)</em><br>평가 환산P 상위 5명</strong><br>
+							<span><strong>필수</strong>  · 1명↑ 도입 (9~10월 위촉 기준)</span>
+							<span>· 월초P 900만 이상</span>
+						</dd>
+					</dl>
+				</div>
+                    
 				<!-- G SL부문 -->
 				<div class="titleBox">
 					<p class="titleBox_t">G SL부문</p>
@@ -151,7 +175,7 @@
 					</dl>
 					<dl>
 						<dt>선발 인원<span>|</span></dt>
-						<dd>환산P <strong>상위 5명</strong></dd>
+						<dd>평가 환산P <strong>상위 5명</strong></dd>
 					</dl>
 				</div>
 				<div class="mandatory_standards gsl">
@@ -161,30 +185,6 @@
 							<strong><em>피 도입자 합산 (본인 업적 제외)</em><br>평가 환산P 상위 5명</strong><br>
 							<span><strong>필수</strong>  · 1명↑ 도입 (9~10월 위촉 기준)</span>
 							<span>· 월초P 600만 이상</span>
-						</dd>
-					</dl>
-				</div>
-
-				<!-- S SL부문 -->
-				<div class="titleBox">
-					<p class="titleBox_t">S SL부문</p>
-				</div>
-				<div class="evaluationInfo">
-					<dl>
-						<dt>평가 대상<span>|</span></dt>
-						<dd>S SL</dd>
-					</dl>
-						<dt>선발 인원<span>|</span></dt>
-						<dd>환산P <strong>상위 5명</strong></dd>
-					</dl>
-				</div>
-				<div class="mandatory_standards gsl">
-					<dl>
-						<dt>필수기준</dt>
-						<dd>
-							<strong><em>피 도입자 합산 (본인 업적 제외)</em><br>평가 환산P 상위 5명</strong><br>
-							<span><strong>필수</strong>  · 1명↑ 도입 (9~10월 위촉 기준)</span>
-							<span>· 월초P 900만 이상</span>
 						</dd>
 					</dl>
 				</div>

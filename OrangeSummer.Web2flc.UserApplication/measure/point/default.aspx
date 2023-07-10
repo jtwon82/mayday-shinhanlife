@@ -26,7 +26,7 @@
 						</dl>
 						<dl>
 							<dt>평가 기준<span>|</span></dt>
-							<dd><strong>순위부문 :</strong> 환산P</dd>
+							<dd><strong>순위부문 :</strong> 평가 환산P</dd>
 							<dd><strong>BP부문 :</strong> 환산P</dd>
 						</dl>
 						<dl>

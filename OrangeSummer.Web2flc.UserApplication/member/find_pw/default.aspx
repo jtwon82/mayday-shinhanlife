@@ -168,7 +168,7 @@
             $.ajax({
                 type: "POST",
                 contentType: "application/json; charset=utf-8",
-                url: "/api/member/checkPno",
+                url: "/api/member/checkPno2",
                 data: JSON.stringify({ "Mobile": $user_tel.val() }),
                 dataType: "json",
                 async: false,
@@ -177,7 +177,7 @@
                         $.ajax({
                             type: "POST",
                             contentType: "application/json; charset=utf-8",
-                            url: "/api/Sms/sendMsg",
+                            url: "/api/Sms2/sendMsg2",
                             data: JSON.stringify({ "Pno": $user_tel.val() }),
                             dataType: "json",
                             async: false,
@@ -212,7 +212,7 @@
             $.ajax({
                 type: "POST",
                 contentType: "application/json; charset=utf-8",
-                url: "/api/Sms/compareRndNo",
+                url: "/api/Sms2/compareRndNo2",
                 data: JSON.stringify({ "RndNo": $certi_num.val() }),
                 dataType: "json",
                 async: false,

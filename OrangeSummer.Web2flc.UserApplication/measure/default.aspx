@@ -24,8 +24,8 @@
                             <img src="/resources/img/sub/measure/measureSl.png" alt="SL부문" /></a></li>
                         <li><a href="/measure/point">
                             <img src="/resources/img/sub/measure/measurePoint.png" alt="지점부문" /></a></li>
-						<li><a href="/measure/group">
-                            <img src="/resources/img/sub/measure/measureEtc.png" alt="기타부문" /></a></li>
+<%--						<li><a href="/measure/group">
+                            <img src="/resources/img/sub/measure/measureEtc.png" alt="기타부문" /></a></li>--%>
                     </ul>
 				   <%-- <dl class="dynamite">
 					    <dt>DYNAMITE 시책</dt>

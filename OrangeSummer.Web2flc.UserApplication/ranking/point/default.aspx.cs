@@ -123,7 +123,7 @@ namespace OrangeSummer.Web2flc.UserApplication.ranking.point
                         sb.Append("<ul class='rankingUnit'>\n");
                         sb.Append("	<li>[날짜 기준] " + _date + "</li>\n");
                         //sb.Append("	<li>[ 단위 ]  캠페인 환산 CMIP</li>\n");
-                        sb.Append("	<li>[단위] 환산 P</li>\n");
+                        sb.Append("	<li>[단위] 평가 환산P</li>\n");
                         sb.Append("</ul>\n");
                         if (sb1.ToString() != "" || sb2.ToString() != "" || sb3.ToString() != "")
                         {
@@ -139,7 +139,7 @@ namespace OrangeSummer.Web2flc.UserApplication.ranking.point
                         }
                         _branch = sb.ToString();
 
-                        Common.User.Paging paging = new Common.User.Paging("./", page, 10, 5, _total, "#tab6-move\n");
+                        Common.User.Paging paging = new Common.User.Paging("./", page, 15, 4, _total, "#tab6-move\n");
                         _paging = paging.ToString();
                     }
                     #endregion

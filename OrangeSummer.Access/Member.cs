@@ -496,7 +496,7 @@ namespace OrangeSummer.Access
             query.Append($"     )A ");
             query.Append($" ) MY_REWARD ");
             query.Append($", T1.*, T4.* ");
-            query.Append($"FROM [MEMBER] AS T1 LEFT JOIN [MEMBER_BRANCH_202302] T3 ON T1.[CODE] = T3.[CODE] LEFT JOIN ACHIEVEMENT_202302 T4 ON T1.CODE = T4.CODE ");
+            query.Append($"FROM [MEMBER] AS T1 LEFT JOIN [MEMBER_BRANCH_202306] T3 ON T1.[CODE] = T3.[CODE] LEFT JOIN ACHIEVEMENT_202306 T4 ON T1.CODE = T4.CODE ");
             query.Append($"WHERE T1.[CODE] ='{code}' ");
 
             using (DataTable dt = DBHelper.ExecuteDataTableInQuery(_connection, query.ToString()))
@@ -519,15 +519,17 @@ namespace OrangeSummer.Access
                         member.Achievement = new Model.Achievement()
                         {
                             Date = dateStr,
-                            Cost2 = Check.IsNone(dr["COST2"].ToString()) ? "" : Convert.ToDecimal(dr["COST2"].ToString()).ToString("#,##0"),
-                            Cost = Check.IsNone(dr["COST"].ToString()) ? "" : Convert.ToDecimal(dr["COST"].ToString()).ToString("#,##0"),
-                            Canp = Check.IsNone(dr["CANP"].ToString()) ? "" : Convert.ToDecimal(dr["CANP"].ToString()).ToString("#,##0"),
-                            Reward = Check.IsNone(dr["REWARD"].ToString()) ? "" : Convert.ToDecimal(dr["REWARD"].ToString()).ToString("#,##0"),
-                            Cmip = Check.IsNone(dr["CMIP"].ToString()) ? "" : Convert.ToDecimal(dr["CMIP"].ToString()).ToString("#,##0"),
-                            PersonRank= Check.IsNone(dr["PERSON_RANK"].ToString()) ? "" : Convert.ToDecimal(dr["PERSON_RANK"].ToString()).ToString("#,##0"),
-                            BranchRank = dr["BRANCH_RANK"].ToString(),
-                            MyReward = Check.IsNone(dr["MY_REWARD"].ToString()) ? "0" : Convert.ToDecimal(dr["MY_REWARD"].ToString()).ToString("#,##0")
+                            Cost2 = Check.getValue(dr, "COST2", "#,##0"),//Check.IsNone(dr["COST2"].ToString()) ? "" : Convert.ToDecimal(dr["COST2"].ToString()).ToString("#,##0"),
+                            Cost = Check.getValue(dr, "COST", "#,##0"),//Check.IsNone(dr["COST"].ToString()) ? "" : Convert.ToDecimal(dr["COST"].ToString()).ToString("#,##0"),
+                            Canp = Check.getValue(dr, "CANP", "#,##0"),//Check.IsNone(dr["CANP"].ToString()) ? "" : Convert.ToDecimal(dr["CANP"].ToString()).ToString("#,##0"),
+                            Reward = Check.getValue(dr, "REWARD", "#,##0"),//Check.IsNone(dr["REWARD"].ToString()) ? "" : Convert.ToDecimal(dr["REWARD"].ToString()).ToString("#,##0"),
+                            Cmip = Check.getValue(dr, "CMIP", "#,##0"),//Check.IsNone(dr["CMIP"].ToString()) ? "" : Convert.ToDecimal(dr["CMIP"].ToString()).ToString("#,##0"),
+                            PersonRank = Check.getValue(dr, "PERSON_RANK", "#,##0"),//Check.IsNone(dr["PERSON_RANK"].ToString()) ? "" : Convert.ToDecimal(dr["PERSON_RANK"].ToString()).ToString("#,##0"),
+                            BranchRank = Check.getValue(dr, "BRANCH_RANK", "#,##0"),//dr["BRANCH_RANK"].ToString(),
+                            MyReward = Check.getValue(dr, "MY_REWARD", "#,##0"),//Check.IsNone(dr["MY_REWARD"].ToString()) ? "0" : Convert.ToDecimal(dr["MY_REWARD"].ToString()).ToString("#,##0")
                         };
+                //        Person2Cmip = Check.getValue(dr, "PERSON2_CMIP", "#,##0"),
+                //Person2Cnt = Check.getValue(dr, "PERSON2_CNT"),
                     }
                 }
             }

@@ -75,7 +75,7 @@ namespace OrangeSummer.Web.MasterApplication.board.roulette
                     List<Model.Roulette> list = biz.Excel();
                     if (list != null)
                     {
-                        string _filename = "롤렛이벤트";
+                        string _filename = "스크래치";
                         using (XLWorkbook book = new XLWorkbook())
                         {
                             string path = Path.Combine(Common.Master.AppSetting.Path, "temp", $"{_filename}_{DateTime.Now.ToString("yyyyMMdd")}.xlsx");
@@ -107,7 +107,7 @@ namespace OrangeSummer.Web.MasterApplication.board.roulette
                                 sheet.Cell("A" + index).Value = count - (index - 2);
                                 sheet.Cell("B" + index).Value = item.Branch.Name;
                                 sheet.Cell("C" + index).Value = item.Member.Level;
-                                sheet.Cell("D" + index).Value = item.Member.Code;
+                                sheet.Cell("D" + index).Value = "'"+item.Member.Code;
                                 sheet.Cell("E" + index).Value = item.Member.Name;
                                 sheet.Cell("F" + index).Style.NumberFormat.Format = new string('0', item.Member.Mobile.Length);
                                 sheet.Cell("F" + index).Value = item.Member.Mobile;

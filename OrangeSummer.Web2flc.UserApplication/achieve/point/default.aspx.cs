@@ -64,10 +64,10 @@ namespace OrangeSummer.Web2flc.UserApplication.achieve.point
                                 contents.AppendLine($"	<dt>월초 P</dt>");
                                 contents.AppendLine($"			<dd class='cmip'>{item.BranchCmip}</dd>");
                                 contents.AppendLine($"</dl>");
-                                contents.AppendLine($"<dl class='cmipBp'>");
-                                contents.AppendLine($"	<dt>월초 BP <em>(%)</em></dt>");
-                                contents.AppendLine($"	<dd>{item.BranchCmip2}%</dd>");
-                                contents.AppendLine($"</dl>");
+                                //contents.AppendLine($"<dl class='cmipBp'>");
+                                //contents.AppendLine($"	<dt>월초 BP <em>(%)</em></dt>");
+                                //contents.AppendLine($"	<dd>{item.BranchCmip2}%</dd>");
+                                //contents.AppendLine($"</dl>");
 
                                 contents.AppendLine("	</div>");
 

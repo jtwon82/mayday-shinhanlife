@@ -125,17 +125,13 @@
     <Content Include="ranking\point\default.aspx" />
     <Content Include="ranking\sl\default.aspx" />
     <Content Include="resources\css\board.css" />
-    <Content Include="resources\css\board.css.bak" />
     <Content Include="resources\css\index.css" />
-    <Content Include="resources\css\index.css.bak" />
     <Content Include="resources\css\layout.css" />
     <Content Include="resources\css\progress-bar.css" />
     <Content Include="resources\css\reset.css" />
     <Content Include="resources\css\sub.css" />
-    <Content Include="resources\css\sub.css.bak" />
     <Content Include="resources\css\swiper-bundle.css" />
     <Content Include="resources\css\swiper.css" />
-    <Content Include="resources\css\swiper.css.bak" />
     <Content Include="resources\FONT\OneShinhan-Bold.eot" />
     <Content Include="resources\FONT\OneShinhan-Bold.woff" />
     <Content Include="resources\FONT\OneShinhan-Bold.woff2" />
@@ -423,8 +419,6 @@
     </Content>
     <Content Include="packages.config" />
     <Content Include="common\master\page.Master" />
-    <Content Include="board\evt\default.aspx.bak" />
-    <Content Include="board\evt\default.aspx.cs.bak" />
     <None Include="Properties\PublishProfiles\01.lfc.shinhanlife-fc.com.pubxml" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Properties\PublishProfiles\lfc.pubxml" />
@@ -440,7 +434,6 @@
     <Content Include="resources\img\sub\bm\Thumbs.db" />
     <Content Include="resources\img\sub\index\Thumbs.db" />
     <Content Include="resources\img\sub\measure\Thumbs.db" />
-    <Content Include="resources\js\common.js.bak" />
     <None Include="Web References\kr.co.youiwe.webservice\ServiceSMS.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

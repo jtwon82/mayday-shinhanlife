@@ -139,7 +139,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking.point
                         }
                         _branch = sb.ToString();
 
-                        Common.User.Paging paging = new Common.User.Paging("./", page, 10, 5, _total, "#tab6-move\n");
+                        Common.User.Paging paging = new Common.User.Paging("./", page, 15, 4, _total, "#tab6-move\n");
                         _paging = paging.ToString();
                     }
                     #endregion

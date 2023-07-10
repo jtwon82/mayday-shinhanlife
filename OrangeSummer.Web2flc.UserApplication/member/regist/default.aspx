@@ -9,7 +9,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <body>
-	    <div id="sub_wrap">
+	    <div id="sub_wrap" class="subMeta05">
             <uc1:menu runat="server" ID="menu" />
 
             <div class="subContainer">
@@ -218,7 +218,7 @@
                 $.ajax({
                     type: "POST",
                     contentType: "application/json; charset=utf-8",
-                    url: "/api/member/checkPno",
+                    url: "/api/member/checkPno2",
                     data: JSON.stringify({ "Mobile": $user_tel.val() }),
                     dataType: "json",
                     async: false,
@@ -234,7 +234,7 @@
                             $.ajax({
                                 type: "POST",
                                 contentType: "application/json; charset=utf-8",
-                                url: "/api/Sms/sendMsg",
+                                url: "/api/Sms2/sendMsg2",
                                 data: JSON.stringify({ "Pno": $user_tel.val() }),
                                 dataType: "json",
                                 async: false,
@@ -275,7 +275,7 @@
                 $.ajax({
                     type: "POST",
                     contentType: "application/json; charset=utf-8",
-                    url: "/api/Sms/compareRndNo",
+                    url: "/api/Sms2/compareRndNo2",
                     data: JSON.stringify({ "RndNo": $certi_num.val() }),
                     dataType: "json",
                     async: false,

@@ -25,7 +25,7 @@ namespace OrangeSummer.Web2flc.UserApplication.controllers
         /// 사용자 코드 중복체크
         /// </summary>
         [HttpPost]
-        [ActionName("checkPno")]
+        [ActionName("checkPno2")]
         public HttpResponseMessage checkPno(MemberRequest request)
         {
             HttpResponseMessage resp = null;

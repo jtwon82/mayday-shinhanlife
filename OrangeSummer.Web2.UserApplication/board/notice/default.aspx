@@ -48,7 +48,7 @@
                         <asp:Repeater ID="rptEventlList" runat="server">
                             <ItemTemplate>
                                 <div class="listBox">
-                                    <a href="detail.aspx?id=<%# Eval("Id").ToString() + "&type=" + Eval("Type").ToString() %>">
+                                <a href="<%# Eval("url").ToString() %>">
                                         <p class="title">[이벤트] <%# Eval("Title") %></p>
                                         <p class="replyNum"><%# Eval("ReplyCount") %></p>
                                         <ul class="info">

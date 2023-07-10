@@ -22,7 +22,7 @@
 				<div class="info_">
 					<ul>
 						<li><span>이벤트기간</span>2023년 7월 10일 ~ 8월 31일 까지</li>
-						<li><span>이벤트경품</span>썸머 기간 커피쿠폰 총 1,600명<br>랜덤 추첨 증정</li>
+						<li><span>이벤트경품</span>커피음료 쿠폰</li>
 					</ul>
 					<div class="scratchpad"></div>
 				</div>
@@ -58,11 +58,12 @@
 							        dataType: "json",
 							        async: false,
 							        success: function (json) {
-						                if (result != "win") openPopup('.popup_fail');
-							            if (result == "win") openPopup('.popup_winning');
 							            if (json.result != "SUCCESS") {
-							                //alert("정상적으로 참여되지 않았습니다.");
+							                alert("정상적으로 참여되지 않았습니다.\n참여는 1일 1회 참여 가능합니다.");
 							                return false;
+							            } else {
+							                if (result != "win") openPopup('.popup_fail');
+							                if (result == "win") openPopup('.popup_winning');
 							            }
 							        },
 							        error: function (jqxhr, status, error) {

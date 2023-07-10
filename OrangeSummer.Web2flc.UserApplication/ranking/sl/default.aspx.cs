@@ -110,7 +110,7 @@ namespace OrangeSummer.Web2flc.UserApplication.ranking.sl
 
                     sb.Append("<ul class='rankingUnit'>");
                     sb.Append("	<li>[날짜 기준] " + _date + "</li>");
-                    sb.Append("	<li>[단위] 환산 P</li>");
+                    sb.Append("	<li>[단위] 평가 환산P</li>");
                     sb.Append("</ul>");
                     if (sb1.ToString() != "" || sb2.ToString() != "" || sb3.ToString() != "")
                     {
