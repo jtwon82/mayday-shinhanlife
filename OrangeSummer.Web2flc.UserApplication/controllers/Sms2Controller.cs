@@ -22,7 +22,7 @@ namespace OrangeSummer.Web2flc.UserApplication.controllers
         /// 문자발송
         /// </summary>
         [HttpPost]
-        [ActionName("sendMsg")]
+        [ActionName("sendMsg2")]
         public HttpResponseMessage sendMsg(UserRequest request)
         {
             Json json = new Json();
@@ -102,7 +102,7 @@ namespace OrangeSummer.Web2flc.UserApplication.controllers
         /// compareRndNo
         /// </summary>
         [HttpPost]
-        [ActionName("compareRndNo")]
+        [ActionName("compareRndNo2")]
         public HttpResponseMessage compareRndNo(UserRequest request)
         {
             Json json = new Json();

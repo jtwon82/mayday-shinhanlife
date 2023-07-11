@@ -130,11 +130,11 @@
     font-size: 26px;
     padding: 20px 0;
     padding-left: 30px;
-    background-position: 5% 50%;
+    background-position: 0px 50%;
 }
 .index_list .next a{
     background:url(/resources/img/sub/board/bu_arrow_d.png) 30px  no-repeat;
-    background-position: 5% 50%;
+    background-position: 0px 50%;
 }
 .board_view_wrap .btn_area {
     font-size: 0;

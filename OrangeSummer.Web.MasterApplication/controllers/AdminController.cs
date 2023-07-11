@@ -41,7 +41,7 @@ namespace OrangeSummer.Web.MasterApplication.controllers
             string userdefine = sms_id;  //예약취소를 위해 넣어주는 구분자 정의값, 사용자 임의로 지정해주시면 됩니다. 영문으로 넣어주셔야 합니다. 사용자가 구분할 수 있는 값을 넣어주세요.
             string canclemode = "1";     //예약 취소 모드 1: 사용자정의값에 의한 삭제.  현재는 무조건 1을 넣어주시면 됩니다.
 
-            
+
             if (Common.Master.AppSetting.DevMode == "DEV")
             {
                 json.Result = "SUCCESS";
@@ -67,6 +67,7 @@ namespace OrangeSummer.Web.MasterApplication.controllers
                             ServiceSMS oSoap = new ServiceSMS();
 
                             int ableCnt = oSoap.GetRemainCount(sms_id, hash_value);
+                            json.Message = " rand_no:" + rand_no;
                             if (ableCnt < 1)
                             {
                                 json.Result = "FAIL";

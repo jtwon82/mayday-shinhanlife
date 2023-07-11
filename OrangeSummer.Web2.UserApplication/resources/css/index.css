@@ -51,11 +51,11 @@
 .main_personInfo {
     width: 100%;
     z-index: 11;
-    padding-bottom: 46px;
+    padding-bottom: 30px;
     text-align:center;
 }
 .main_personImg img.personImg {
-    border: 1px solid transparent;
+    border: solid 5px #705dcf;
     border-radius: 20px;
     box-sizing: border-box;
     margin: 0 auto;
@@ -64,7 +64,7 @@
     display: block;
 }
 .person_rank {
-    font-size: 55px;
+    font-size: 32px;
     font-weight: bold;
     color: #000;
     letter-spacing: -2.75px;
@@ -108,20 +108,21 @@
     cursor: pointer;
 }
 .my_rank{
-    background-color: #5bc3f6;
-    border-radius: 43px;
+    margin-bottom:36px;
     font-size: 30px;
-    letter-spacing: -1.5px;
     color: #fff;
-    line-height: 86px;
-    display: inline-block;
-    padding: 0 40px;
-    margin-top:24px;
+    text-align: center;
+}
+.my_rank b{
+    font-size: 35px;
+    font-weight: 300;
+    display: block;
+    color: #fff;
 }
 .my_rank em{
     display:inline-block;
-    width:50px;
-    height:50px;
+    width:81px;
+    height:80px;
     background-image:url(/resources/img/index/main_myRank_icon.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -129,14 +130,17 @@
     vertical-align: -12px;
 }
 .my_rank span{
-    font-size: 30px;
+    font-size: 80px;
     font-family: 'OneShinhanB';
     color: #fff;
     display: inline-block;
-    margin-left: 62px;
 }
-.mainEventBanner {
-    
+.categoryWrap {
+    padding:33px;
+    padding-bottom:10px;
+    margin-bottom:40px;
+    border-radius: 40px;
+    background-color: #5c48c2;
 }
 .mainEventBanner .mainEventBanner_t {
     font-size: 35px;
@@ -156,12 +160,12 @@
     margin-bottom: 35px;
 }
 .categoryBox dd {
-    width: 47%;
+    width: 47.5%;
     float: left;
     margin-bottom:5.5%;
 }
 .categoryBox dd:nth-child(even){
-    margin-left: 6%;
+    margin-left: 5%;
 }
 .categoryBox dd a{
     font-size: 0px;
@@ -170,8 +174,8 @@
 .categoryBox dd a span{
     margin: 0 auto;
     display: block;
-    width: 292.8px;
-    height:297px;
+    width: 260px;
+    height:251px;
     background-size:contain;
     background-repeat: no-repeat;
 }

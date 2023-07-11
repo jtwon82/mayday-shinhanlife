@@ -40,7 +40,7 @@
 }
 
 .subMeta05.measure{
-    background: #fbfbfb url(/resources/img/sub/measure_bg.gif) top center no-repeat;
+    background: #fbfbfb url(/resources/img/sub/measure_bg.jpg) top center no-repeat;
 }
 
 .subTitle{
@@ -474,6 +474,112 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
 }
 
 /* 시책안내 */
+/* lfc */
+.subMeta05.measure.lfc .subContainer.guide.sl .mandatory_standards.gsl dl{
+    height: 333px;
+}
+.subMeta05.measure.lfc .subContainer.guide.sl .mandatory_standards.gsl dl dd{
+    margin-top: 40px;
+}
+.subMeta05.measure.lfc .subContainer.guide.point .mandatory_standards dl{
+    height:191px;
+}
+.subMeta05.measure.lfc .subContainer.guide.point .mandatory_standards dl dd{
+    margin-top: 38px;
+}
+.subMeta05.measure.lfc .measureCon.point .Con dl{
+    padding:0 5px;
+}
+.subMeta05.measure.lfc .measureCon.point .Con dl{
+    width:30%;
+}
+.subMeta05.measure.lfc .measureCon.point .Con dl:nth-child(1){
+    width:33%;
+}
+.subMeta05.measure.lfc .measureCon.point .Con dl:nth-child(3){
+    width:36%;
+}
+.subMeta05.measure.lfc ul.bmTabs.measure li a{
+    width: 197px;
+}
+.subMeta05.measure.lfc .subContainer.guide.sl .evaluationInfo dl dt .space{
+    width: 59px;
+}
+.measureCon.Con1{
+    margin-top:20px;
+}
+.subMeta05.measure .individual .evaluationInfo dd.purple{
+    font-family: 'OneShinhanL', sans-serif;
+    padding-left: 160px;
+}
+.subMeta05.measure .individual .evaluationInfo dd.purple strong{
+    color: #705dcf;
+}
+.subMeta05.measure .individual .measureCon .Con{
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    background:none;
+}
+.subMeta05.measure .individual .measureCon strong{
+    font-size:40px;
+    color:#705dcf;
+    font-family: 'OneShinhanB', sans-serif;
+    letter-spacing: -2px;
+}
+.subMeta05.measure .individual .measureCon .Con dl{
+    width:48%;
+    border-right: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom:20px;
+    padding:0;
+}
+.subMeta05.measure .individual .measureCon .Con dl:nth-child(even){
+    margin-left: 20px;
+}
+.subMeta05.measure .individual .measureCon .Con dl:nth-child(3) dd, .subMeta05.measure .individual .measureCon .Con dl:nth-child(4) dd{
+    height:180px;
+    padding-top: 40px;
+}
+.subMeta05.measure .individual .measureCon .Con dt{
+    line-height: 70px;
+    color:#fff;
+    font-size: 30px;
+    font-family: 'OneShinhanM', sans-serif;
+    font-weight: 300;
+    letter-spacing: -1.5px;
+}
+.subMeta05.measure .individual .measureCon.Con1 .Con dt{
+    background-color:#705dcf;
+}
+.subMeta05.measure .individual .measureCon.Con1 .Con dd{
+    height:180px;
+    padding-top: 40px;
+    letter-spacing: -1.4px;
+}
+.subMeta05.measure .individual .measureCon.Con1 .Con dl:first-child dd{
+    padding-top:60px;
+}
+.subMeta05.measure .individual .measureCon.Con2 .Con dt{
+    background-color:#ae94f3;
+}
+.subMeta05.measure .individual .measureCon.Con3 .Con dt{
+    background-color:#879dfb;
+}
+.subMeta05.measure .individual .measureCon.Con4 .Con dt{
+    background-color:#fba8b1;
+}
+.subMeta05.measure .individual .measureCon .Con dd{
+    background-color: #fff;
+    height:140px;
+    line-height: initial;
+    padding-top:40px;
+    box-sizing: border-box;
+    font-size:28px;
+    margin-top:0;
+}
 .measure_list{
     margin-top: 160px;
     margin-bottom:36px;
@@ -506,11 +612,11 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
     font-family: 'OneShinhanB', sans-serif;
     border-top:1px solid #e5e5e5;
     padding-top:40px;
+    padding-bottom:15px;
 }
 #sub_wrap.measure .measure_list dl dt{
     font-weight:100;
-    width:150px;
-    
+    width:160px;
 }
 .measure_list dl dt, .measure_guide .titleBox dt{
     display: inline-block;
@@ -519,7 +625,7 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
     width: 135px;
     height: 40px;
     font-weight:bold;
-    line-height: 41px;
+    line-height: 40px;
     font-size: 20px;
     letter-spacing: 0px;
     background: #705dcf;
@@ -558,6 +664,11 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
 .measure_guide .titleBox{
     float:left;
     width:100%;
+    margin-bottom: -15px;
+    margin-top:10px;
+}
+.measure_guide .titleBox.gsl{
+    margin-top:50px;
 }
 .measure_guide .titleBox.sl dt{
     padding-left:50px;
@@ -577,46 +688,9 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
     font-weight:300;
 }
 .measureCon{
-    margin-top: 40px;
+    margin-bottom: 50px;
     float:left;
     width:100%;
-}
-.subContainer.guide.individual .measureCon .Con{
-    height:224px;
-}
-.subContainer.guide.individual .Con dl:nth-child(2) dd{
-    line-height: 1.3;
-    margin-top: -7px;
-    font-size: 22px;
-}
-.subContainer.guide.sl .Con dl:nth-child(2) dd{
-    line-height: 1.3;
-    margin-top: -9px;
-    font-size:22px;
-}
-.subContainer.guide.individual .evaluationInfo dl:nth-child(2) dd+dd{
-    font-size:20px;
-    margin-top: -8px;
-}
-.subContainer.guide.individual .mandatory_standards dd strong{
-    font-weight:300;
-    margin-bottom: 5px;
-}
-.subContainer.guide.individual .Con dl:nth-child(2) dd strong{
-    font-size:30px;
-}
-.subContainer.guide.sl .measureCon .Con{
-    height:224px;
-}
-.subContainer.guide.point .measureCon .Con{
-    height:189px;
-}
-.subContainer.guide.point .measureCon.bp .Con{
-    height:200px;
-    padding:28px 0;
-}
-.subContainer.guide.group .measureCon.bb .Con{
-    height:232px;
 }
 .measureCon.esl{margin-bottom:0;}
 
@@ -625,42 +699,102 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
    text-indent: 20px;
     background:
     url(/resources/img/sub/measure/circle.png) left center no-repeat;
-    font-size:30px;
+    font-size:28px;
     font-weight: bold;
     width:100%;
-    font-family: 'OneShinhanM', sans-serif;
+    font-family: 'OneShinhanB', sans-serif;
 }
 .measureCon .Con{
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 5%);
     width: 100%;
     background-color: #fff;
-    padding: 35px 10px;
+    padding: 40px 0;
     border-radius: 20px;
     box-sizing: border-box;
     overflow:hidden;
 }
 .measureCon .Con dl{
     border-right:1px dashed #c9c9c9;
-    width: 24%;
+    width: 33%;
     height: 100%;
     text-align:
     center;
     box-sizing: border-box;
    float:left;
     vertical-align: middle;
+    padding:0 10px;
 }
-.measureCon .Con dl:nth-child(3){
-    width:26.7%;
+.measureCon .Con dl:nth-child(1){
+    width:28%;
 }
-.measureCon .Con dl:last-child{border-right:none;}
-.measureCon.sl .Con dl{
-    width:50%;
+.measureCon .Con dl:last-child{
+    border-right:none;
+     width:36%;
 }
+
+.subMeta05.measure .sl .measureCon .Con{
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    background:none;
+}
+.subMeta05.measure .sl .measureCon strong{
+    color:#705dcf;
+    font-family: 'OneShinhanB', sans-serif;
+    letter-spacing: -2px;
+}
+.subMeta05.measure .sl .measureCon .Con dl{
+    width:48%;
+    border-right: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom:20px;
+    padding:0;
+}
+.subMeta05.measure .sl .measureCon .Con dl:nth-child(even){
+    margin-left: 20px;
+}
+.subMeta05.measure .sl .measureCon .Con dl:nth-child(3) dd{
+    height:180px;
+    padding-top: 60px;
+}
+.subMeta05.measure .sl .measureCon .Con dl:nth-child(4) dd{
+    height:180px;
+    padding-top: 5px;
+}
+.subMeta05.measure .sl .measureCon .Con dt{
+    line-height: 70px;
+    color:#fff;
+    font-size: 30px;
+    font-family: 'OneShinhanM', sans-serif;
+    font-weight: 300;
+    letter-spacing: -1.5px;
+}
+.subMeta05.measure .sl .measureCon.Con1 .Con dt{
+    background-color:#ae94f3;
+}
+.subMeta05.measure .sl .measureCon.Con2 .Con dt{
+    background-color:#879dfb;
+}
+.subMeta05.measure .sl .measureCon.Con3 .Con dt{
+    background-color:#fba8b1;
+}
+.subMeta05.measure .sl .measureCon .Con dd{
+    background-color: #fff;
+    height:140px;
+    line-height: initial;
+    padding-top:40px;
+    box-sizing: border-box;
+    font-size:28px;
+    letter-spacing: -1.4px;
+    margin-top:0;
+}
+
 .measureCon .Con dt{
-    height: 70px;
 }
 .measureCon .Con dt, .measureCon .Con dd{
-    font-size:24px;
+    font-size:28px;
     font-weight:bold;
     font-family: 'OneShinhanB', sans-serif;
 }
@@ -672,18 +806,19 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
 .measureCon .Con dd{
     font-weight:300;
     font-family: 'OneShinhanM', sans-serif;
-    height: 80px;
-    line-height: 80px;
 }
 .measureCon .Con dd{
-    font-size:24px;
+    font-size:28px;
+    margin-top: 20px;
+}
+.measureCon .Con dd strong{
+    font-size:38px;
+    color:#705dcf;
+    font-family: 'OneShinhanB', sans-serif;
 }
 .measureCon .Con dd.small{
-    font-size: 18px;
-    line-height: 1.33;
-    font-family: 'OneShinhanL';
-    font-weight: 100;
-    margin-top: -14px;
+    font-size: 22px;
+    
 }
 .measureCon .Con dd em{
     display:inline-block;
@@ -693,7 +828,9 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
     font-family: 'OneShinhanB', sans-serif;
     letter-spacing: -3px;
 }
-
+.subMeta05.measure .subContainer.guide .measureCon.point{
+    margin-top: 40px;
+}
 .measureCon.point + .point{
     margin-bottom:40px;
 }
@@ -1358,7 +1495,7 @@ ul.bmTabs li a:hover, ul.bmTabs li a.current, ul.bmTabs.measure li.current, ul.b
     line-height:45px;
 }
 .evaluationInfo{
-    margin:25px 0;
+    margin:10px 0;
 }
 strong{
     font-weight:bold;
@@ -1367,13 +1504,23 @@ strong.purple{
     color:#705dcf;
     font-weight:bold;
 }
+.evaluationInfo dd.purple{
+    color:#705dcf;
+    font-family: 'OneShinhanM', sans-serif;
+}
+.evaluationInfo dd span.transparent{
+    color:transparent;
+    width: 153px;
+    display: inline-block;
+}
 .introduction {
     float: left;
-    margin: 30px 0;
+    margin-top: -20px;
+    margin-bottom:20px;
 }
 .introduction dt{
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     float: left;
     font-size: 34px;
      font-weight: bold;
@@ -1385,16 +1532,25 @@ strong.purple{
     font-family: 'OneShinhanM', sans-serif;
     width: 100%;
     float:left;
-    font-size:24px;
-    padding-left:27px;
+    font-size:28px;
+    padding-left:24px;
+    margin-bottom: 3px;
+    letter-spacing: -1.8px;
+}
+.introduction dd.purple{
+    color:#705dcf;
 }
 .evaluationInfo dt, .evaluationInfo dd{
     color:#000;
-    font-size:24px;
+    font-size:28px;
     font-family: 'OneShinhanL', sans-serif;
 }
+.evaluationInfo dt, .evaluationInfo dd strong{
+    font-family: 'OneShinhanM', sans-serif;
+    font-weight:300;
+}
 .evaluationInfo dt .space{
-    width: 39px;
+    width: 59px;
     display: inline-block;
 }
 .evaluationInfo dt .space + .space{
@@ -1408,198 +1564,151 @@ strong.purple{
     padding-left:20px;
 }
 .evaluationInfo dt span{
-    vertical-align: 4px;
+    vertical-align: 2px;
     display:inline-block;
-    margin:0 10px;
-    font-size:18px;
+    margin:0 13px;
+    font-size:20px;
     font-family: 'OneShinhanB', sans-serif;
 }
 .evaluationInfo dt span.sl_blank{margin-left:25px;}
+.subContainer.guide.sl .evaluationInfo dd.purple{padding-left:163px;}
 .subContainer.guide.sl .mandatory_standards dl{
     width:100%;
-    height:174px;
+    height:425px;
 }
 .subContainer.guide.sl .evaluationInfo dl dt .space{
-    width: 48px;
+    width: 59px;
 }
 .subContainer.guide.sl .evaluationInfo dl dt .space + .space{
     width: 16px;
 }
 .subContainer.guide.sl .mandatory_standards dl dd{
-    line-height: 1.2;
+    line-height:40px;
+}
+
+.subContainer.guide.sl .mandatory_standards dl em{
+    color: #705dcf;
+    font-family: 'OneShinhanM', sans-serif;
 }
 .subContainer.guide.sl .mandatory_standards dl strong{
     display:inline-block;
     font-weight:normal;
 }
+.subContainer.guide.sl .Con1 .mandatory_standards dl span{
+    height:15px;
+    display:block;
+}
+.subContainer.guide.sl .mandatory_standards dl span strong{
+    font-size:28px;
+    color:#000;
+    margin-right: 5px;
+}
+.subContainer.guide.sl .mandatory_standards dl span{
+    font-family: 'OneShinhanM', sans-serif;
+}
+.subContainer.guide.sl .mandatory_standards dl span + span{
+    display: block;
+    margin-left: -61px;
+    margin-top: -5px;
+}
+.subContainer.guide.sl .mandatory_standards dl strong em{
+    font-family: 'OneShinhanB', sans-serif;
+    font-weight:bold;
+    color:#000;
+}
 .subContainer.guide.sl .mandatory_standards.gsl{
     margin-bottom:30px;
 }
-.subContainer.guide.point .measureCon.bp .Con dl{
-    width:26%;
+.subContainer.guide.sl .mandatory_standards.gsl dl{
+    height:284px;
 }
-.subContainer.guide.point .measureCon.bp .Con dl:first-child dd{
-    font-size:22px;
-    line-height:1.33;
+.subContainer.guide.point .bp {
+    float: left;
+    margin-top: -20px;
+    margin-bottom:20px;
 }
-.subContainer.guide.point .measureCon.bp .Con dl:first-child dd strong{
-    font-size:24px;
+.subContainer.guide.point .bp dt{
+    width: 100%;
+    margin-bottom: 10px;
+    float: left;
+    font-size: 34px;
+     font-weight: bold;
+     padding-left: 24px;
+    background: url(/resources/img/sub/measure/circle.png) left center no-repeat;
+    font-family: 'OneShinhanB', sans-serif;
 }
-.subContainer.guide.point .measureCon.bp .Con dl:first-child dd strong em{
-   font-size: 30px;
-    vertical-align: -1px;
-}
-.subContainer.guide.point .measureCon.bp .Con dl:nth-child(2){
-    width:48%;
-}
-.subContainer.guide.point .measureCon .Con dd.trip_area{
-    margin-top: -15px;
-}
-.subContainer.guide.point .measureCon.bp{
-    margin-top: 10px;
-}
-.subContainer.guide.point .measureCon.bp .Con dl:nth-child(2) dd{
-    margin-top:-18px;
-    font-size:22px;
-   line-height:1.33;
-   font-family: 'OneShinhanL', sans-serif;
-    font-weight: bold;
-}
-.subContainer.guide.point .measureCon.bp .Con dl:nth-child(2) dd *{
-   font-size:22px;
-   display:block;
-   font-family: 'OneShinhanB', sans-serif;
-}
-.subContainer.guide.point .measureCon.point dl:nth-child(1){
-    width: 22%;
-}
-
-.subContainer.guide.point .measureCon.point dl dt{
-    height: 48px;
-}
-.subContainer.guide.point .measureCon.point dl:nth-child(2) dd, .subContainer.guide.point .measureCon.point dl:nth-child(3) dd{
-    line-height:1.2;
-    font-size:22px;
-}
-.subContainer.guide.point .measureCon.point dl:nth-child(2) dd strong{
-    font-size:24px;
-}
- .subContainer.guide.point .measureCon.point dl:nth-child(3) dd strong{
-     font-size:30px;
- }
-.subContainer.guide.point .measureCon.point dl:nth-child(2){
-    width: 27%;
-}s
-.subContainer.guide.point .measureCon.point dl:nth-child(3) dd{
-    margin-top:-4px;
-}
-.subContainer.guide.point .measureCon.point dl:nth-child(3) dd em + em, .subContainer.guide.individual .measureCon dl:nth-child(2) dd em + em, .subContainer.guide.sl .measureCon dl:nth-child(2) dd em + em{
-    color:#000;
-    margin-left: 5px;
-}
-.subContainer.guide.group .evaluationInfo dl dt .space{
-    width: 48px;
-}
-.subContainer.guide.group .evaluationInfo dl dt .space + .space{
-    width:16px;
-}
-.subContainer.guide.group .measureCon dl{
-    width:30%;
-}
-.subContainer.guide.group .measureCon dl dd{
-   line-height: 75px;
-}
-.subContainer.guide.group .measureCon dl:first-child dt, .subContainer.guide.group .measureCon dl:last-child dt{
-    line-height: 62px;
-}
-.subContainer.guide.group .measureCon dl:nth-child(2){
-    width: 40%;
-}
-.subContainer.guide.group .measureCon dl:nth-child(2) dt span{
-    font-size: 20px;
-    font-weight:300;
+.subContainer.guide.point .bp dd{
     font-family: 'OneShinhanM', sans-serif;
+    width: 100%;
+    float:left;
+    font-size:28px;
+    padding-left:27px;
+    margin-bottom: 3px;
+    letter-spacing: -1.4px;
 }
-.subContainer.guide.group .measureCon .Con + .Con dl:first-child dd{
-    line-height: 75px;
-}
-.subContainer.guide.group .measureCon dl:nth-child(2) dd{
-    line-height: 72px;
-}
-.subContainer.guide.group .measureCon dl:nth-child(2) dd strong{
-    font-weight:bold;
-    font-size:30px;
+.subContainer.guide.point .bp dd.purple{
     font-family: 'OneShinhanB', sans-serif;
+    color:#705dcf;
 }
-.subContainer.guide.group .measureCon dl:nth-child(2) dd strong em{
-    font-size:26px;
+.subContainer.guide.group .evaluationInfo dt .space{
+    width: 25px;
 }
-.subContainer.guide.group .evaluationInfo{
-    margin-bottom:0;
-} 
-.subContainer.guide.group .measureCon .Con dl:first-child dd {
-    line-height: 1.5;
+.subContainer.guide.group .evaluationInfo dd span.transparent{
+    width: 128px;
 }
-.subContainer.guide.group .measureCon dl:nth-child(3) dd{
-    line-height: 1.2;
-    font-size: 22px;
-    margin-top: -5px;
+.subContainer.guide.group .measureCon .Con dt{
+    height:77px;
 }
-.subContainer.guide.group .measureCon dl:nth-child(3) dd strong{
-    display:block;
-    font-family: 'OneShinhanB', sans-serif;
+.subContainer.guide.group .measureCon .Con dt span{
+    font-size:24px;
 }
-.subContainer.guide.group .measureCon.guinness dl:nth-child(2) dt{
-   line-height: 62px;
+.subContainer.guide.group .measureCon .Con dl:nth-child(2) dd{
+    margin-top: 27px;
 }
-.subContainer.guide.group .measureCon.guinness dl:nth-child(2) dd{
-    line-height: 35px;
+.subContainer.guide.group .measureCon .Con dl{
+    padding:0 15px;
 }
-.subContainer.guide.group .measureCon.guinness dl:nth-child(3) dd{
-    line-height: 1.4;
-    margin-top: 5px;
+.subContainer.guide.group .measureCon .Con dl:nth-child(2){
+    width: 38%;
 }
-.subContainer.guide.group .measureCon.guinness dl:nth-child(2) dd span{
-    margin:0 10px;
+.subContainer.guide.group .measureCon .Con dl:nth-child(3){
+    width: 34%;
 }
-.subContainer.guide.group .measureCon.guinness dl:nth-child(2) dd *{
-    display:inline-block;
-    vertical-align: middle;
-}
-.subContainer.guide.group .measureCon.guinness dl:nth-child(2) dd strong{
-    text-align:left;
+.mandatory_standards{
+    margin-bottom:20px;
 }
 .mandatory_standards dl{
     overflow: hidden;
     background-color:#fff;
     border-radius:20px;
-    width:48.5%;
-    height:230px;
+    width:100%;
+    height:276px;
     float:left;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
 }
 .mandatory_standards dl.two{
     float:right;
 }
 .mandatory_standards dt{
     background-color:#705dcf;
-    line-height:60px;
+    line-height:70px;
     color:#fff;
     text-align:center;
-    font-size:28px;
+    font-size:30px;
     font-family: 'OneShinhanM', sans-serif;
 }
 .mandatory_standards dd{
-    margin-top:20px;
-    font-size:24px;
+    margin-top:34px;
+    font-size:28px;
     font-family: 'OneShinhanM', sans-serif;
     text-align:center;
 }
 .mandatory_standards dd strong{
     color:#705dcf;
-    display:block;
-    font-family: 'OneShinhanM', sans-serif;
+    font-family: 'OneShinhanB', sans-serif;
     margin-bottom:10px;
+    font-weight:bold;
+    font-size:34px;
 }
 .mandatory_standards dl.two dd{
 }
@@ -1636,13 +1745,6 @@ strong.purple{
 .measureCon.headoffice .Con dl:last-child dd em{
     font-size:44px;
 }
-.measureCon.point .Con dl:nth-child(2) dd em{
-    font-size:33px;
-}
-.measureCon.point .Con dl:first-child dd{
-    font-size:24px;
-}
-
 /*  210628 추가 */
 .product_price{
     float:left;

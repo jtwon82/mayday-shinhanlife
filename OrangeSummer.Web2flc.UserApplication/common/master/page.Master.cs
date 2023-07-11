@@ -22,7 +22,7 @@ namespace OrangeSummer.Web2flc.UserApplication.common.master
             #region [ 로그인 체크 ]
             string url = ServerVariables.Url;
             bool checker = false;
-            string[] directory = { "/default.aspx", "/member/regist/default.aspx", "/member/login/default.aspx", "/member/terms/default.aspx", "/member/find_pw/default.aspx" };
+            string[] directory = { "/default.aspx", "/member/regist/default.aspx", "/member/login/default.aspx", "/member/terms/default.aspx", "/member/find_pw/default.aspx", "/intro/default.aspx" };
             foreach (var item in directory)
             {
                 if (url.Equals(item))
@@ -90,9 +90,9 @@ namespace OrangeSummer.Web2flc.UserApplication.common.master
 
             if (Common.User.AppSetting.DevMode != "DEV" && !Request.IsSecureConnection)
             {
-                //string redirectUrl = Request.Url.AbsoluteUri.Replace("http:", "https:");
-                string redirectUrl = "https://" + HttpContext.Current.Request.Url.Host + ":4433/";
-                Response.Redirect(redirectUrl);
+                string redirectUrl = Request.Url.AbsoluteUri.Replace("http:", "https:");
+                string nextUrl = "https://" + HttpContext.Current.Request.Url.Host + ":4433/";
+                Response.Redirect(nextUrl);
             }
         }
 

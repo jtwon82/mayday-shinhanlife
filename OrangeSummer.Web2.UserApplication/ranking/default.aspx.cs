@@ -34,7 +34,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking
         {
             try
             {
-                using (Business.Member biz = new Business.Member(OrangeSummer.Common.User.AppSetting.Connection))
+                using (Access.Member biz = new Access.Member(OrangeSummer.Common.User.AppSetting.Connection))
                 {
                     List<Model.Banner> list = biz.BackgroundInfo();
                     _json = JsonConvert.SerializeObject(list);
@@ -49,7 +49,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking
                 StringBuilder sb3 = new StringBuilder();
                 StringBuilder sb4 = new StringBuilder();
                 StringBuilder uniqueChk = new StringBuilder();
-                using (Business.Achievement biz = new Business.Achievement(Common.User.AppSetting.Connection))
+                using (Access.Achievement biz = new Access.Achievement(Common.User.AppSetting.Connection))
                 {
                     #region [ 개인 ]
                     sb.Clear();
@@ -58,7 +58,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking
                     sb3.Clear();
                     sb4.Clear();
 
-                    List<Model.Achievement> persons = biz.UserRanking_202206(1, 100, "PERSON");
+                    List<Model.Achievement> persons = biz.UserRanking_202306(1, 100, "PERSON");
                     if (persons != null)
                     {
                         DateTime dt = DateTime.Parse(persons[0].Date);
@@ -66,7 +66,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking
                         int index = 1;
                         foreach (Model.Achievement item in persons)
                         {
-                            string key = $"{item.PersonRank}|";
+                            string key = $"{item.PersonRank}|{item.PersonCanp}";
                             if (uniqueChk.ToString().Contains(key))
                             {
                                 continue;
@@ -78,7 +78,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking
                                 sb2.Append("<dl class='rank2'>\n");
                                 sb2.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankingbox_ico.png' alt=''></span>\n");
                                 sb2.Append($"	<dt><em>{item.PersonRank}위</em><span class='myName'>{item.BranchName}<em> {item.MemberName}</em></span></dt>\n");
-                                sb2.Append($"	<dd>{item.Cost}</dd>\n");
+                                sb2.Append($"	<dd>{item.PersonCanp}</dd>\n");
                                 sb2.Append("</dl>\n");
                             }
                             else if (item.PersonRank == "1")
@@ -86,7 +86,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking
                                 sb1.Append("<dl class='rank1'>\n");
                                 sb1.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankingbox_ico.png' alt=''></span>\n");
                                 sb1.Append($"	<dt><em>{item.PersonRank}위</em><span class='myName'>{item.BranchName}<em> {item.MemberName}</em></span></dt>\n");
-                                sb1.Append($"	<dd>{item.Cost}</dd>\n");
+                                sb1.Append($"	<dd>{item.PersonCanp}</dd>\n");
                                 sb1.Append("</dl>\n");
                             }
                             else if (item.PersonRank == "3")
@@ -94,22 +94,22 @@ namespace OrangeSummer.Web2.UserApplication.ranking
                                 sb3.Append("<dl class='rank3'>\n");
                                 sb3.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankingbox_ico.png' alt=''></span>\n");
                                 sb3.Append($"	<dt><em>{item.PersonRank}위</em><span class='myName'>{item.BranchName}<em> {item.MemberName}</em></span></dt>\n");
-                                sb3.Append($"	<dd>{item.Cost}</dd>\n");
+                                sb3.Append($"	<dd>{item.PersonCanp}</dd>\n");
                                 sb3.Append("</dl>\n");
                             }
                             else if (Int32.Parse(item.PersonRank) < 11)
                             {
                                 sb3.Append("<dl>\n");
-                                sb3.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankingbox_ico.png' alt=''></span>\n");
+                                sb3.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankinglist_ico.png' alt=''></span>\n");
                                 sb3.Append($"	<dt><em>{item.PersonRank}위</em><span class='myName'>{item.BranchName}<em> {item.MemberName}</em></span></dt>\n");
-                                sb3.Append($"	<dd>{item.Cost}</dd>\n");
+                                sb3.Append($"	<dd>{item.PersonCanp}</dd>\n");
                                 sb3.Append("</dl>\n");
                             }
                             else {
                                 sb4.Append("<dl>\n");
                                 sb4.Append("<span class='icon'><img src = '/resources/img/sub/ranking/rankinglist_ico.png' alt=''></span>\n");
-                                sb4.Append($"	<dt><em>{item.PersonRank}위</em><span class='myName'>{item.BranchName}<em> {item.MemberName}</em></span></dt>\n");
-                                sb4.Append($"	<dd>{item.Cost}</dd>\n");
+                                sb4.Append($"	<dt>{item.PersonRank}위</dt>\n");
+                                sb4.Append($"	<dd>{item.PersonCanp}</dd>\n");
                                 sb4.Append("</dl>\n");
                             }
 
@@ -120,7 +120,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking
                     sb.Append("<!-- 개인부문 -->\n");
                     sb.Append("<ul class='rankingUnit'>\n");
                     sb.Append("	<li>[날짜 기준] " + _date + "</li>\n");
-                    sb.Append("	<li>[ 단위 ] 환산 CANP</li>\n");
+                    sb.Append("	<li>[단위] 환산 CANP</li>\n");
                     sb.Append("</ul>\n");
                     if (sb1.ToString() != "" || sb2.ToString() != "" || sb3.ToString() != "") {
                         sb.Append("<div class=\"rankingBox\">\n");

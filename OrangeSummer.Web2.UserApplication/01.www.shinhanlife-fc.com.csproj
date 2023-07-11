@@ -87,13 +87,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="achieve\bm\default.aspx" />
+    <Content Include="achieve\default.aspx" />
     <Content Include="achieve\point\default.aspx" />
     <Content Include="achieve\sl\default.aspx" />
+    <Content Include="board\default.aspx" />
     <Content Include="board\evt\default.aspx" />
-    <Content Include="board\evt\detail.aspx" />
     <Content Include="board\notice\default.aspx" />
     <Content Include="board\notice\detail.aspx" />
     <Content Include="board\roulette-\default.aspx" />
+    <Content Include="board\scrach\default.aspx" />
     <Content Include="board\word\default.aspx" />
     <Content Include="common\js\common.js" />
     <Content Include="common\js\jquery-library.js" />
@@ -336,6 +338,7 @@
     <Content Include="resources\img\sub\measure\dynamiteBanner.png" />
     <Content Include="resources\img\sub\measure\individual_standardBox.png" />
     <Content Include="resources\img\sub\measure\measureConBg.png" />
+    <Content Include="resources\img\sub\measure\measureEtc.png" />
     <Content Include="resources\img\sub\measure\measureGroup.png" />
     <Content Include="resources\img\sub\measure\measureHeadoffice.png" />
     <Content Include="resources\img\sub\measure\measureIndividual.png" />
@@ -417,6 +420,7 @@
     </Content>
     <Content Include="packages.config" />
     <Content Include="common\master\page.Master" />
+    <None Include="Properties\PublishProfiles\01.www.shinhanlife-fc.com.pubxml" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Properties\PublishProfiles\OrangeSummerFront.pubxml" />
     <None Include="Properties\Settings.settings">
@@ -447,6 +451,13 @@
     <Compile Include="achieve\bm\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="achieve\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="achieve\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="achieve\point\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -461,19 +472,19 @@
     <Compile Include="achieve\sl\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="board\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="board\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="board\evt\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="board\evt\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="board\evt\detail.aspx.cs">
-      <DependentUpon>detail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="board\evt\detail.aspx.designer.cs">
-      <DependentUpon>detail.aspx</DependentUpon>
     </Compile>
     <Compile Include="board\notice\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
@@ -494,6 +505,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="board\roulette-\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="board\scrach\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="board\scrach\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
     <Compile Include="board\word\default.aspx.cs">
@@ -563,6 +581,7 @@
     </Compile>
     <Compile Include="measure\group\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="measure\group\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
@@ -688,6 +707,10 @@
     <ProjectReference Include="..\MLib\MLib.csproj">
       <Project>{96f3570b-c1ba-4e65-81f8-cd8be458306f}</Project>
       <Name>MLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OrangeSummer.Access\OrangeSummer.Access.csproj">
+      <Project>{025ca64e-8017-419f-b3ec-4b8095c7a1d4}</Project>
+      <Name>OrangeSummer.Access</Name>
     </ProjectReference>
     <ProjectReference Include="..\OrangeSummer.Business\OrangeSummer.Business.csproj">
       <Project>{ec61b561-2054-4808-81ed-cc027e28e84c}</Project>

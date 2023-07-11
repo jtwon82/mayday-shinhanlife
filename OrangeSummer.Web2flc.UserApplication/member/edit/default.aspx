@@ -3,17 +3,13 @@
 <%@ Register Src="~/common/uc/menu.ascx" TagPrefix="uc1" TagName="menu" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <link rel="stylesheet" href="/resources/css/sub.css" />
+    <link rel="stylesheet" href="/resources/css/sub.css?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>" />
 
     <script type="text/javascript" src="/resources/js/common.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <body>
-	    <div class="background sub">
-		    <p class="cover"></p>
-		    <p class="upload"><img src="/resources/img/sub/subMetaBg_member.jpg" alt=""/></p>
-	    </div>
-	    <div id="sub_wrap">
+	    <div id="sub_wrap" class="subMeta05">
             <uc1:menu runat="server" ID="menu" />
             <div class="subContainer">
                 <p class="subTitle"><img src="/resources/img/sub/signup_editTitle.png" alt="회원정보수정" /></p>

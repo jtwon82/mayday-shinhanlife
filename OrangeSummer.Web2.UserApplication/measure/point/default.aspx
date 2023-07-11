@@ -4,13 +4,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link rel="stylesheet" href="/resources/css/sub.css?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"" />
     <link rel="stylesheet" href="/resources/css/swiper.css?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>""/>
-
-    <script type="text/javascript" src="/resources/js/common.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
     <script type="text/javascript" src="/resources/js/swiper.min.4.3.5.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <body>
-        <div id="sub_wrap" class="subMeta05">
+        <div id="sub_wrap" class="subMeta05 measure ">
             <uc1:menu runat="server" ID="menu" />
             <div class="subContainer guide point">
                 <p class="subTitle"><img src="/resources/img/sub/measureTitle.png" alt="시책안내" /></p>
@@ -19,78 +17,91 @@
                         <li><a href="/measure/individual">개인 부문</a></li>
                         <li><a href="/measure/sl">SL 부문</a></li>
                         <li><a href="/measure/point" class="current">지점 부문</a></li>
-                        <li><a href="/measure/group">그룹부문</a></li>
+                        <li><a href="/measure/group">기타부문</a></li>
                     </ul>
                     
-				<!-- 지점부문 -->
-                <div class="measureCon ranking point">
-					<p class="Con_t">순위부문</p>
-					<div class="Con">
+					<div class="evaluationInfo">
 						<dl>
-							<dt>구분</dt>
-							<dd>상위</dd>
+							<dt>평가 대상<span>|</span></dt>
+							<dd>BM, EM, ERM, IRM</dd>
 						</dl>
 						<dl>
-							<dt>순위</dt>
-							<dd>환산 CANP 순위<strong><em>1-10</em> 위</strong></dd>
+							<dt>평가 기준<span>|</span></dt>
+							<dd><strong>순위부문 :</strong> 환산 CANP</dd>
+							<dd><strong>BP부문 :</strong> CANP BP 달성률</dd>
 						</dl>
 						<dl>
-							<dt>최소 기준</dt>
-							<dd>CMIP <br/><strong><em>8,000</em>만<em>↑</em></strong></dd>
+							<dt>선발 인원<span>|</span></dt>
+							<dd>상위 65명 + α</dd>
 						</dl>
 						<dl>
-							<dt>보상</dt>
-							<dd class="trip_area">제주+푸켓</dd>
+							<dt>특<em class="space"></em>징<span>|</span></dt>
+							<dd class="purple">순위부문 우선 선발 후 BP부문 선발</dd>
 						</dl>
 					</div>
-					
-					<div class="Con">
-						<dl>
-							<dt>구분</dt>
-							<dd>일반</dd>
-						</dl>
-						<dl>
-							<dt>순위</dt>
-							<dd>환산 CANP 순위<strong><em>11-40</em> 위</strong></dd>
-						</dl>
-						<dl>
-							<dt>최소 기준</dt>
-							<dd>CMIP <br/><strong><em>4,000</em>만<em>↑</em></strong></dd>
-						</dl>
-						<dl>
-							<dt>보상</dt>
-							<dd class="trip_area">푸켓</dd>
-						</dl>
-					</div>
+
+					<div class="measureCon ranking point">
+						<p class="Con_t">순위부문</p>
+						<div class="mandatory_standards gsl">
+							<dl>
+								<dt>필수기준</dt>
+								<dd><strong>CMIP 3천만↑</strong><br>지점 내 개인부문 5명 이상 달성<br>& 7~8월 합산 CMIP(MI 기준) 3천만 ↑</dd>
+							</dl>
+						</div>
+						<div class="Con">
+							<dl>
+								<dt>평가 CANP 순위</dt>
+								<dd><strong>1-10</strong>위</dd>
+							</dl>
+							<dl>
+								<dt>CMIP</dt>
+								<dd><strong>15,000만↑</strong></dd>
+							</dl>
+							<dl>
+								<dt>혜택</dt>
+								<dd><strong>스페인+다낭</strong></dd>
+							</dl>
+						</div>
+						
+						<div class="Con">
+							<dl>
+								<dt>평가 CANP 순위</dt>
+								<dd><strong>11-25</strong>위</dd>
+							</dl>
+							<dl>
+								<dt>CMIP</dt>
+								<dd><strong>8,000만↑</strong></dd>
+							</dl>
+							<dl>
+								<dt>혜택</dt>
+								<dd><strong>호주</strong></dd>
+							</dl>
+						</div>
+
+						<div class="Con">
+							<dl>
+								<dt>평가 CANP 순위</dt>
+								<dd><strong>26-65</strong>위</dd>
+							</dl>
+							<dl>
+								<dt>CMIP</dt>
+								<dd><strong>4,000만↑</strong></dd>
+							</dl>
+							<dl>
+								<dt>혜택</dt>
+								<dd><strong>다낭</strong></dd>
+							</dl>
+						</div>
 				</div>
-				
-				 <dl class="necessaryGuidance">
-					<dt>필수 기준</dt>
-					<dd>지점 내 개인부문 달성인원 5명 이상</dd>
-				</dl>
 				   
-				<div class="measureCon bp first">
-					<p class="Con_t">BP부문</p>
-					<div class="Con">
-						<dl>
-							<dt>순위</dt>
-							<dd>CANP BP달성률<br/><strong>상위<em>10</em>위</strong> <br/></dd>
-						</dl>
-						<dl>
-							<dt>필수기준</dt>
-							<dd><strong class="purple">7월+8월 BP 100% 달성</strong>
-								(CMIP 또는 CANP BP 달성)<br/>
-								<strong class="purple">7월+8월 CMIP 2,000만 ↑</strong>
-							</dd>
-						</dl>
-						<dl>
-							<dt>보상</dt>
-							<dd class="trip_area">푸켓</dd>
-						</dl>
-					</div>
-				</div>
+				<div class="bp">
+					<dt>BP 부문</dt>
+					<dd class="purple">CANP BP 100% 이상 달성 시 다낭 Trip 확정!</dd>
+					<dd>지점 내 개인부문 5명 이상 달성</dd>
+					<dd>& 7~8월 합산 CMIP(MI 기준) 3천만 ↑</dd>
+				</div>	
 				
-			</div>
+			</div> 
 		</div>
 				
 	</div>

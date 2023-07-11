@@ -34,7 +34,7 @@ namespace OrangeSummer.Web2flc.UserApplication.ranking.point
         {
             try
             {
-                using (Business.Member biz = new Business.Member(OrangeSummer.Common.User.AppSetting.Connection))
+                using (Access.Member biz = new Access.Member(OrangeSummer.Common.User.AppSetting.Connection))
                 {
                     List<Model.Banner> list = biz.BackgroundInfo();
                     _json = JsonConvert.SerializeObject(list);
@@ -49,7 +49,7 @@ namespace OrangeSummer.Web2flc.UserApplication.ranking.point
                 StringBuilder sb3 = new StringBuilder();
                 StringBuilder sb4 = new StringBuilder();
                 StringBuilder uniqueChk = new StringBuilder();
-                using (Business.Achievement biz = new Business.Achievement(Common.User.AppSetting.Connection))
+                using (Access.Achievement biz = new Access.Achievement(Common.User.AppSetting.Connection))
                 {
 
                     #region [ 지점 ]
@@ -59,7 +59,7 @@ namespace OrangeSummer.Web2flc.UserApplication.ranking.point
                     sb3.Clear();
                     sb4.Clear();
 
-                    List<Model.Achievement> branchs = biz.UserRanking_new(page, 10, "BRANCH");
+                    List<Model.Achievement> branchs = biz.UserRanking_202306(page, 15, "BRANCH");
                     if (branchs != null)
                     {
                         DateTime dt = DateTime.Parse(branchs[0].Date);
@@ -68,7 +68,7 @@ namespace OrangeSummer.Web2flc.UserApplication.ranking.point
                         int index = 1;
                         foreach (Model.Achievement item in branchs)
                         {
-                            string key = $"{item.BranchRank}|{item.Cmip}";
+                            string key = $"{item.BranchRank}|{item.BranchCanp}";
                             if (uniqueChk.ToString().Contains(key))
                             {
                                 continue;
@@ -77,57 +77,69 @@ namespace OrangeSummer.Web2flc.UserApplication.ranking.point
 
                             if (item.BranchRank == "2")
                             {
-                                sb2.Append("	<dl class=''>");
-                                sb2.Append($"		<dt>{item.BranchRank}위</dt>");
-                                sb2.Append($"		<dd><span class='pointer'>{item.BranchName}</span>{item.Cmip}</dd>");
-                                sb2.Append("	</dl>");
+                                sb2.Append("<dl class='rank2'>\n");
+                                sb2.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankingbox_ico.png' alt=''></span>\n");
+                                sb2.Append($"		<dt><em>{item.BranchRank}위</em><span class='myName'><em>{item.Branch.Name}</em></span></dt>\n");
+                                sb2.Append($"		<dd>{item.BranchCanp}</dd>\n");
+                                sb2.Append("	</dl>\n");
                             }
                             else if (item.BranchRank == "1")
                             {
-                                sb1.Append("	<dl class='centerBox'>");
-                                sb1.Append($"		<dt>{item.BranchRank}위</dt>");
-                                sb1.Append($"		<dd><span class='pointer'>{item.BranchName}</span>{item.Cmip}</dd>");
-                                sb1.Append("	</dl>");
+                                sb1.Append("<dl class='rank1'>\n");
+                                sb1.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankingbox_ico.png' alt=''></span>\n");
+                                sb1.Append($"		<dt><em>{item.BranchRank}위</em><span class='myName'><em>{item.Branch.Name}</em></span></dt>\n");
+                                sb1.Append($"		<dd>{item.BranchCanp}</dd>\n");
+                                sb1.Append("	</dl>\n");
                             }
                             else if (item.BranchRank == "3")
                             {
-                                sb3.Append("	<dl>");
-                                sb3.Append($"		<dt>{item.BranchRank}위</dt>");
-                                sb3.Append($"		<dd><span class='pointer'>{item.BranchName}</span>{item.Cmip}</dd>");
-                                sb3.Append("	</dl>");
+                                sb3.Append("<dl class='rank3'>\n");
+                                sb3.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankingbox_ico.png' alt=''></span>\n");
+                                sb3.Append($"		<dt><em>{item.BranchRank}위</em><span class='myName'><em>{item.Branch.Name}</em></span></dt>\n");
+                                sb3.Append($"		<dd>{item.BranchCanp}</dd>\n");
+                                sb3.Append("	</dl>\n");
+                            }
+                            else if (Int32.Parse(item.BranchRank) < 11)
+                            {
+                                sb3.Append("<dl>\n");
+                                sb3.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankinglist_ico.png' alt=''></span>\n");
+                                sb3.Append($"		<dt><em>{item.BranchRank}위</em><span class='myName'><em>{item.Branch.Name}</em></span></dt>\n");
+                                sb3.Append($"       <dd>{item.BranchCanp}</dd>\n");
+                                sb3.Append("</dl>\n");
                             }
                             else
                             {
-                                sb4.Append("<dl>");
-                                sb4.Append($"	<dt>{item.BranchRank}위  |  {item.BranchName}</dt>");
-                                sb4.Append($"	<dd>{item.Cmip}</dd>");
-                                sb4.Append("</dl>");
+                                sb4.Append("<dl>\n");
+                                sb4.Append("<span class='icon'><img src = '/resources/img/sub/ranking/rankinglist_ico.png' alt=''></span>\n");
+                                sb4.Append($"<dt>{item.BranchRank}위</dt>\n");
+                                sb4.Append($"<dd>{item.BranchCanp}</dd>\n");
+                                sb4.Append("</dl>\n");
                             }
                             
                             index++;
                         }
 
-                        sb.Append("<!-- 지점부문 -->");
-                        sb.Append("<ul class='rankingUnit'>");
-                        sb.Append("	<li>[날짜 기준] " + _date + "</li>");
-                        //sb.Append("	<li>[ 단위 ]  캠페인 환산 CMIP</li>");
-                        sb.Append("	<li>[ 단위 ] 월납화보험료</li>");
-                        sb.Append("</ul>");
+                        sb.Append("<!-- 지점부문 -->\n");
+                        sb.Append("<ul class='rankingUnit'>\n");
+                        sb.Append("	<li>[날짜 기준] " + _date + "</li>\n");
+                        //sb.Append("	<li>[ 단위 ]  캠페인 환산 CMIP</li>\n");
+                        sb.Append("	<li>[단위] 평가 환산P</li>\n");
+                        sb.Append("</ul>\n");
                         if (sb1.ToString() != "" || sb2.ToString() != "" || sb3.ToString() != "")
                         {
-                            sb.Append("<div class=\"rankingBox point\">");
-                            sb.Append(sb2.ToString() + sb1.ToString() + sb3.ToString());
-                            sb.Append("</div>");
+                            sb.Append("<div class=\"rankingBox  \">\n");
+                            sb.Append(sb1.ToString() + sb2.ToString() + sb3.ToString());
+                            sb.Append("</div>\n");
                         }
                         if (sb4.ToString() != "")
                         {
-                            sb.Append("<div class=\"rankingList point\">");
+                            sb.Append("<div class=\"rankingList \">\n");
                             sb.Append(sb4.ToString());
-                            sb.Append("</div>");
+                            sb.Append("</div>\n");
                         }
                         _branch = sb.ToString();
 
-                        Common.User.Paging paging = new Common.User.Paging("./", page, 10, 5, _total, "#tab6-move");
+                        Common.User.Paging paging = new Common.User.Paging("./", page, 15, 4, _total, "#tab6-move\n");
                         _paging = paging.ToString();
                     }
                     #endregion

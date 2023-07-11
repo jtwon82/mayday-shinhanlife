@@ -1,4 +1,6 @@
-﻿using MLib.Data;
+﻿using MLib.Cipher;
+using MLib.Data;
+using MLib.Logger;
 using MLib.Util;
 using OrangeSummer.Business;
 using System;
@@ -28,16 +30,40 @@ namespace OrangeSummer.Web2flc.UserApplication.index
                 if (!Check.IsNone(Common.User.Identify.Id))
                 {
                     Model.Member member = null;
-                    using (Business.Member biz = new Business.Member(Common.Master.AppSetting.Connection))
+                    using (Access.Member biz = new Access.Member(Common.Master.AppSetting.Connection))
                     {
                         //var SECRET = AES.Decrypt(Common.User.AppSetting.EncKey, MLib.Auth.Web.Cookies("ORANGESUMMER", "SECRET"));
                         //string secret = AES.Decrypt(Common.User.AppSetting.EncKey, SECRET);
                         //string code = Tool.Separator(secret, "|", 0);
 
-                        member = biz.UserDetail202302(Common.User.Identify.Code);
+                        member = biz.UserDetail_202306(Common.User.Identify.Code);
 
                         if (member != null)
                         {
+                            if (member.Achievement.Part == "PERSON")
+                            {
+                                member.Achievement.Rank = member.Achievement.PersonRank;
+                            }
+                            else if (member.Achievement.Part == "BRANCH")
+                            {
+                                member.Achievement.Rank = member.Achievement.BranchRank;
+                            }
+                            else if (member.Achievement.Part == "SL")
+                            {
+                                if (member.LevelName=="S SL")
+                                {
+                                    member.Achievement.Rank = member.Achievement.SlRank2;
+                                }
+                                else if (member.LevelName == "G SL")
+                                {
+                                    member.Achievement.Rank = member.Achievement.SlRank3;
+                                }
+                                else if (member.LevelName == "E SL")
+                                {
+                                    member.Achievement.Rank = member.Achievement.SlRank;
+                                }
+                            }
+
                             _member = member;
                         }
                         else
@@ -47,7 +73,7 @@ namespace OrangeSummer.Web2flc.UserApplication.index
                     }
 
                     #region [ 이벤트 배너 ]
-                    using (Business.Banner biz = new Business.Banner(Common.User.AppSetting.Connection))
+                    using (Access.Banner biz = new Access.Banner(Common.User.AppSetting.Connection))
                     {
                         List<Model.Banner> list = biz.UserList("MAIN");
                         if (list != null)

@@ -1,129 +1,116 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/common/master/page.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="OrangeSummer.Web2.UserApplication.board.evt._default" %>
 
 <%@ Register Src="~/common/uc/menu.ascx" TagPrefix="uc1" TagName="menu" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <link rel="stylesheet" href="/resources/css/sub.css" />
-    <link rel="stylesheet" href="/resources/css/board.css" />
-    <link rel="stylesheet" href="/resources/css/swiper-bundle.css">
-
-    <script type="text/javascript" src="/resources/js/common.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
-    <script type="text/javascript" src="/resources/js/swiper-bundle2.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
+    <script type="text/javascript" src="/resources/js/jquery.1.11.0.min.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
+<script type="text/javascript" src="/resources/js/swiper.min.4.3.5.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
+<script type="text/javascript" src="/common/js/jquery-library.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
+<link rel="stylesheet" href="/resources/css/sub.css?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>" />
+<link rel="stylesheet" href="/resources/css/swiper.css?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>" />
+<script type="text/javascript" src="/resources/js/swiper3.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
+<script type="text/javascript" src="/resources/js/wScratchPad.min.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
+<script type="text/javascript" src="/resources/js/common.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <body>
-        <div id="sub_wrap" class="subMeta08">
+	<div id="sub_wrap" class="subMeta06 july">
             <uc1:menu runat="server" ID="menu" />
-		<div class="subContainer notice">
-			<p class="subTitle"><img src="/resources/img/sub/eventTitle.png" alt="이벤트" /></p>
-			<div class="eventPage">
 
-
-
-                
-				<!--p class="ingEventTitle">진행 중 이벤트</p-->
-				<div class="list">
-					<div class="event_rolling">
-						<!-- Swiper -->
-						<div class="swiper-container2">
-							<div class="swiper-wrapper">
-                        <asp:Repeater ID="rptBannerList" runat="server">
-                            <ItemTemplate>
-								<div class="swiper-slide">
-									<a href="<%# MLib.Util.Check.IsNone(Eval("Link").ToString()) ? "javascript:;" : Eval("Link").ToString() %>">
-                                        <img src="<%# OrangeSummer.Common.User.AppSetting.AwsUrl(Eval("AttMobile").ToString()) %>"/>
-									</a>
-								</div>
-                            </ItemTemplate>
-                        </asp:Repeater>
-							</div>
-							<!-- Add Pagination -->
-							<div class="swiper-pagination2"></div>
-						</div>
-					</div>
+		<div class="subContainer">
+			<div class="eventPage" id="scratcEvent">
+				<h3 class="title"></h3>
+				<div class="info_">
+					<ul>
+						<li><span>이벤트기간</span>2023년 7월 10일 ~ 8월 31일 까지</li>
+						<li><span>이벤트경품</span>커피음료 쿠폰</li>
+					</ul>
+					<div class="scratchpad"></div>
 				</div>
-				
-				<div class="event_board">
-                        <asp:Repeater ID="rptList" runat="server">
-                            <ItemTemplate>
-					<div class="listBox"><a href="<%# Eval("Url").ToString()!=""? Eval("Url").ToString():"detail.aspx?id="+Eval("Id") +"&type="+ Eval("Type").ToString()%>">
-						<p class="title"><span><%# ListNumber(Eval("Total"), Container.ItemIndex) %></span> <%# Eval("Title") %></p>
-						<p class="replyNum"><%# Eval("ReplyCount") %></p>
-						<ul class="info">
-							<li class="name"><%# Eval("Admin.Name") %><span>ㅣ</span></li>
-							<li class="view">view <em><%# Eval("ViewCount") %></em><span>ㅣ</span></li>
-							<li class="date"><%# Eval("RegistDate").ToString().Substring(2, 8) %></li>
-						</ul></a>
-					</div>
-                            </ItemTemplate>
-                        </asp:Repeater>
+				<script>
+					var result = "<%= _result %>"
+					var scratchEnd = false;
+					var resultBg;
+					if (result != "win") resultBg = "/resources/img/sub/event/scratch_pad_lose.png";
+					if(result == "win")resultBg = "/resources/img/sub/event/scratch_pad_win.png";
+					$('.scratchpad').wScratchPad({
+						size : 30,
+						bg : resultBg,
+						fg : '/resources/img/sub/event/scratch_pad_default.png',
+						scratchMove : function(e, percent) {
+							if (percent > 30 && scratchEnd == false) {
+								this.clear();
+								this.scratch = false;
+								completeScratch();
+							}
+						}
+					});
+					function completeScratch(){
+						scratchEnd = true;
+						setTimeout(function () {
+						    $(".dimmed").show();
 
-                    <%=_paging %>
-
-				</div>
-
-
-
-
-				<div class="ingEventList" style="display:none;">
-					<p class="ingEventTitle">진행 중 이벤트</p>
-					<div class="list">
-<%--						<dl><a href="/board/roulette">
-							<dt>썸머 출석이벤트 / 2021년 07월 01일 ~ 15일까지</dt>
-							<dd><img src="/resources/img/sub/event/eventImg01.png" alt=""/></dd></a>
-						</dl>--%>
-
-						<div class="event_rolling">
-							<!-- Swiper -->
-							<div class="swiper-container2">
-								<div class="swiper-wrapper">
-
-                                 
-                        <%--<asp:Repeater ID="rptList" runat="server">
-                            <ItemTemplate>
-								  <div class="swiper-slide">
-									<a href="<%# Eval("Url").ToString()!=""? Eval("Url").ToString():"detail.aspx?id="+Eval("Id") +"&type="+ Eval("Type").ToString()%>">
-										<dl>
-											<dt><%# Eval("Title") %> / <%# Eval("Sdate") %> ~ <%# Eval("Edate") %>까지</dt>
-										</dl>
-										<img src="<%# Eval("attImage") %>" alt="<%# Eval("Title") %>"/>
-									</a></div>
-                            </ItemTemplate>
-                        </asp:Repeater>--%>
-								</div>
-								<!-- Add Pagination -->
-								<div class="swiper-pagination2"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-<%--				<div class="commingEventList">
-					<p class="commingEventTitle">커밍순 이벤트</p>
-					<div class="list">
-						<dl>
-							<dt>복권 이벤트 / 2021년 08월 01일 ~ 14일까지</dt>
-							<dd><img src="/resources/img/sub/event/eventImg02.png" alt=""/></dd>
-						</dl>
-					</div>
-				</div>--%>
+							if (result != "") {
+							    $.ajax({
+							        type: "POST",
+							        contentType: "application/json; charset=utf-8",
+							        url: "/api/roulette/play",
+							        data: JSON.stringify({ "result": result }),
+							        dataType: "json",
+							        async: false,
+							        success: function (json) {
+							            if (json.result != "SUCCESS") {
+							                alert("정상적으로 참여되지 않았습니다.\n참여는 1일 1회 참여 가능합니다.");
+							                return false;
+							            } else {
+							                if (result != "win") openPopup('.popup_fail');
+							                if (result == "win") openPopup('.popup_winning');
+							            }
+							        },
+							        error: function (jqxhr, status, error) {
+							            var err = "[" + jqxhr.status + "] " + jqxhr.statusText;
+							            alert("오류가 발생했습니다.\n새로고침 후 다시 시도해주세요.\n" + err);
+							        }
+							    });
+							}
+						}, 1000);
+					}
+				</script>
 			</div>
 		</div>
+				
+	</div>
+	<!-- popup -->
+	<div class="popup_wrap popup_winning">
+		<div class="popup_inner scratch">
+			<div class="popup_container">
+				<div class="popup_title">
+					<p class="date"><%=DateTime.Now.ToString("yyyy-MM-dd") %><br><%=OrangeSummer.Common.User.Identify.Name %> 님</p>
+					<p class="main_txt">당첨되셨습니다!</p>
+					<p class="sub_txt">축하드립니다. <br><span>커피쿠폰</span>에 당첨되셨습니다.</p>
+				</div>
+			</div>
+			<button class="popup_close">
+				<img src="/resources/img/sub/event/scratch_popup_close.png" alt="닫기">
+			</button>
+		</div>
+	</div>
 
-        </div>
-    </body>
+	<div class="popup_wrap popup_fail">
+		<div class="popup_inner scratch">
+			<div class="popup_container">
+				<div class="popup_title">
+					<p class="main_txt">꽝</p>
+					<p class="sub_txt"><span>다음 기회</span>에 도전하세요.</p>
+			</div>
+			<button class="popup_close">
+				<img src="/resources/img/sub/event/scratch_popup_close.png" alt="닫기">
+			</button>
+		</div>
+	</div>
+	<!-- //popup -->
+<style>.hide{display:none;}</style>
+<div class='dimmed hide' style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 100; opacity: 0.5; background-color: rgb(0, 0, 0); "></div>
+</body>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-						<!-- Initialize Swiper -->
-							<script>
-							    var swiper = new Swiper('.swiper-container2', {
-							        e: '',
-							        autoplay: {
-							            delay: 5000,
-							            disableOnInteraction: false,
-							        },
-								  pagination: {
-									el: '.swiper-pagination2',
-								  },
-								});
-							</script>
 </asp:Content>

@@ -10,7 +10,7 @@ namespace OrangeSummer.Access
     /// 전윤기 - 2020.06.19
     /// 공지사항 Access
     /// </summary>
-    public class Notice
+    public class Notice: IDisposable
     {
         private string _connection = string.Empty;
 
@@ -384,6 +384,11 @@ namespace OrangeSummer.Access
 
             return notice;
         }
+
         #endregion
+        public void Dispose()
+        {
+            _connection = null;
+        }
     }
 }

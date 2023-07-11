@@ -1,12 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="menu.ascx.cs" Inherits="OrangeSummer.Web2flc.UserApplication.common.uc.menu" %>
 
 <div id="header">
-    <h1 class="logo"><a href="/index">
-        <img src="/resources/img/index/index_logo.png" alt="ShinhanLife" /></a></h1>
-    <p class="homeBtn">
-        <a href="/index">
-            <img src="/resources/img/index/index_homeIcon.png" alt="ShinhanLife" /></a>
-    </p>
+			<h1 class="logo"><a href="/index"><img src="/resources/img/index/index_logo.png" alt="ShinhanLife" /></a></h1>
+			<p class="homeBtn"><a href="/index"><img src="/resources/img/index/index_homeIcon.png" alt="ShinhanLife" /></a></p>
 
     <header class="cf" id="hd">
         <div id="hd_wr">
@@ -42,14 +38,22 @@
             }
         %>
                 </div>
-
                 <div class="close"></div>
                 <ul id="mainMenu">
-					<li><a href="/member/reward/">프로모션 수수료</a></li>
-					<li><a href="/board/notice/">주요 안내</a></li>
+							<li>
+								<a href="/measure">시책 안내</a>
+							</li>
+							<li>
+								<a href="/achieve">나의 업적</a>
+							</li>
+							<li>
+								<a href="/ranking">썸머 랭킹</a>
+							</li>
+							<li>
+								<a href="/board/notice">공지&이벤트</a>
+							</li>
                 </ul>
             </div>
         </div>
     </header>
-
-</div>
+		</div>

@@ -274,6 +274,7 @@
     <Content Include="template.aspx" />
     <Content Include="travel\default.aspx" />
     <Content Include="travel\regist.aspx" />
+    <None Include="Properties\PublishProfiles\01.admin.shinhanlife-fc.com.pubxml" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Web References\kr.co.youiwe.webservice\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -652,6 +653,10 @@
     <ProjectReference Include="..\MLib\MLib.csproj">
       <Project>{96f3570b-c1ba-4e65-81f8-cd8be458306f}</Project>
       <Name>MLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OrangeSummer.Access\OrangeSummer.Access.csproj">
+      <Project>{025ca64e-8017-419f-b3ec-4b8095c7a1d4}</Project>
+      <Name>OrangeSummer.Access</Name>
     </ProjectReference>
     <ProjectReference Include="..\OrangeSummer.Business\OrangeSummer.Business.csproj">
       <Project>{ec61b561-2054-4808-81ed-cc027e28e84c}</Project>

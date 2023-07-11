@@ -85,7 +85,7 @@ namespace OrangeSummer.Web2.UserApplication.board.notice
                         #region [ 댓글 ]
                         int subpage = Check.IsNone(Request["subpage"], 1);
                         int size = 10;
-                        using (Business.NoticeReply bizNotice = new Business.NoticeReply(Common.User.AppSetting.Connection))
+                        using (Access.NoticeReply bizNotice = new Access.NoticeReply(Common.User.AppSetting.Connection))
                         {
                             List<Model.NoticeReply> list = bizNotice.UserList(1, (size * subpage), id, Common.User.Identify.Id);
                             if (list != null)

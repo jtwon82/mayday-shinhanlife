@@ -16,12 +16,6 @@
 					<p class="subTitle"><img src="/resources/img/sub/rankingTitle.png" alt="SUMMER 랭킹" />
 					</p>
 
-					<div class="cumulativePage" style="display:none">
-						<p class="endTxt">
-							준비중입니다.
-						</p>
-					</div>
-
 					<div>
 						<ul class="bmTabs measure ranking">
 							<li>
@@ -63,6 +57,7 @@
                     $(".background .upload img").attr('src', "/upload/"+T);
                 }
             });
+            $(".rankingBox").removeClass("point");
         });
     </script>
 </asp:Content>

@@ -25,9 +25,9 @@ namespace OrangeSummer.Web2.UserApplication.controllers
             try
             {
                 PlayResponse json = new PlayResponse() { Result = "FAIL", Message = "실패" };
-                using (Business.Roulette biz = new Business.Roulette(Common.User.AppSetting.Connection))
+                using (Access.Roulette biz = new Access.Roulette(Common.User.AppSetting.Connection))
                 {
-                    bool result = biz.UserRegist(new Model.Roulette()
+                    bool result = biz.UserRegist_202306(new Model.Roulette()
                     {
                         Id = Tool.UniqueNewGuid,
                         FkMember = Common.User.Identify.Id,

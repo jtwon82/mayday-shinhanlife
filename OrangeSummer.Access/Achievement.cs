@@ -12,7 +12,7 @@ namespace OrangeSummer.Access
     /// 전윤기 - 2020.06.18
     /// 업적관리 Access
     /// </summary>
-    public class Achievement
+    public class Achievement : IDisposable
     {
         private string _connection = string.Empty;
 
@@ -372,6 +372,83 @@ namespace OrangeSummer.Access
 
             return DBHelper.ExecuteDataTable(_connection, "ADM_ACHIEVEMENT_NSM_CHECK_202206");
         }
+        public DataTable Regist_202306(DataTable dt)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            // DBHelper.ExecuteNonInQuery(_connection, "ADM_ACHIEVEMENT_DELETE");
+            DBHelper.ExecuteDataTableInQuery(_connection, "TRUNCATE TABLE ACHIEVEMENT_TEMP_202306 ");
+
+            StringBuilder query_insert = new StringBuilder();
+            StringBuilder query_select = new StringBuilder();
+            StringBuilder query_union = new StringBuilder();
+            query_insert.Append($"INSERT INTO [ACHIEVEMENT_TEMP_202306] (");
+            query_insert.Append($"[ORDERBY], [DATE] ");
+            query_insert.Append($", [SCOT], [BRANCH_NAME], [CODE], [MEMBER_NAME], [LEVEL_NAME]");
+            query_insert.Append($", PERSON_CMIP,PERSON_CANP,PERSON_CNT,SL_CANP2,SL_CMIP2,SL_CANP3,SL_CMIP3,SL_CANP,SL_CMIP,BRANCH_CANP,BRANCH_CMIP,BRANCH_CMIP2,BRANCH_CANP2,PERSON2_CANP,PERSON2_CMIP,PERSON2_CNT,PERSON_RANK,SL_RANK2,SL_RANK3,SL_RANK,BRANCH_RANK,PERSON2_RANK ");
+            query_insert.Append($")");
+
+            query_select.Append($" SELECT * FROM ( SELECT ");
+            query_select.Append($"0 [ORDERBY], '' [DATE] ");
+            query_select.Append($", '' [SCOT], '' [BRANCH_NAME], '' [CODE], '' [MEMBER_NAME], '' [LEVEL_LEVEL] ");
+            query_select.Append($", '' PERSON_CMIP,'' PERSON_CANP,'' PERSON_CNT,'' SL_CANP2,'' SL_CMIP2,'' SL_CANP3,'' SL_CMIP3,'' SL_CANP,'' SL_CMIP,'' BRANCH_CANP,'' BRANCH_CMIP,'' BRANCH_CMIP2,'' BRANCH_CANP2,'' PERSON2_CANP,'' PERSON2_CMIP,0 PERSON2_CNT,0 PERSON_RANK,0 SL_RANK2,0 SL_RANK3,0 SL_RANK,0 BRANCH_RANK,0 PERSON2_RANK ");
+            query_select.Append($"");
+
+            int index = 1;
+            foreach (DataRow dr in dt.Rows)
+            {
+                try
+                {
+                    if (index % 500 == 1) query_union.Append(query_select);
+                    int id = 0;
+
+                    query_union.Append($" UNION ALL SELECT  ");
+                    query_union.Append($"{index} [ORDERBY], '{dr[id++].ToString()}' [DATE]");
+                    query_union.Append($", '{dr[id++].ToString()}' [SCOT], '{dr[id++].ToString()}' [BRANCH_NAME], '{dr[id++].ToString()}' [CODE], '{dr[id++].ToString()}' [MEMBER_NAME] , '{dr[id++].ToString()}' [LEVEL_NAME] ");
+
+                    // ,,,,,,,,,,,,,,,,,,,,,
+                    query_union.Append($", '{dr[id++].ToString()}' PERSON_CMIP   ");
+                    query_union.Append($", '{dr[id++].ToString()}' PERSON_CANP   ");
+                    query_union.Append($", '{dr[id++].ToString()}' PERSON_CNT   ");
+                    query_union.Append($", '{dr[id++].ToString()}' SL_CANP2   ");
+                    query_union.Append($", '{dr[id++].ToString()}' SL_CMIP2   ");
+                    query_union.Append($", '{dr[id++].ToString()}' SL_CANP3   ");
+                    query_union.Append($", '{dr[id++].ToString()}' SL_CMIP3   ");
+                    query_union.Append($", '{dr[id++].ToString()}' SL_CANP   ");
+                    query_union.Append($", '{dr[id++].ToString()}' SL_CMIP   ");
+                    query_union.Append($", '{dr[id++].ToString()}' BRANCH_CANP   ");
+                    query_union.Append($", '{dr[id++].ToString()}' BRANCH_CMIP   ");
+                    query_union.Append($", '{dr[id++].ToString()}' BRANCH_CMIP2   ");
+                    query_union.Append($", '{dr[id++].ToString()}' BRANCH_CANP2   ");
+                    query_union.Append($", '{dr[id++].ToString()}' PERSON2_CANP   ");
+                    query_union.Append($", '{dr[id++].ToString()}' PERSON2_CMIP   ");
+                    query_union.Append($", '{dr[id++].ToString()}' PERSON2_CNT   ");
+                    query_union.Append($", '{dr[id++].ToString()}' PERSON_RANK   ");
+                    query_union.Append($", '{dr[id++].ToString()}' SL_RANK2   ");
+                    query_union.Append($", '{dr[id++].ToString()}' SL_RANK3   ");
+                    query_union.Append($", '{dr[id++].ToString()}' SL_RANK   ");
+                    query_union.Append($", '{dr[id++].ToString()}' BRANCH_RANK   ");
+                    query_union.Append($", '{dr[id++].ToString()}' PERSON2_RANK   ");
+
+                    if (index % 500 == 0)
+                    {
+                        query_union.Append(") A WHERE [ORDERBY]>0");
+                        DBHelper.ExecuteDataTableInQuery(_connection, query_insert.ToString() + query_union.ToString());
+                        query_union.Clear();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+
+                index++;
+            }
+
+            query_union.Append(") A WHERE [ORDERBY]>0");
+            DBHelper.ExecuteDataTableInQuery(_connection, query_insert.ToString() + query_union.ToString());
+
+            return DBHelper.ExecuteDataTable(_connection, "ADM_ACHIEVEMENT_CHECK_202306");
+        }
 
         public List<Model.Achievement> List_202206(int page, int size, string orderby, string branch, string level, string code, string name)
         {
@@ -579,7 +656,7 @@ namespace OrangeSummer.Access
 
             return lists;
         }
-        public List<Model.Achievement> List202302(int page, int size, string orderby, string branch, string level, string code, string name)
+        public List<Model.Achievement> List_202302(int page, int size, string orderby, string branch, string level, string code, string name)
         {
             List<Model.Achievement> lists = null;
             List<SqlParameter> parameters = new List<SqlParameter>();
@@ -591,6 +668,32 @@ namespace OrangeSummer.Access
             parameters.Add(new SqlParameter("@KEY_CODE", code));
             parameters.Add(new SqlParameter("@KEY_NAME", name));
             using (DataTable dt = DBHelper.ExecuteDataTable(_connection, "ADM_ACHIEVEMENT_LIST_202302", parameters))
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    lists = new List<Model.Achievement>();
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        Model.Achievement achievement = new Model.Achievement().getAchievement(dr);
+                        lists.Add(achievement);
+                    }
+                }
+            }
+
+            return lists;
+        }
+        public List<Model.Achievement> List_202306(int page, int size, string orderby, string branch, string level, string code, string name)
+        {
+            List<Model.Achievement> lists = null;
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@PAGE", page));
+            parameters.Add(new SqlParameter("@SIZE", size));
+            parameters.Add(new SqlParameter("@ORDERBY", orderby));
+            parameters.Add(new SqlParameter("@KEY_BRANCH", branch));
+            parameters.Add(new SqlParameter("@KEY_LEVEL", level));
+            parameters.Add(new SqlParameter("@KEY_CODE", code));
+            parameters.Add(new SqlParameter("@KEY_NAME", name));
+            using (DataTable dt = DBHelper.ExecuteDataTable(_connection, "ADM_ACHIEVEMENT_LIST_202306", parameters))
             {
                 if (dt.Rows.Count > 0)
                 {
@@ -650,6 +753,33 @@ namespace OrangeSummer.Access
 
             return lists;
         }
+        public List<Model.Achievement> ListRewradPromotion_202306(int page, int size, string orderby, string branch, string level, string code, string name)
+        {
+            List<Model.Achievement> lists = null;
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@PAGE", page));
+            parameters.Add(new SqlParameter("@SIZE", size));
+            parameters.Add(new SqlParameter("@ORDERBY", orderby));
+            parameters.Add(new SqlParameter("@KEY_BRANCH", branch));
+            parameters.Add(new SqlParameter("@KEY_LEVEL", level));
+            parameters.Add(new SqlParameter("@KEY_CODE", code));
+            parameters.Add(new SqlParameter("@KEY_NAME", name));
+            using (DataTable dt = DBHelper.ExecuteDataTable(_connection, "ADM_REWRAD_PROMOTION_LIST_202306", parameters))
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    lists = new List<Model.Achievement>();
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        Model.Achievement achievement = new Model.Achievement().getAchievement(dr);
+
+                        lists.Add(achievement);
+                    }
+                }
+            }
+
+            return lists;
+        }
 
         public List<Model.Achievement> ListRewradCharge(int page, int size, string orderby, string branch, string level, string code, string name)
         {
@@ -687,6 +817,33 @@ namespace OrangeSummer.Access
                                 Name = dr["BRANCH_NAME"].ToString()
                             }
                         };
+
+                        lists.Add(achievement);
+                    }
+                }
+            }
+
+            return lists;
+        }
+        public List<Model.Achievement> ListRewradCharge_202306(int page, int size, string orderby, string branch, string level, string code, string name)
+        {
+            List<Model.Achievement> lists = null;
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@PAGE", page));
+            parameters.Add(new SqlParameter("@SIZE", size));
+            parameters.Add(new SqlParameter("@ORDERBY", orderby));
+            parameters.Add(new SqlParameter("@KEY_BRANCH", branch));
+            parameters.Add(new SqlParameter("@KEY_LEVEL", level));
+            parameters.Add(new SqlParameter("@KEY_CODE", code));
+            parameters.Add(new SqlParameter("@KEY_NAME", name));
+            using (DataTable dt = DBHelper.ExecuteDataTable(_connection, "ADM_REWRAD_CHARGE_LIST_202306", parameters))
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    lists = new List<Model.Achievement>();
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        Model.Achievement achievement = new Model.Achievement().getAchievement(dr);
 
                         lists.Add(achievement);
                     }
@@ -847,6 +1004,26 @@ namespace OrangeSummer.Access
 
             return achievement;
         }
+        public List<Model.Achievement> UserList_202306(string code, string level)
+        {
+            List<Model.Achievement> achievement = new List<Model.Achievement>();
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@CODE", code));
+            parameters.Add(new SqlParameter("@LEVEL", level));
+            using (DataTable dt = DBHelper.ExecuteDataTable(_connection, "USP_ACHIEVEMENT_LIST_202306", parameters))
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        Model.Achievement T = new Model.Achievement().getAchievement(dr);
+                        achievement.Add(T);
+                    }
+                }
+            }
+
+            return achievement;
+        }
         public List<Model.Achievement> UserListNsm_202206(string type)
         {
             List<Model.Achievement> achievement = new List<Model.Achievement>();
@@ -974,6 +1151,37 @@ namespace OrangeSummer.Access
 
             return lists;
         }
+        public List<Model.Achievement> UserRanking_202306(int page, int size, string part)
+        {
+            List<Model.Achievement> lists = null;
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@PAGE", page));
+            parameters.Add(new SqlParameter("@SIZE", size));
+            if (part.Contains("SL"))
+            {
+                parameters.Add(new SqlParameter("@PART", "SL"));
+                parameters.Add(new SqlParameter("@LEVEL", part));
+            }
+            else
+            {
+                parameters.Add(new SqlParameter("@PART", part));
+                parameters.Add(new SqlParameter("@LEVEL", ""));
+            }
+            using (DataTable dt = DBHelper.ExecuteDataTable(_connection, "USP_ACHIEVEMENT_RANKING_202306", parameters))
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    lists = new List<Model.Achievement>();
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        Model.Achievement achievement = new Model.Achievement().getAchievement(dr);
+                        lists.Add(achievement);
+                    }
+                }
+            }
+
+            return lists;
+        }
 
         public List<Model.Achievement> UserRanking_new(int page, int size, string part)
         {
@@ -1020,5 +1228,9 @@ namespace OrangeSummer.Access
             return lists;
         }
 
+        public void Dispose()
+        {
+            _connection = null;
+        }
     }
 }

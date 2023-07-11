@@ -31,7 +31,7 @@ namespace OrangeSummer.Web2.UserApplication.achieve.bm
             try
             {
                 #region [ 업적 ]
-                using (Business.Achievement biz = new Business.Achievement(Common.User.AppSetting.Connection))
+                using (Access.Achievement biz = new Access.Achievement(Common.User.AppSetting.Connection))
                 {
                     StringBuilder title = new StringBuilder();
                     StringBuilder contents = new StringBuilder();
@@ -39,11 +39,11 @@ namespace OrangeSummer.Web2.UserApplication.achieve.bm
 
                     if (",신인FC".Contains("," + Common.User.Identify.LevelName))
                     {
-                        achievement = biz.UserList_202206(Common.User.Identify.Code, "신인FC");
+                        achievement = biz.UserList_202306(Common.User.Identify.Code, "신인FC");
                     }
                     else
                     {
-                        achievement = biz.UserList_202206(Common.User.Identify.Code, "FC");
+                        achievement = biz.UserList_202306(Common.User.Identify.Code, "FC");
                     }
 
                     if (achievement != null)
@@ -91,7 +91,7 @@ namespace OrangeSummer.Web2.UserApplication.achieve.bm
                                 contents.AppendLine($"			<dd class='cmip'>{item.Canp}</dd>");
                                 contents.AppendLine($"		</dl>");
                                 contents.AppendLine($"		<dl class='cmip'>");
-                                contents.AppendLine($"			<dt>CMIP</dt>");
+                                contents.AppendLine($"			<dt>원 CMIP</dt>");
                                 contents.AppendLine($"			<dd>{item.Cmip}</dd>");
                                 contents.AppendLine($"		</dl>");
                                 contents.AppendLine($"		<dl class='number'>");
