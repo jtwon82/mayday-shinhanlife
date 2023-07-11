@@ -38,9 +38,9 @@ namespace OrangeSummer.Web.MasterApplication.board.notice
                 if (!Check.IsNone(id))
                 {
                     Model.Notice notice = null;
-                    using (Business.Notice biz = new Business.Notice(Common.Master.AppSetting.Connection))
+                    using (Access.Notice biz = new Access.Notice(Common.Master.AppSetting.Connection))
                     {
-                        notice = biz.Detail(id);
+                        notice = biz.Detail_202206(id);
                         if (notice != null)
                         {
                             _command = "mod";
@@ -51,6 +51,7 @@ namespace OrangeSummer.Web.MasterApplication.board.notice
 
                             Element.Set(this.type, notice.Type);
                             Element.Set(this.title, notice.Title);
+                            Element.Set(this.url, notice.Url);
                             Element.Set(this.contents, notice.Contents);
                             Element.Set(this.useyn, notice.UseYn);
                             Element.Set(this.attfiled, notice.AttFile);
@@ -77,7 +78,7 @@ namespace OrangeSummer.Web.MasterApplication.board.notice
                     #region [ 댓글 ]
                     int subpage = Check.IsNone(Request["subpage"], 1);
                     int size = 10;
-                    using (Business.NoticeReply biz = new Business.NoticeReply(Common.Master.AppSetting.Connection))
+                    using (Access.NoticeReply biz = new Access.NoticeReply(Common.Master.AppSetting.Connection))
                     {
                         List<Model.NoticeReply> list = biz.List(subpage, size, id);
                         if (list != null)
@@ -154,10 +155,10 @@ namespace OrangeSummer.Web.MasterApplication.board.notice
                 notice.AttImage = "";
                 notice.AttFile = file;
                 notice.AttFileName = filename;
-                notice.Url = "";
+                notice.Url = Element.Get(this.url) ;
                 notice.Contents = Element.Get(this.contents);
                 notice.UseYn = Element.Get(this.useyn);
-                using (Business.Notice biz = new Business.Notice(Common.Master.AppSetting.Connection))
+                using (Access.Notice biz = new Access.Notice(Common.Master.AppSetting.Connection))
                 {
                     bool result = biz.Regist(notice);
                     if (result)
@@ -211,10 +212,10 @@ namespace OrangeSummer.Web.MasterApplication.board.notice
                 notice.AttImage = "";
                 notice.AttFile = file;
                 notice.AttFileName = filename;
-                notice.Url = "";
+                notice.Url = Element.Get(this.url);
                 notice.Contents = Element.Get(this.contents);
                 notice.UseYn = Element.Get(this.useyn);
-                using (Business.Notice biz = new Business.Notice(Common.Master.AppSetting.Connection))
+                using (Access.Notice biz = new Access.Notice(Common.Master.AppSetting.Connection))
                 {
                     bool result = biz.Modify(notice);
                     if (result)
@@ -234,7 +235,7 @@ namespace OrangeSummer.Web.MasterApplication.board.notice
             try
             {
                 string id = Check.IsNone(Request["id"], true);
-                using (Business.Notice biz = new Business.Notice(Common.Master.AppSetting.Connection))
+                using (Access.Notice biz = new Access.Notice(Common.Master.AppSetting.Connection))
                 {
                     bool result = biz.Delete(id);
                     if (result)
@@ -285,7 +286,7 @@ namespace OrangeSummer.Web.MasterApplication.board.notice
                 LinkButton btn = (LinkButton)sender;
                 string subpage = Check.IsNone(Request["subpage"], "1");
                 string id = Check.IsNone(Request["id"], true);
-                using (Business.NoticeReply biz = new Business.NoticeReply(Common.Master.AppSetting.Connection))
+                using (Access.NoticeReply biz = new Access.NoticeReply(Common.Master.AppSetting.Connection))
                 {
                     bool result = biz.Delete(btn.CommandArgument);
                     if (result)

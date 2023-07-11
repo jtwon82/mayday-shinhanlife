@@ -1,42 +1,33 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 @font-face {
     font-family: 'OneShinhanB';
-    src: url('../FONT/OneShinhan-Bold.woff2') format('woff2'),
-        url('../FONT/OneShinhan-Bold.woff') format('woff'),
-		url('../FONT/OneShinhan-Bold.eot') format('eot'),
-		url('../FONT/OneShinhan-Bold.ttf') format('truetype');
+    src: url('/resources/FONT/OneShinhan-Bold.woff2') format('woff2'),
+        url('/resources/FONT/OneShinhan-Bold.woff') format('woff'),
+		url('/resources/FONT/OneShinhan-Bold.eot') format('eot'),
+		url('/resources/FONT/OneShinhanBold.ttf') format('ttf');
     font-weight: bold;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'OneShinhanM';
-    src: url('../FONT/OneShinhan-Medium.woff2') format('woff2'),
-        url('../FONT/OneShinhan-Medium.woff') format('woff'),
-		url('../FONT/OneShinhan-Medium.eot') format('eot'),
-		url('../FONT/OneShinhan-Medium.ttf') format('truetype');
+    src: url('/resources/FONT/OneShinhan-Medium.woff2') format('woff2'),
+        url('/resources/FONT/OneShinhan-Medium.woff') format('woff'),
+		url('/resources/FONT/OneShinhan-Medium.eot') format('eot'),
+		url('/resources/FONT/OneShinhanMedium.ttf') format('ttf');
     font-weight: 300;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'OneShinhanL';
-    src: url('../FONT/OneShinhan-Light.woff2') format('woff2'),
-        url('../FONT/OneShinhan-Light.woff') format('woff'),
-		url('../FONT/OneShinhan-Light.eot') format('eot'),
-		url('../FONT/OneShinhan-Light.ttf') format('truetype');
+    src: url('/resources/FONT/OneShinhan-Light.woff2') format('woff2'),
+        url('/resources/FONT/OneShinhan-Light.woff') format('woff'),
+		url('/resources/FONT/OneShinhan-Light.eot') format('eot'),
+		url('/resources/FONT/OneShinhanLight.ttf') format('ttf');
     font-display: swap;
 	font-weight:100;
-}
-
-@font-face {
-    font-family:"YoonGothic";
-    src:url('../FONT/YoonGothic.eot');
-    src:url('../FONT/YoonGothic.eot?#iefix') format('embedded-opentype'),
-        url('../FONT/YoonGothic.woff') format('woff');
-    src:local(※), url('../FONT/YoonGothic.woff') format('woff');
-    font-display: swap;
 }
 
 /* v2.0 | 20110126
@@ -63,7 +54,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	font-family:'OneShinhanL', sans-serif;
+	font-family: 'OneShinhanL', sans-serif;
 	position:relative;
 	letter-spacing: -2px;
 	color:#000;
@@ -79,7 +70,6 @@ body {
 	height:100%;
 }
 body#main{background:#fbfbfb;}
-
 ol, ul, li {
 	list-style: none;
 }
@@ -123,10 +113,9 @@ button{
 /* 210625 추가 */
 body.login{
 	background:url(../img/loginBg.jpg) center top no-repeat;
-	min-height:1430px;
+	min-height:1500px;
 	background-size:cover;
-/*	background-position-y:-60px;*/
 }
 body.bm{background:#e7ebee;}
-body.bm_sl{background:#96b3ff;}
+body.bm_sl{}
 body.bm_point{background:#b6e6d8;}

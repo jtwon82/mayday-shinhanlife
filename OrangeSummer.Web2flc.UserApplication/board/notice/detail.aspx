@@ -5,16 +5,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link rel="stylesheet" href="/resources/css/sub.css?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>" />
     <link rel="stylesheet" href="/resources/css/board.css?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>" />
-
-    <script type="text/javascript" src="/resources/js/common.js?v=<% =DateTime.Now.ToString("yyyyMMddHHmmss") %>"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
-	    <div class="background sub">
-		    <p class="cover"></p>
-		    <p class="upload"><img src="/resources/img/sub/subMetaBg_noti.jpg" alt=""/></p>
-	    </div>
-	    <div id="sub_wrap">
+    <body>
+	    <div id="sub_wrap" class="subMeta09">
 
             <uc1:menu runat="server" ID="menu" />
 
@@ -90,11 +85,10 @@
                                         <span class="user"><%# Eval("Member.Name") %></span>
                                         <div class="editBtnList">
                                             <%# Eval("DelYn").ToString() == "N" ? "<a href=\"javascript:reply.answer('"+ Eval("Id").ToString() +"');\" class=\"btn_comment_re\">답글</a>" : "" %>
-                                            <%# (Eval("DelYn").ToString() == "N" && Eval("Fkmember").ToString() == OrangeSummer.Common.User.Identify.Id) ? "<a href=\"javascript:reply.show('"+ Eval("Id") +"');\" class=\"btn_comment_mod\"><span>|</span>수정</a><a href=\"javascript:reply.delete('"+ Eval("Id") +"');\" class=\"btn_comment_del\"><span>|</span>삭제</a>" : "" %>
+                                            <%# (Eval("DelYn").ToString() == "N" && Eval("FkMember").ToString() == OrangeSummer.Common.User.Identify.Id.ToUpper()) ? "<a href=\"javascript:reply.show('"+ Eval("Id") +"');\" class=\"btn_comment_mod\"><span> </span>수정</a><a href=\"javascript:reply.delete('"+ Eval("Id") +"');\" class=\"btn_comment_del\"><span> </span>삭제</a>" : "" %>
                                         </div>
                                     </div>
-
-                                    <div class="txt">
+                                    <div class="txt" style="width: 50%;">
                                         <%# Eval("DelYn").ToString() == "Y" ? "<del>삭제된 글입니다.</del>": Eval("Contents").ToString().Replace(Environment.NewLine, "<br />") %>
                                     </div>
 

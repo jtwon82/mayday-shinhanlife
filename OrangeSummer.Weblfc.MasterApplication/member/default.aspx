@@ -52,6 +52,7 @@
     </div>
 
     <p class="mb-1">* 총 <span class="text-danger font-weight-bold"><%= _total %></span>개의 회원이 있습니다.</p>
+    <p class="mb-1">* 회원코드는 있지만 (지점, 신분, 이름)이 없다면, 업적디비의 회원정보를 업데이트해주세요.</p>
 
     <div class="table-responsive">
         <table class="table table-bordered" style="min-width: 1110px;">
@@ -85,7 +86,7 @@
                             <td><%# Eval("Branch.Name") %></td>
                             <td><%# OrangeSummer.Common.Code.MemberLevelName(Eval("Level").ToString()) %></td>
                             <td><a href="detail.aspx?id=<%# Eval("id").ToString() + Parameters() %>"><%# Eval("Code") %></a></td>
-                            <td><a href="detail.aspx?id=<%# Eval("Id").ToString() + Parameters() %>"><%# Eval("Name") %></a></td>
+                            <td><a href="detail.aspx?id=<%# Eval("id").ToString() + Parameters() %>"><%# Eval("Name") %></a></td>
                             <td><%# Eval("Mobile") %></td>
                             <!--<td><%# Eval("DelYn").ToString() == "Y" ? "비활성" : "활성" %></td>-->
                             <td><%# Eval("RegistDate") %></td>

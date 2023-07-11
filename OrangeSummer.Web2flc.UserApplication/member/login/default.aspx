@@ -7,9 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     
 <body class="login">
-	<p class="login_txt">
-		<img src="/resources/img/login_txt.png" alt="두번 떠나는 새롭고도 놀라운 신한라이프 첫 썸머! 놀라운 Summer"/>
-	</p>
+	<p class="login_txt"><img src="/resources/img/login_txt.png" alt="2023 SUMMER FESTIVAL"/></p>
 	<div class="loginPage">
 		<div class="fc_code">
             <asp:TextBox ID="code" runat="server" MaxLength="8" ClientIDMode="Static" placeholder="FC코드 8자리를 입력해 주세요."></asp:TextBox>
@@ -22,17 +20,16 @@
 		<div class="btn_login">
             <button id="btnLogin" runat="server" onserverclick="btnLogin_ServerClick" onclick="if (!member.login()) { return false; }">로그인</button>
 		</div>
-
+		<p class="tail">※ 기존 FC회원은 코드 앞에 '000'을 붙여주세요.</p>
 		<div class="check_group">
 			<div class="login_check">
-				<input type="checkbox" name="loginChk" id="loginChk" onchange="remember.value=this.checked?'Y':'N'">
-				<em></em>
+				<input type="checkbox" name="loginChk" id="loginChk" onchange="remember.value=this.checked?'Y':'N'"/>
 				<label for="loginChk" class="loginChk">자동 로그인</label>
                 <asp:HiddenField ID="remember" runat="server" ClientIDMode="Static" Value="Y" />
 			</div>
             <ul class="btn_list">
-				<li><a href="/member/find_pw/">비밀번호 찾기</a><span>|</span></li>
-				<li><a href="/member/regist/">회원가입</a></li>
+				<li class="findPw"><a href="/member/find_pw/">비밀번호 찾기</a></li>
+				<li class="join"><a href="/member/regist/">회원가입</a></li>
 			</ul>
 		</div>
 	</div>

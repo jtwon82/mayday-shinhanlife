@@ -10,7 +10,7 @@ namespace OrangeSummer.Access
     /// 전윤기 - 2020.06.19
     /// 공지사항 Access
     /// </summary>
-    public class Notice
+    public class Notice: IDisposable
     {
         private string _connection = string.Empty;
 
@@ -119,6 +119,43 @@ namespace OrangeSummer.Access
         /// 공지사항 조회
         /// </summary>
         public Model.Notice Detail(string id)
+        {
+            Model.Notice notice = null;
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@ID", id));
+            using (DataTable dt = DBHelper.ExecuteDataTable(_connection, "ADM_NOTICE_DETAIL", parameters))
+            {
+                if (dt.Rows.Count == 1)
+                {
+                    DataRow dr = dt.Rows[0];
+                    notice = new Model.Notice()
+                    {
+                        Id = dr["ID"].ToString().ToUpper(),
+                        Sort = Convert.ToInt32(dr["SORT"].ToString()),
+                        FkAdmin = dr["FK_ADMIN"].ToString().ToUpper(),
+                        Type = dr["TYPE"].ToString(),
+                        Title = dr["TITLE"].ToString(),
+                        Contents = dr["CONTENTS"].ToString(),
+                        Url = dr["URL"].ToString(),
+                        AttImage = dr["ATT_IMAGE"].ToString(),
+                        AttFile = dr["ATT_FILE"].ToString(),
+                        AttFileName = dr["ATT_FILENAME"].ToString(),
+                        UseYn = dr["USE_YN"].ToString(),
+                        DelYn = dr["DEL_YN"].ToString(),
+                        RegistDate = dr["REGIST_DATE"].ToString(),
+                        ViewCount = Convert.ToInt32(dr["VIEW_COUNT"].ToString()),
+                        Admin = new Model.Admin()
+                        {
+                            Name = dr["ADMIN_NAME"].ToString()
+                        }
+                    };
+                }
+            }
+
+            return notice;
+        }
+
+        public Model.Notice Detail_202206(string id)
         {
             Model.Notice notice = null;
             List<SqlParameter> parameters = new List<SqlParameter>();
@@ -347,6 +384,11 @@ namespace OrangeSummer.Access
 
             return notice;
         }
+
         #endregion
+        public void Dispose()
+        {
+            _connection = null;
+        }
     }
 }

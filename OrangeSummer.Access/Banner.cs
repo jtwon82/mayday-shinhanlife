@@ -10,7 +10,7 @@ namespace OrangeSummer.Access
     /// 전윤기 - 2020.06.19
     /// 배너관리 Access
     /// </summary>
-    public class Banner
+    public class Banner: IDisposable
     {
         private string _connection = string.Empty;
 
@@ -333,6 +333,11 @@ namespace OrangeSummer.Access
 
             return lists;
         }
+
         #endregion
+        public void Dispose()
+        {
+            _connection = null;
+        }
     }
 }

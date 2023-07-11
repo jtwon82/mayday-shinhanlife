@@ -17,6 +17,7 @@ namespace OrangeSummer.Web2flc.UserApplication.board.notice
         protected string _paging = string.Empty;
         private int _size = 10;
         private int _block = 10;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -32,28 +33,37 @@ namespace OrangeSummer.Web2flc.UserApplication.board.notice
         {
             try
             {
-                using (Business.Member biz = new Business.Member(OrangeSummer.Common.User.AppSetting.Connection))
+                using (Access.Member biz = new Access.Member(OrangeSummer.Common.User.AppSetting.Connection))
                 {
                     List<Model.Banner> list = biz.BackgroundInfo();
                     _json = JsonConvert.SerializeObject(list);
                 }
 
                 int page = Check.IsNone(Request["page"], 1);
-                using (Business.Notice biz = new Business.Notice(Common.User.AppSetting.Connection))
+                using (Access.Notice biz = new Access.Notice(Common.User.AppSetting.Connection))
                 {
                     List<Model.Notice> list = biz.UserList(1, 10, "NOTICE");
                     if (list != null)
                     {
                         this.rptNoticeList.DataSource = list;
                         this.rptNoticeList.DataBind();
+                        _total = _total+list[0].Total;
+                    }
+
+                    list = biz.UserList(page, _size, "EVENT");
+                    if (list != null)
+                    {
+                        this.rptEventlList.DataSource = list;
+                        this.rptEventlList.DataBind();
+                        _total = _total + list[0].Total;
                     }
 
                     list = biz.UserList(page, _size, "NORMAL");
                     if (list != null)
                     {
-                        this.rptList.DataSource = list;
-                        this.rptList.DataBind();
-                        _total = list[0].Total;
+                        this.rptNormalList.DataSource = list;
+                        this.rptNormalList.DataBind();
+                        _total = _total + list[0].Total;
                     }
 
                     Common.User.Paging paging = new Common.User.Paging("./", page, _size, _block, _total);
@@ -61,7 +71,7 @@ namespace OrangeSummer.Web2flc.UserApplication.board.notice
                 }
 
                 #region [ 이벤트 배너 ]
-                using (Business.Banner biz = new Business.Banner(Common.User.AppSetting.Connection))
+                using (Access.Banner biz = new Access.Banner(Common.User.AppSetting.Connection))
                 {
                     List<Model.Banner> list = biz.UserList("NOTICE");
                     if (list != null)

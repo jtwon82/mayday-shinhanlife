@@ -32,9 +32,13 @@ namespace OrangeSummer.Business
         {
             return _achievement.List_new(page, size, orderby, branch, level, code, name);
         }
-        public List<Model.Achievement> List202302(int page, int size, string orderby, string branch, string level, string code, string name)
+        public List<Model.Achievement> List_202302(int page, int size, string orderby, string branch, string level, string code, string name)
         {
-            return _achievement.List202302(page, size, orderby, branch, level, code, name);
+            return _achievement.List_202302(page, size, orderby, branch, level, code, name);
+        }
+        public List<Model.Achievement> List_202306(int page, int size, string orderby, string branch, string level, string code, string name)
+        {
+            return _achievement.List_202306(page, size, orderby, branch, level, code, name);
         }
         public List<Model.Achievement> ListRewradPromotion(int page, int size, string orderby, string branch, string level, string code, string name)
         {
@@ -43,6 +47,14 @@ namespace OrangeSummer.Business
         public List<Model.Achievement> ListRewradCharge(int page, int size, string orderby, string branch, string level, string code, string name)
         {
             return _achievement.ListRewradCharge(page, size, orderby, branch, level, code, name);
+        }
+        public List<Model.Achievement> List_202206(int page, int size, string orderby, string branch, string level, string code, string name)
+        {
+            return _achievement.List_202206(page, size, orderby, branch, level, code, name);
+        }
+        public List<Model.Achievement> ListNsm_202206(int page, int size, string orderby, string branch, string level, string code, string name)
+        {
+            return _achievement.ListNsm_202206(page, size, orderby, branch, level, code, name);
         }
         #endregion
 
@@ -57,6 +69,10 @@ namespace OrangeSummer.Business
         {
             return _achievement.Regist_new(dt);
         }
+        public DataTable Regist_202306(DataTable dt)
+        {
+            return _achievement.Regist_202306(dt);
+        }
         public DataTable RegistPromotion(DataTable dt)
         {
             return _achievement.RegistPromotion(dt);
@@ -64,6 +80,14 @@ namespace OrangeSummer.Business
         public DataTable RegistCharge(DataTable dt)
         {
             return _achievement.RegistCharge(dt);
+        }
+        public DataTable Regist_202206(DataTable dt)
+        {
+            return _achievement.Regist_202206(dt);
+        }
+        public DataTable RegistNsm_202206(DataTable dt)
+        {
+            return _achievement.RegistNsm_202206(dt);
         }
 
         #region [ 사용자 ]
@@ -88,8 +112,30 @@ namespace OrangeSummer.Business
         {
             return _achievement.UserList_new(code, level);
         }
+        public List<Model.Achievement> UserList_202206(string code, string level)
+        {
+            return _achievement.UserList_202206(code, level);
+        }
+        public List<Model.Achievement> UserList_202306(string code, string level)
+        {
+            return _achievement.UserList_202306(code, level);
+        }
+        public List<Model.Achievement> UserListNsm_202206(string type)
+        {
+            return _achievement.UserListNsm_202206( type);
+        }
         #endregion
         
+        //#region [ 사용자2 fc ]
+        ///// <summary>
+        ///// 업적 리스트
+        ///// </summary>
+        //public List<Model.Achievement> UserList2FC(string code)
+        //{
+        //    return _achievement.UserList2FC(code);
+        //}
+        //#endregion
+
         /// <summary>
         /// 업적 랭킹
         /// </summary>
@@ -100,6 +146,14 @@ namespace OrangeSummer.Business
         public List<Model.Achievement> UserRanking_new(int page, int size, string part)
         {
             return _achievement.UserRanking_new(page, size, part);
+        }
+        public List<Model.Achievement> UserRanking_202206(int page, int size, string part)
+        {
+            return _achievement.UserRanking_202206(page, size, part);
+        }
+        public List<Model.Achievement> UserRanking_202306(int page, int size, string part)
+        {
+            return _achievement.UserRanking_202306(page, size, part);
         }
 
         /// <summary>

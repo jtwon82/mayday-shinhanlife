@@ -40,7 +40,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking.gsl
                 StringBuilder sb3 = new StringBuilder();
                 StringBuilder sb4 = new StringBuilder();
                 StringBuilder uniqueChk= new StringBuilder();
-                using (Business.Achievement biz = new Business.Achievement(Common.User.AppSetting.Connection))
+                using (Access.Achievement biz = new Access.Achievement(Common.User.AppSetting.Connection))
                 {
                     #region [ SL ]
                     sb.Clear();
@@ -49,7 +49,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking.gsl
                     sb3.Clear();
                     sb4.Clear();
 
-                    List<Model.Achievement> sls = biz.UserRanking(1, 100, "G SL");
+                    List<Model.Achievement> sls = biz.UserRanking_202306(1, 100, "G SL");
                     if (sls != null)
                     {
                         DateTime dt = DateTime.Parse(sls[0].Date);
@@ -57,7 +57,7 @@ namespace OrangeSummer.Web2.UserApplication.ranking.gsl
                         int index = 1;
                         foreach (Model.Achievement item in sls)
                         {
-                            string key = $"{item.SlRank3}|{item.SlCmip3}";
+                            string key = $"{item.SlRank3}|{item.SlCanp3}";
                             if (uniqueChk.ToString().Contains(key))
                             {
                                 continue;
@@ -66,63 +66,62 @@ namespace OrangeSummer.Web2.UserApplication.ranking.gsl
 
                             if (item.SlRank3 == "2")
                             {
-                                sb2.Append("<dl class=''>");
-                                sb2.Append("	<dd class='crown'><img src='/resources/img/sub/ranking/sliver.png' alt='' /></dd>");
-                                sb2.Append($"	<dt>{item.SlRank3}위</dt>");
-                                sb2.Append("	<dd>");
-                                sb2.Append($"	<span class='myName'>{item.Branch.Name}<em> {item.Name}</em></span>");
-                                sb2.Append($"	{item.SlCmip3}");
-                                sb2.Append("	</dd>");
-                                sb2.Append("</dl>");
+                                sb2.Append("<dl class='rank2'>\n");
+                                sb2.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankingbox_ico.png' alt=''></span>\n");
+                                sb2.Append($"	<dt><em>{item.SlRank3}위</em><span class='myName'>{item.Branch.Name}<em> {item.Name}</em></span></dt>\n");
+                                sb2.Append($"	<dd>{item.SlCanp3}</dd>\n");
+                                sb2.Append("</dl>\n");
                             }
                             else if (item.SlRank3 == "1")
                             {
-                                sb1.Append("<dl class='centerBox'>");
-                                sb1.Append("	<dd class='crown'><img src='/resources/img/sub/ranking/gold.png' alt='' /></dd>");
-                                sb1.Append($"	<dt>{item.SlRank3}위</dt>");
-                                sb1.Append("	<dd>");
-                                sb1.Append($"	<span class='myName'>{item.Branch.Name}<em> {item.Name}</em></span>");
-                                sb1.Append($"	{item.SlCmip3}");
-                                sb1.Append("	</dd>");
-                                sb1.Append("</dl>");
+                                sb1.Append("<dl class='rank1'>\n");
+                                sb1.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankingbox_ico.png' alt=''></span>\n");
+                                sb1.Append($"	<dt><em>{item.SlRank3}위</em><span class='myName'>{item.Branch.Name}<em> {item.Name}</em></span></dt>\n");
+                                sb1.Append($"	<dd>{item.SlCanp3}</dd>\n");
+                                sb1.Append("</dl>\n");
                             }
                             else if (item.SlRank3 == "3")
                             {
-                                sb3.Append("<dl>");
-                                sb3.Append("	<dd class='crown'><img src='/resources/img/sub/ranking/copper.png' alt='' /></dd>");
-                                sb3.Append($"        <dt>{item.SlRank3}위</dt>");
-                                sb3.Append("        <dd>");
-                                sb3.Append($"        <span class=\"myName\">{item.Branch.Name}<em> {item.Name}</em></span>");
-                                sb3.Append($"        {item.SlCmip3}");
-                                sb3.Append("	</dd>");
-                                sb3.Append("</dl>");
+                                sb3.Append("<dl class='rank3'>\n");
+                                sb3.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankingbox_ico.png' alt=''></span>\n");
+                                sb3.Append($"	<dt><em>{item.SlRank3}위</em><span class='myName'>{item.Branch.Name}<em> {item.Name}</em></span></dt>\n");
+                                sb3.Append($"	<dd>{item.SlCanp3}</dd>\n");
+                                sb3.Append("</dl>\n");
+                            }
+                            else if (Int32.Parse(item.SlRank3) < 11)
+                            {
+                                sb3.Append("<dl>\n");
+                                sb3.Append("	<span class='icon'><img src='/resources/img/sub/ranking/rankinglist_ico.png' alt=''></span>\n");
+                                sb3.Append($"		<dt><em>{item.SlRank3}위</em><span class='myName'>{item.Branch.Name}<em> {item.Name}</em></span></dt>\n");
+                                sb3.Append($"       <dd>{item.SlCanp3}</dd>\n");
+                                sb3.Append("</dl>\n");
                             }
                             else
                             {
-                                sb4.Append("<dl>");
-                                sb4.Append($"    <dt>{item.SlRank3}위</dt>");
-                                sb4.Append($"    <dd>{item.SlCmip3}</dd>");
-                                sb4.Append("</dl>");
+                                sb4.Append("<dl>\n");
+                                sb4.Append($"    <dt>{item.SlRank3}위</dt>\n");
+                                sb4.Append($"    <dd>{item.SlCanp3}</dd>\n");
+                                sb4.Append("</dl>\n");
                             }
                             index++;
                         }
                     }
 
-                    sb.Append("<ul class='rankingUnit'>");
-                    sb.Append("	<li>[날짜 기준] " + _date + "</li>");
-                    sb.Append("	<li>[ 단위 ]  캠페인 환산 CMIP</li>");
-                    sb.Append("</ul>");
+                    sb.Append("<ul class='rankingUnit'>\n");
+                    sb.Append("	<li>[날짜 기준] " + _date + "</li>\n");
+                    sb.Append("	<li>[단위] 환산 CANP</li>\n");
+                    sb.Append("</ul>\n");
                     if (sb1.ToString() != "" || sb2.ToString() != "" || sb3.ToString() != "")
                     {
-                        sb.Append("<div class=\"rankingBox\">");
-                        sb.Append(sb2.ToString() + sb1.ToString() + sb3.ToString());
-                        sb.Append("</div>");
+                        sb.Append("<div class=\"rankingBox\">\n");
+                        sb.Append(sb1.ToString() + sb2.ToString() + sb3.ToString());
+                        sb.Append("</div>\n");
                     }
                     if (sb4.ToString() != "")
                     {
-                        sb.Append("<div class=\"rankingList\">");
+                        sb.Append("<div class=\"rankingList\">\n");
                         sb.Append(sb4.ToString());
-                        sb.Append("</div>");
+                        sb.Append("</div>\n");
                     }
                     _sl = sb.ToString();
 

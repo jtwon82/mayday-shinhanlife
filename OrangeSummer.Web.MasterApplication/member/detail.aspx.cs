@@ -52,7 +52,7 @@ namespace OrangeSummer.Web.MasterApplication.member
                         // 지점
                         using (Business.Branch bbiz = new Business.Branch(Common.Master.AppSetting.Connection))
                         {
-                            List<Model.Branch> list = bbiz.Line202302();
+                            List<Model.Branch> list = bbiz.Line_new();
                             if (list != null)
                             {
                                 this.branch.DataSource = list;

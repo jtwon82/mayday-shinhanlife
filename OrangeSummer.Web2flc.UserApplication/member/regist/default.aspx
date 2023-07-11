@@ -9,11 +9,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <body>
-	    <div class="background sub">
-		    <p class="cover"></p>
-		    <p class="upload"><img src="/resources/img/sub/subMetaBg_member.jpg" alt=""/></p>
-	    </div>
-	    <div id="sub_wrap">
+	    <div id="sub_wrap" class="subMeta05">
             <uc1:menu runat="server" ID="menu" />
 
             <div class="subContainer">
@@ -46,7 +42,6 @@
                             <asp:TextBox ID="user_fccode" type="number" runat="server" ClientIDMode="Static" MaxLength="8" placeholder="숫자 8자리 필수" CssClass="form_control"></asp:TextBox>
                             <input type="hidden" name="check" id="check" value="N" />
                             <a href="javascript:member.checkCode();" class="btn_check">중복확인</a>
-                            <p class="warning one">* 성명/연락처 인증 후 코드 중복확인 해주세요.</p>
 					    </div>
 
                         <div class="form_group">
@@ -223,7 +218,7 @@
                 $.ajax({
                     type: "POST",
                     contentType: "application/json; charset=utf-8",
-                    url: "/api/member/checkPno",
+                    url: "/api/member/checkPno2",
                     data: JSON.stringify({ "Mobile": $user_tel.val() }),
                     dataType: "json",
                     async: false,
@@ -239,7 +234,7 @@
                             $.ajax({
                                 type: "POST",
                                 contentType: "application/json; charset=utf-8",
-                                url: "/api/Sms/sendMsg",
+                                url: "/api/Sms2/sendMsg2",
                                 data: JSON.stringify({ "Pno": $user_tel.val() }),
                                 dataType: "json",
                                 async: false,
@@ -280,7 +275,7 @@
                 $.ajax({
                     type: "POST",
                     contentType: "application/json; charset=utf-8",
-                    url: "/api/Sms/compareRndNo",
+                    url: "/api/Sms2/compareRndNo2",
                     data: JSON.stringify({ "RndNo": $certi_num.val() }),
                     dataType: "json",
                     async: false,

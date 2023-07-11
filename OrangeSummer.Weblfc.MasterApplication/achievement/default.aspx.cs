@@ -43,9 +43,9 @@ namespace OrangeSummer.Weblfc.MasterApplication.achievement
                 string orderby = Check.IsNone(Request["orderby"], "ORDERBY");
 
                 // 지점
-                using (Business.Branch biz = new Business.Branch(Common.Master.AppSetting.Connection))
+                using (Access.Branch biz = new Access.Branch(Common.Master.AppSetting.Connection))
                 {
-                    List<Model.Branch> list = biz.Line202302();
+                    List<Model.Branch> list = biz.Line_new();
                     if (list != null)
                     {
                         this.branch.DataSource = list;
@@ -70,9 +70,9 @@ namespace OrangeSummer.Weblfc.MasterApplication.achievement
                 Element.Set(this.code, code);
                 Element.Set(this.name, name);
 
-                using (Business.Achievement biz = new Business.Achievement(Common.Master.AppSetting.Connection))
+                using (Access.Achievement biz = new Access.Achievement(Common.Master.AppSetting.Connection))
                 {
-                    List<Model.Achievement> list = biz.List202302(page, _size, orderby, branch, level, code, name);
+                    List<Model.Achievement> list = biz.List_202306(page, _size, orderby, branch, level, code, name);
                     if (list != null)
                     {
                         this.rptList.DataSource = list;
@@ -115,9 +115,9 @@ namespace OrangeSummer.Weblfc.MasterApplication.achievement
                             DataSet ds = Reader(upload.SaveFilePath);
                             if (ds.Tables[0].Rows.Count > 0)
                             {
-                                using (Business.Achievement biz = new Business.Achievement(Common.Master.AppSetting.Connection))
+                                using (Access.Achievement biz = new Access.Achievement(Common.Master.AppSetting.Connection))
                                 {
-                                    DataTable dt = biz.Regist_new(ds.Tables[0]);
+                                    DataTable dt = biz.Regist_202306(ds.Tables[0]);
                                     if (dt.Rows.Count == 1)
                                     {
                                         DataRow dr = dt.Rows[0];

@@ -54,7 +54,7 @@ namespace OrangeSummer.Web2flc.UserApplication.board.notice
                 string type = Check.IsNone(Request["type"], true);
 
                 Model.Notice notice = null;
-                using (Business.Notice biz = new Business.Notice(Common.User.AppSetting.Connection))
+                using (Access.Notice biz = new Access.Notice(Common.User.AppSetting.Connection))
                 {
                     notice = biz.UserDetail(id);
                     if (notice != null)
@@ -72,20 +72,20 @@ namespace OrangeSummer.Web2flc.UserApplication.board.notice
 
                         notice = biz.UserBefore(id, type);
                         if (notice != null)
-                            _before = $"<a href=\"detail.aspx?id={notice.Id}&type={notice.Type}\">{notice.Title}</a>";
+                            _before = $"<a href=\"detail.aspx?id={notice.Id}&type={notice.Type}\">이전글</a>";
                         else
                             _before = "&nbsp;";
 
                         notice = biz.UserNext(id, type);
                         if (notice != null)
-                            _next = $"<a href=\"detail.aspx?id={notice.Id}&type={notice.Type}\">{notice.Title}</a>";
+                            _next = $"<a href=\"detail.aspx?id={notice.Id}&type={notice.Type}\">다음글</a>";
                         else
                             _next = "&nbsp;";
 
                         #region [ 댓글 ]
                         int subpage = Check.IsNone(Request["subpage"], 1);
                         int size = 10;
-                        using (Business.NoticeReply bizNotice = new Business.NoticeReply(Common.User.AppSetting.Connection))
+                        using (Access.NoticeReply bizNotice = new Access.NoticeReply(Common.User.AppSetting.Connection))
                         {
                             List<Model.NoticeReply> list = bizNotice.UserList(1, (size * subpage), id, Common.User.Identify.Id);
                             if (list != null)

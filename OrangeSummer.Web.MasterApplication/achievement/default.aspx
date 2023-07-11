@@ -36,20 +36,14 @@
     <p class="mb-1">* 총 <span class="text-danger font-weight-bold"><%= _total %></span>개의 업적이 있습니다.</p>
 
     <div class="table-responsive">
-        <table class="table table-bordered" style="min-width: 500px;">
+        <table class="table table-bordered" style="min-width: 1024px;">
             <colgroup>
                 <col style="width: 3%;" />
+                <col style="width: 10%;" />
+                <col style="width: 10%;" />
+                <col style="width: 10%;" />
+                <col style="width: 10%;" />
                 <col />
-                <col style="width: 5%;" />
-                <col style="width: 10%;" />
-                <col style="width: 8%;" />
-                <col style="width: 10%;" />
-                <col style="width: 10%;" />
-                <col style="width: 5%;" />
-                <col style="width: 5%;" />
-                <col style="width: 10%;" />
-                <col style="width: 10%;" />
-                <col style="width: 10%;" />
             </colgroup>
             <thead>
                 <tr>
@@ -58,14 +52,31 @@
                     <th>신분</th>
                     <th>코드</th>
                     <th>성명</th>
-
-                    <th>월납화보험료<br />(보장)</th>
-                    <th>월납화보험료</th>
+                    
+                    <th>CMIP</th>
                     <th>CANP</th>
-                    <th>REWARD</th>
-                    <th>지점부문 환산 <br/>CMIP</th>
-                    <th>개인<br />순위</th>
-                    <th>지점<br />순위</th>
+                    <th>CNT</th>
+                    <th>SlCanp2</th>
+                    <th>SlCmip2</th>
+                    <th>SlCanp3</th>
+                    <th>SlCmip3</th>
+                    <th>SlCanp</th>
+                    <th>SlCmip</th>
+                    <th>BRANCH CANP</th>
+                    <th>BRANCH CMIP</th>
+                    <th>BRANCH CMIP달성</th>
+                    <th>BRANCH CANP달성</th>
+                    
+                    <th>PERSON2 CANP</th>
+                    <th>PERSON2 CMIP</th>
+                    <th>PERSON2 CNT</th>
+
+                    <th>RANK</th>
+                    <th>S RANK</th>
+                    <th>G RANK</th>
+                    <th>E RANK</th>
+                    <th>BRANCH RANK</th>
+                    <th>PERSON2 RANK</th>
                 </tr>
             </thead>
             <tbody>
@@ -78,13 +89,29 @@
                             <td><%# Eval("Code") %></td>
                             <td><%# Eval("Name") %></td>
                             
-                            <td><%# Eval("Cost2") %></td>
-                            <td><%# Eval("Cost") %></td>
-                            <td><%# Eval("Canp") %></td>
-                            <td><%# Eval("Reward") %></td>
-                            <td><%# Eval("Cmip") %></td>
+                            <td><%# Eval("PersonCmip") %></td>
+                            <td><%# Eval("PersonCanp") %></td>
+                            <td><%# Eval("PersonCnt") %></td>
+                            <td><%# Eval("SlCanp2") %></td>
+                            <td><%# Eval("SlCmip2") %></td>
+                            <td><%# Eval("SlCanp3") %></td>
+                            <td><%# Eval("SlCmip3") %></td>
+                            <td><%# Eval("SlCanp") %></td>
+                            <td><%# Eval("SlCmip") %></td>
+                            <td><%# Eval("BranchCanp") %></td>
+                            <td><%# Eval("BranchCmip") %></td>
+                            <td><%# Eval("BranchCmip2") %></td>
+                            <td><%# Eval("BranchCanp2") %></td>
+                            <td><%# Eval("Person2Canp") %></td>
+                            <td><%# Eval("Person2Cmip") %></td>
+                            <td><%# Eval("Person2Cnt") %></td>
+
                             <td><%# Eval("PersonRank") %></td>
+                            <td><%# Eval("SlRank2") %></td>
+                            <td><%# Eval("SlRank3") %></td>
+                            <td><%# Eval("SlRank") %></td>
                             <td><%# Eval("BranchRank") %></td>
+                            <td><%# Eval("Person2Rank") %></td>
                         </tr>
                     </ItemTemplate>
                 </asp:Repeater>

@@ -67,6 +67,7 @@ namespace OrangeSummer.Weblfc.MasterApplication.controllers
                             ServiceSMS oSoap = new ServiceSMS();
 
                             int ableCnt = oSoap.GetRemainCount(sms_id, hash_value);
+                            json.Message = " rand_no:" + rand_no;
                             if (ableCnt < 1)
                             {
                                 json.Result = "FAIL";

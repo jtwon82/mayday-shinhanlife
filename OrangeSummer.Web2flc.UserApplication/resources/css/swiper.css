@@ -95,7 +95,6 @@
   -o-transition-property: -o-transform;
   -ms-transition-property: -ms-transform;
   transition-property: transform, height;
-  height:auto !important;
 }
 /* a11y */
 .swiper-container .swiper-notification {
@@ -116,12 +115,16 @@
   touch-action: pan-x;
 }
 /* Arrows */
+.subContainer.bm.point .swiper-button-prev,
+.subContainer.bm.point .swiper-button-next {
+  top: 26%;
+}
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 50%;
-  width:67px;
-  height:67px;
+  top: 35%;
+  width:64px;
+  height:64px;
   margin-top: -33px;
   z-index: 10;
   cursor: pointer;
@@ -135,9 +138,9 @@
 }
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
-  background: url("../img/sub/bm/left_arrow.png") no-repeat;
-  width:67px;
-  height:67px;
+  background: url("/resources/img/sub/bm/left_arrow.png") no-repeat;
+  width:64px;
+  height:64px;
   right: auto;
   z-index:100;
 }
@@ -151,7 +154,7 @@
 }
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
-  background: url("../img/sub/bm/right_arrow.png") no-repeat;
+  background: url("/resources/img/sub/bm/right_arrow.png") no-repeat;
   right: 0;
   left: auto;
 }
@@ -572,23 +575,22 @@ button.swiper-pagination-bullet {
     transform: rotate(360deg);
   }
 }
-/*  210623 추가 CSS */
+/*  210623 �߰� CSS */
 .swiper-container3.personal .swiper-button-prev, 
 .swiper-container3.personal .swiper-button-next{
-	margin-top:-153px;
+	top: 31%;
 }
-/* 210713 추가 */
+/* 210713 �߰� */
 .swiper-button-prev span, .swiper-button-next span{
 	display: block;
-    color: #2b9075;
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    margin-left: -27px;
-	font-family: 'OneShinhanB';
-	font-weight:bold;
+  color: #429c83;
+  position: absolute;
+  top: -37px;
+  font-family: 'OneShinhanB';
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: -1.1px;
 }
 .swiper-button-next span{
-	color:#c55762;
-	margin-left: -22px;
+	color:#b15963;
 }

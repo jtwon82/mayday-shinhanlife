@@ -8,6 +8,7 @@
     {
         public int Total { get; set; }
         public string Id { get; set; }
+        public string Code { get; set; }
         public int Sort { get; set; }
         public string FkNotice { get; set; }
         public string FkMember { get; set; }

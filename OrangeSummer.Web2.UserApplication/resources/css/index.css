@@ -1,178 +1,217 @@
 /*body#main{
-	background:url(../img/index/mainImg_balii.jpg) top center no-repeat; 
-	background-color:#fbfbfb;
-}*/
-#main_wrap{
-	max-width: 720px;
-    left:50%;
-	margin-left:-360px;
+ background:url(/resources/img/index/mainImg_balii.jpg) top center no-repeat;
+ background-color:#fbfbfb;
+ }*/
+.background {
+    max-width: 720px;
+    background-color: #fbfbfb;
+    width: 100%;
+    z-index: 11;
+    height: 335px;
+    margin: 0 auto;
+}
+.background p {
+    height: 100%;
+}
+.topBox {
+    z-index: 12;
+    position: absolute;
+    bottom: 0;
+}
+.cover {
+    background: rgba(0,0,0,.55);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 11;
+    height: 550px;
+}
+.background .upload img {
+    width: 100%;
+    height: 100%;
+}
+#main_wrap {
+    max-width: 720px;
+    left: 50%;
+    margin-left: -360px;
     overflow: hidden;
-	position:absolute;
-	top:0;
-	background:#fbfbfb;
+    position: absolute;
+    top: 0;
+    background: #fbfbfb;
 }
-#main_wrap.hawai{
-	background:url(../img/index/mainImg_hawai.jpg) center center no-repeat;
+#main_wrap.hawai {
+    background: url(/resources/img/index/mainImg_hawai.jpg) center center no-repeat;
 }
-.main_container{
-	/*background-color:#fbfbfb;*/
-	padding:0 50px 100px;
+.main_container {
+    padding: 0 50px;
+    margin-top: 28.6%;
+    padding-bottom: 90px;
 }
-.main_personInfo{
-	width:100%;
-	margin-top: 340px;
-	z-index: 11;
+.main_personInfo {
+    width: 100%;
+    z-index: 11;
+    padding-bottom: 30px;
+    text-align:center;
 }
-.main_personImg img.personImg{
+.main_personImg img.personImg {
+    border: solid 5px #705dcf;
     border-radius: 20px;
-	width:100%; 
-	height:100%;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
-.main_personImg span{
-	display:block;
-	float:left;
+.main_personImg span {
+    display: block;
 }
-.person_rank{
-	margin-top: 22px;
-	font-size:55px;
-	color:#000;
-	letter-spacing:-2.75px;
-	font-family: 'OneShinhanB', sans-serif;
-	font-weight:bold;
-	text-align: center;
+.person_rank {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: -2.75px;
+    font-family: 'OneShinhanB';
+    text-align: center;
+    margin-top: 20px;
 }
-.person_rank span{
-	font-size:30px;
-	font-family: 'OneShinhanM', sans-serif;
-	font-weight:500;
-	display:block;
-	color:#000;
-	margin-bottom:10px;
+.person_rank span {
+    font-size: 30px;
+    font-family: 'OneShinhanL';
+    display: block;
+    font-weight: 600;
+    color: #000;
 }
-.main_personImg{
-	width:200px; 
-	height:200px;
-	margin: 0 auto;
+.main_personImg {
+    position: relative;
 }
 .main_personImg input[type="file"] {
-	/* 파일 필드 숨기기 */
-	position: absolute;
-	width: 1px; 
-	height: 1px;
-	padding: 0; 
-	margin: -1px; 
-	overflow: hidden; 
-	clip:rect(0,0,0,0); 
-	border: 0; 
+    /* 파일 필드 숨기기 */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
 }
-.inputFileButton{
-	position: absolute;
+.inputFileButton {
+    position: absolute;
     top: -40px;
-    left: 160px;
+    right: 33%;
     cursor: pointer;
 }
-.imgEditBtn{
-	position: absolute;
-    right: -30px;
-    top: 43px;
+.imgEditBtn {
+    position: absolute;
+    right: -20px;
+    top: 55px;
 }
-.imgEditBtn img{
-	cursor:pointer;
+.imgEditBtn img {
+    cursor: pointer;
 }
-.rewardBox{
-	margin-top:35px;
-	margin-bottom: 40px;
-	width:100%;
+.my_rank{
+    margin-bottom:36px;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
 }
-.rewardBox .rewardTitle span{
-	display:block;
-	font-size:25px;
-	font-family: 'OneShinhanB', sans-serif;
-	font-weight: bold;
-	text-align: center;
+.my_rank b{
+    font-size: 35px;
+    font-weight: 300;
+    display: block;
+    color: #fff;
 }
-
-.rewardBox dl{
-	width:100%;
+.my_rank em{
+    display:inline-block;
+    width:81px;
+    height:80px;
+    background-image:url(/resources/img/index/main_myRank_icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 18px;
+    vertical-align: -12px;
 }
-.rewardBox dl.canp{margin-bottom:40px;}
-.rewardBox dl:last-child{
-	margin-bottom:0;
+.my_rank span{
+    font-size: 80px;
+    font-family: 'OneShinhanB';
+    color: #fff;
+    display: inline-block;
 }
-
-.rewardBox dl.canp dt{
-	background-color:#96b3ff;
+.categoryWrap {
+    padding:33px;
+    padding-bottom:10px;
+    margin-bottom:40px;
+    border-radius: 40px;
+    background-color: #5c48c2;
 }
-.rewardBox dl dd{
-	float:right;
-	font-size:31px;
-	font-family: 'OneShinhanB', sans-serif;
-	font-weight:bold;
-	color:#715def;
-	line-height:50px;
-}
-.rewardBox dl:last-child{
-	width:100%;
-	box-sizing:border-box;
-	border-radius:20px;
-	margin-top:30px;
-}
-.rewardBox dl:last-child dt{
-	background:none;
-	width:100%;
-	font-size:30px;
-	text-align:center;
-	height:80px;
-	line-height:80px;
-	background-color:#9486db;
-	border-radius: 20px 20px 0 0;
-	color:#fff;
-	font-family: 'OneShinhanB', sans-serif;
-	font-weight:bold;
-	letter-spacing: normal;
-}
-.rewardBox dl:last-child dd{
-	line-height:141px;
-	float:none;
-	text-align:center;
-	font-size:45px;
-	background-color:#f1ecff;
-	border-radius: 0 0 20px 20px;
-}
-.rewardBox dl:last-child dd a{
-	color:#705cef;
-	font-family: 'OneShinhanB', sans-serif;
-	font-weight:bold;
-	letter-spacing: normal;
+.mainEventBanner .mainEventBanner_t {
+    font-size: 35px;
+    font-family: 'OneShinhanM';
 }
 
-.categoryBox dt{
-	font-size:35px;
-	font-weight:600;
-	color:#000;
-	margin-bottom:35px;
+.categoryBox {
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 5px;
 }
-.categoryBox dd{
-	margin-bottom: 30px;
+.categoryBox dt {
+    font-size: 35px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 35px;
+}
+.categoryBox dd {
+    width: 47.5%;
+    float: left;
+    margin-bottom:5.5%;
+}
+.categoryBox dd:nth-child(even){
+    margin-left: 5%;
 }
 .categoryBox dd a{
-	width: 100%;
-    height: auto;
+    font-size: 0px;
+    color: transparent;
 }
-.categoryBox dd a img{
-	width:100%;
+.categoryBox dd a span{
+    margin: 0 auto;
+    display: block;
+    width: 260px;
+    height:251px;
+    background-size:contain;
+    background-repeat: no-repeat;
 }
-.categoryBox dd:last-child{margin-right:0;}
-.mainEventBanner {
-    padding-top: 10px;
+.categoryBox dd:nth-child(1) a span{
+   background-image: url(/resources/img/index/categoryIcon01.png) ;
 }
-.swiper-slide img {
-    width: 100%	;
-    height: auto;
-    border: 1px solid transparent;
-    border-radius: 40px;
-    box-sizing: border-box;
+.categoryBox dd:nth-child(2) a span{
+   background-image: url(/resources/img/index/categoryIcon02.png) ;
+}
+.categoryBox dd:nth-child(3) a span{
+   background-image: url(/resources/img/index/categoryIcon03.png) ;
+}
+.categoryBox dd:nth-child(4) a span{
+   background-image: url(/resources/img/index/categoryIcon04.png) ;
 }
 .swiper-container{
-	padding-bottom:30px !important;
+    padding-bottom: 30px !important;
 }
+.swiper-container .swiper-wrapper{
+    height:480px;
+  
+}
+.swiper-slide img {
+    width: 100%;
+    border: 0;
+      border-radius: 40px;
+}
+
+
+/* popup */
+.dimm {position:fixed;top:0;left:0;z-index:999;width:100%;height:100%;background:rgba(0,0,0,0.6);}
+.popup_wrap {display: none; position: fixed; top: 0; left: 0; bottom: 0; right: 0; z-index: 999; overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch; /*-ms-overflow-style: none;*/ text-align: center;}
+.popup_wrap .popup_inner {position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); margin: auto; padding-bottom: 50px; z-index:1000;}
+.popup_wrap .popup_container {overflow: hidden;position: relative;background: #fff; width:540px; border:20px solid #705dcf;padding: 85px 0;}
+.popup_wrap .popup_close {position:absolute;top: 46px;right: 46px;width: 28px;}
+
+.popup_notice .popup_inner{height: 520px;}
+.popup_notice .icon img{margin:0 auto;}
+.popup_notice .main_txt img{margin:0 auto;padding-top: 43px;}

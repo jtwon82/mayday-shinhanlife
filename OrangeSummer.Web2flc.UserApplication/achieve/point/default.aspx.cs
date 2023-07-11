@@ -22,20 +22,20 @@ namespace OrangeSummer.Web2flc.UserApplication.achieve.point
                 PageLoad();
             }
         }
-        private void PageLoad()
+        private void PageLoadx()
         {
         }
 
-        private void PageLoadx()
+        private void PageLoad()
         {
             try
             {
                 #region [ 업적 ]
-                using (Business.Achievement biz = new Business.Achievement(Common.User.AppSetting.Connection))
+                using (Access.Achievement biz = new Access.Achievement(Common.User.AppSetting.Connection))
                 {
                     StringBuilder title = new StringBuilder();
                     StringBuilder contents = new StringBuilder();
-                    List<Model.Achievement> achievement = biz.UserList2(Common.User.Identify.Code, "BRANCH");
+                    List<Model.Achievement> achievement = biz.UserList_202306(Common.User.Identify.Code, "BRANCH");
 
                     if (achievement != null)
                     {
@@ -44,18 +44,34 @@ namespace OrangeSummer.Web2flc.UserApplication.achieve.point
                             DateTime dt = DateTime.Parse(item.Date);
                             string cdate = $"{dt.ToString("yyyy")}년 {dt.ToString("MM")}월 {dt.ToString("dd")}";
 
-                            if (",BM,EM,ERM".Contains("," + OrangeSummer.Common.User.Identify.Level))
+                            if (",BM,EM,ERM".Contains("," + OrangeSummer.Common.User.Identify.LevelName))
                             {
                                 string itsMe = item.ItsMe == "0" ? "전 순위 업적" : item.ItsMe == "1" ? "나의 썸머순위" : item.ItsMe == "2" ? "후 순위 업적" : "";
 
                                 contents.AppendLine($"<div class='swiper-slide slide{item.ItsMe}'>");
                                 contents.AppendLine("	<div class='bmRanking_box'>");
                                 contents.AppendLine($"		<p><span>{cdate}일 기준</span>{itsMe}<em>{item.BranchRank}</em></p>");
-                                contents.AppendLine("		<dl>");
-                                contents.AppendLine("			<dt><span>캠페인환산</span>CMIP</dt>");
+
+                                contents.AppendLine($"<dl class='canp'>");
+                                contents.AppendLine($"  <dt>평가 환산P</dt>");
+                                contents.AppendLine($"	<dd class='canp'>{item.BranchCanp}</dd>");
+                                contents.AppendLine($"</dl>");
+                                contents.AppendLine($"<dl class='canpBp'>");
+                                contents.AppendLine($"	<dt>환산 BP <em>(%)</em></dt>");
+                                contents.AppendLine($"	<dd>{item.BranchCanp2}%</dd>");
+                                contents.AppendLine($"</dl>");
+                                contents.AppendLine($"<dl class='cmip'>");
+                                contents.AppendLine($"	<dt>월초 P</dt>");
                                 contents.AppendLine($"			<dd class='cmip'>{item.BranchCmip}</dd>");
-                                contents.AppendLine("		</dl>");
+                                contents.AppendLine($"</dl>");
+                                //contents.AppendLine($"<dl class='cmipBp'>");
+                                //contents.AppendLine($"	<dt>월초 BP <em>(%)</em></dt>");
+                                //contents.AppendLine($"	<dd>{item.BranchCmip2}%</dd>");
+                                //contents.AppendLine($"</dl>");
+
                                 contents.AppendLine("	</div>");
+
+
                                 if (item.ItsMe == "0")
                                 {
                                     contents.AppendLine($"	<div class='swiper-button-next'><span>내순위<span></div>");

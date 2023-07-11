@@ -41,6 +41,7 @@ namespace OrangeSummer.Weblfc.MasterApplication.member
             {
                 //string code = Check.IsNone(Request["code"], true);
                 string id = Check.IsNone(Request["id"], true);
+
                 using (Business.Member biz = new Business.Member(Common.Master.AppSetting.Connection))
                 {
                     Model.Member member = biz.Detail202302(id);
@@ -51,7 +52,7 @@ namespace OrangeSummer.Weblfc.MasterApplication.member
                         // 지점
                         using (Business.Branch bbiz = new Business.Branch(Common.Master.AppSetting.Connection))
                         {
-                            List<Model.Branch> list = bbiz.Line202302();
+                            List<Model.Branch> list = bbiz.Line_new();
                             if (list != null)
                             {
                                 this.branch.DataSource = list;
